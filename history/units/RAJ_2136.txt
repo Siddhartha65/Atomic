@@ -1,0 +1,74 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+####### OOB #######
+units = {
+	#India Command
+
+
+	#Eastern Command
+	division= {	# "Meerut District"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 106
+		}
+		location = 11955
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division= {	# "Lucknow District"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 107
+		}
+		location = 12137
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	#Southern Command
+	division= {	# "Deccan District"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 109
+		}
+		location = 12781
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division= {	# "Bombay District"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 110
+		}
+		location = 1349
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division= {	# "Madras District"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 111
+		}
+		location = 10278
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+}

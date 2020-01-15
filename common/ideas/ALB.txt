@@ -1,0 +1,25 @@
+ideas = {
+
+  country = {
+    mob_rule = {
+      picture = mob_rule
+      allowed = {
+        always = no
+      }
+
+      allowed_civil_war = {
+        always = yes
+      }
+
+      removal_cost = -1
+
+      modifier = {
+          training_time_factor = -0.1
+          no_supply_grace = 48
+          consumer_goods_factor = 0.05
+          hoxhaism_drift = -1
+          raider_drift = 1
+      }
+      }
+    }
+  }

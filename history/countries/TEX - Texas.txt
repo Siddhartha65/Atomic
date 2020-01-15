@@ -1,0 +1,73 @@
+﻿capital = 375
+
+oob = TEX_2136
+
+
+set_politics = {
+	ruling_party = revelationism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 0
+    revelationism = 40
+    posadism = 0
+    hoxhaism = 0
+    raider = 60
+}
+create_country_leader = {
+	name = "Willie James"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = constructionists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ada Barr"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = maoism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jake Stanley"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = integralists
+	traits = {anti_communist
+						autocratic_imperialist
+						champion_of_peace_4}
+}
+
+create_country_leader = {
+	name = "Steve West"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Willard Dudley"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

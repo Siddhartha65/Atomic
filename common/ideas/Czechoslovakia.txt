@@ -1,0 +1,321 @@
+ideas = {
+
+######## Government ##########
+	country = {
+		eeu_influence_1 = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.5
+				stability_weekly = -0.01
+				technicism_drift = 0.01
+			}
+		}
+	}
+		country = {
+			eeu_influence_2 = {
+				picture = great_depression
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+
+				modifier = {
+					political_power_gain = -1
+					stability_weekly = -0.01
+					technicism_drift = 0.02
+				}
+			}
+		}
+
+
+	political_advisor = {
+
+		CZE_haji_faiz_muhammed_zikeria = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { electronics_developer
+			 					 hoxhaist_demagogue	}
+		}
+
+		CZE_mohammad_hashim_khan = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { unexperienced_imperialist
+			 					 staunch_raider}
+		}
+
+		CZE_mahmud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { anti-raider
+									technicist_reformer }
+		}
+
+
+	CZE_mahmud_khan = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		traits = { rearmer
+								revelationist_moralizer }
+	}
+	CZE_posad = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = CZE
+		}
+
+		traits = { ambitious_union_boss
+								posadist_revolutionary }
+	}
+
+
+		CZE_muhammed_nowroz = {
+
+			picture = generic_political_advisor_arab_3
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { devoted_trotskyist
+			 						ambitious_union_boss }
+		}
+
+}
+
+
+
+	theorist = {
+
+		CZE_muhammad_amin_bughra = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+
+			traits = { military_theorist }
+		}
+
+		CZE_renato_bardolucci = {
+
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		CZE_mohammed_daoud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { army_armored_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_azam_ataullah = {
+
+			picture = generic_army_arab_2
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { army_infantry_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_aalem_daana = {
+
+			picture = generic_navy_arab_3
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { navy_screen_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_hares_muzafar = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { army_entrenchment_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		CZE_asadullah_seraj_khan = {
+
+			picture = generic_army_arab_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_wazir_akbar_khan = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { army_chief_morale_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+
+		CZE_ali_muhammed_khan = {
+
+			picture = generic_air_arab_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { air_chief_reform_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_gholam_wali = {
+
+			picture = generic_air_arab_3
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { air_chief_ground_support_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		CZE_nasirullah_husain = {
+
+			picture = generic_navy_arab_2
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { navy_chief_decisive_battle_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		CZE_mohammed_etemadi_khan = {
+
+			picture = generic_navy_arab_1
+
+			allowed = {
+				original_tag = CZE
+			}
+
+			traits = { navy_chief_naval_aviation_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

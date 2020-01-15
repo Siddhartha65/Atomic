@@ -1,0 +1,77 @@
+
+music_station = "aesthetic"
+
+music = {
+	song = "Angel Wings - Sirius Beat"
+
+}
+
+music = {
+	song = "Call Me - Zai Kowen"
+
+}
+
+music = {
+	song = "Captive_Korine - Korine"
+
+}
+
+music = {
+	song = "Confusions - Thrifter Records"
+
+}
+
+music = {
+	song = "Elecctrik Funk - The APX"
+
+}
+
+music = {
+	song = "Forever Midnight - Zadig The Jasp"
+
+}
+
+music = {
+	song = "Feel The Funk - Peyruis"
+
+}
+
+music = {
+	song = "I N T E R S T E L L A R  C A P I T A L I S M - Anonymous420"
+
+}
+
+music = {
+	song = "I Want You - Desired"
+
+}
+
+music = {
+	song = "J-U-P-I-T-E-R - Deoxys Beats"
+
+}
+
+music = {
+	song = "Sea Dreams - The Majestic Robot"
+
+}
+
+music = {
+	song = "Soft And Furious - Alpha Hydrae"
+
+}
+
+music = {
+	song = "Tasogare - Zai Kowen"
+
+}
+
+music = {
+	song = "The Countdown - Aries Beats"
+
+}
+
+music = {
+	song = "We're Finally Landing - HOME"
+
+}

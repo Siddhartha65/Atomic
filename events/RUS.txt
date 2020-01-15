@@ -1,0 +1,74 @@
+﻿###########################
+# German Events
+###########################
+
+add_namespace = rus
+
+
+######## EEU Ally ########
+country_event = {
+	id = rus.1
+	title = rus.1.t
+	desc = rus.1.d
+	picture = GFX_report_event_sata
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+	option = {
+		name = rus.1.a
+												DDR = {
+														country_event = {
+																							id = eeu.13
+																					}
+												}
+	}
+
+		option = {
+			name = rus.1.b
+			trigger = {
+			  is_ai = no
+			}
+														DDR = {
+															country_event = {
+																								id = eeu.14
+																						}
+													}
+		}
+}
+
+######## EEU Intergration ########
+country_event = {
+	id = rus.2
+	title = rus.2.t
+	desc = rus.2.d
+	picture = GFX_report_event_sata
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+	option = {
+		name = rus.2.a
+												DDR = {
+														country_event = {
+																							id = eeu.15
+																					}
+												}
+	}
+
+		option = {
+			name = rus.2.b
+			trigger = {
+			  is_ai = no
+			}
+														DDR = {
+															country_event = {
+																								id = eeu.16
+																						}
+													}
+		}
+}

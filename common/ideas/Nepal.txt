@@ -1,0 +1,277 @@
+ideas = {
+	political_advisor = {
+
+		NEP_haji_faiz_muhammed_zikeria = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = {autocratic_imperialist
+			 					 hoxhaist_demagogue	}
+		}
+
+		NEP_mohammad_hashim_khan = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { champion_of_peace_2
+			 					 staunch_raider}
+		}
+
+		NEP_mahmud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { camarilla_leader
+									technicist_reformer }
+		}
+
+
+	NEP_mahmud_khan = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = NEP
+		}
+
+		traits = { captain_of_industry
+								revelationist_moralizer }
+	}
+	NEP_posad = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = NEP
+		}
+
+		traits = { conservative_grandee
+								posadist_revolutionary }
+	}
+
+
+		NEP_muhammed_nowroz = {
+
+			picture = generic_political_advisor_arab_3
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { nuclear_scientist
+									political_dancer }
+		}
+
+}
+
+
+
+	theorist = {
+
+		NEP_muhammad_amin_bughra = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+
+			traits = { military_theorist }
+		}
+
+		NEP_renato_bardolucci = {
+
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		NEP_mohammed_daoud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { army_armored_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NEP_azam_ataullah = {
+
+			picture = generic_army_arab_2
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { army_infantry_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NEP_aalem_daana = {
+
+			picture = generic_navy_arab_3
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { navy_screen_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NEP_hares_muzafar = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { army_entrenchment_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		NEP_asadullah_seraj_khan = {
+
+			picture = generic_army_arab_1
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NEP_wazir_akbar_khan = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { army_chief_NEPale_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+
+		NEP_ali_muhammed_khan = {
+
+			picture = generic_air_arab_1
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { air_chief_reform_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NEP_gholam_wali = {
+
+			picture = generic_air_arab_3
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { air_chief_ground_support_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		NEP_nasirullah_husain = {
+
+			picture = generic_navy_arab_2
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { navy_chief_decisive_battle_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NEP_mohammed_etemadi_khan = {
+
+			picture = generic_navy_arab_1
+
+			allowed = {
+				original_tag = NEP
+			}
+
+			traits = { navy_chief_naval_aviation_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

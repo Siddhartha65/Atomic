@@ -1,0 +1,67 @@
+﻿capital = 10
+
+set_politics = {
+	ruling_party = technicism
+	last_election = "2135.9.8"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	hoxhaism = 18
+	revelationism = 15
+	posadism = 2
+	technicism = 65
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {tenacious_defender	triumphant_revolutionary	leider
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = integralists
+	traits = {#
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

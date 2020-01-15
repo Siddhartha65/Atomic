@@ -1,0 +1,94 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = BRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	##### Exército Brasileiro #####
+	division= {	# "1a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 10980 # Rio de Janiero
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 10513 # Sao Paulo
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "3a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 10447 # Porto Alegre
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "4a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 5168 # Recife
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "5a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 8242 # Belo Horizonte
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "1a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 4604 # Belem
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 5156 # Curitiba
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+}

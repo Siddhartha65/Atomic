@@ -1,0 +1,95 @@
+﻿capital = 361
+
+oob = USA_2136
+
+create_faction = "NATO"
+add_to_faction = USA
+add_to_faction = IRE
+
+puppet = IRE
+
+IRE = { set_politics = {
+	ruling_party = technicism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 50
+    revelationism = 20
+    posadism = 0
+    hoxhaism = 15
+    raider = 15
+}
+}
+
+set_politics = {
+	ruling_party = technicism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+    technicism = 80
+    revelationism = 15
+    posadism = 0
+    hoxhaism = 0
+    raider = 5
+}
+create_country_leader = {
+	name = "Jeremy Foster"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Jeremy_Foster.png"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {inexperienced_imperialist
+						fortification_engineer
+						genial_anti_revolutionary
+	}
+}
+
+create_country_leader = {
+	name = "Eleanor Knight"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = maoism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Amir Bishop"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = integralists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kobe Gonzalez"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Brandon Lee"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

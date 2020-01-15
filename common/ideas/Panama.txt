@@ -1,0 +1,277 @@
+ideas = {
+	political_advisor = {
+
+		PAN_haji_faiz_muhammed_zikeria = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { blitzkrieg_theorist
+			 					 hoxhaist_demagogue	}
+		}
+
+		PAN_mohammad_hashim_khan = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { assasination_survivor
+			 					 staunch_raider}
+		}
+
+		PAN_mahmud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { the_silver_advisor
+									technicist_reformer }
+		}
+
+
+	PAN_mahmud_khan = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = PAN
+		}
+
+		traits = { diplomatic_workhorse
+								revelationist_moralizer }
+	}
+	PAN_posad = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = PAN
+		}
+
+		traits = { tenacious_defender
+								posadist_revolutionary }
+	}
+
+
+		PAN_muhammed_nowroz = {
+
+			picture = generic_political_advisor_arab_3
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { champion_of_peace_1
+			 						stout_defender }
+		}
+
+}
+
+
+
+	theorist = {
+
+		PAN_muhammad_amin_bughra = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+
+			traits = { military_theorist }
+		}
+
+		PAN_renato_bardolucci = {
+
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		PAN_mohammed_daoud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { army_armored_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PAN_azam_ataullah = {
+
+			picture = generic_army_arab_2
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { army_infantry_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PAN_aalem_daana = {
+
+			picture = generic_navy_arab_3
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { navy_screen_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PAN_hares_muzafar = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { army_entrenchment_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		PAN_asadullah_seraj_khan = {
+
+			picture = generic_army_arab_1
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PAN_wazir_akbar_khan = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { army_chief_morale_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+
+		PAN_ali_muhammed_khan = {
+
+			picture = generic_air_arab_1
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { air_chief_reform_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PAN_gholam_wali = {
+
+			picture = generic_air_arab_3
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { air_chief_ground_support_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		PAN_nasirullah_husain = {
+
+			picture = generic_navy_arab_2
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { navy_chief_decisive_battle_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		PAN_mohammed_etemadi_khan = {
+
+			picture = generic_navy_arab_1
+
+			allowed = {
+				original_tag = PAN
+			}
+
+			traits = { navy_chief_naval_aviation_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+﻿capital = 277
+
+oob = MEX_2136
+
+give_guarantee = PAN
+
+add_ideas = {
+	papa_enrique
+}
+
+set_politics = {
+	ruling_party = revelationism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 18
+    revelationism = 62
+    posadism = 10
+    hoxhaism = 5
+    raider = 5
+}
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = constructionists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Luis Vasconcelos"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {chamberlain_appeaser
+						blitzkrieg_theorist
+						champion_of_peace_2
+
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

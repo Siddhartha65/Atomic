@@ -1,0 +1,73 @@
+﻿capital = 219
+
+oob = RUS_2136
+
+set_politics = {
+	ruling_party = technicism
+	last_election = "2136.1.1"
+	election_frequency = 72
+	elections_allowed = yes
+}
+
+set_popularities = {
+    technicism = 80
+    revelationism = 0
+    posadism = 0
+    hoxhaism = 20
+    raider = 0
+}
+create_country_leader = {
+	name = "Petrov Grigorievich"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Petrov_Grigorievich.png"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {political_dancer
+						nationalist_symbol
+						old_world_sympathizer
+	}
+}
+
+create_country_leader = {
+	name = "Lisov Astakhov"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "David Tsiolkovsky "
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Emma Yanovna"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = utopianists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Zotov Plisetsky "
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = despot
+	traits = {
+		#
+	}
+}

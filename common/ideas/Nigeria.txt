@@ -1,0 +1,277 @@
+ideas = {
+	political_advisor = {
+
+		NGA_haji_faiz_muhammed_zikeria = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { el_jefe_maximo
+			 					 hoxhaist_demagogue	}
+		}
+
+		NGA_mohammad_hashim_khan = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { exiled_revolutionary
+			 					 staunch_raider}
+		}
+
+		NGA_mahmud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { ideological_crusader
+									technicist_reformer }
+		}
+
+
+	NGA_mahmud_khan = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = NGA
+		}
+
+		traits = { anti_communist
+								revelationist_moralizer }
+	}
+	NGA_posad = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = NGA
+		}
+
+		traits = { staunch_constintutionalist
+								posadist_revolutionary }
+	}
+
+
+		NGA_muhammed_nowroz = {
+
+			picture = generic_political_advisor_arab_3
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { assassination_survivor
+			 						nuclear_scientist }
+		}
+
+}
+
+
+
+	theorist = {
+
+		NGA_muhammad_amin_bughra = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+
+			traits = { military_theorist }
+		}
+
+		NGA_renato_bardolucci = {
+
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		NGA_mohammed_daoud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { army_armored_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NGA_azam_ataullah = {
+
+			picture = generic_army_arab_2
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { army_infantry_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NGA_aalem_daana = {
+
+			picture = generic_navy_arab_3
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { navy_screen_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NGA_hares_muzafar = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { army_entrenchment_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		NGA_asadullah_seraj_khan = {
+
+			picture = generic_army_arab_1
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NGA_wazir_akbar_khan = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { army_chief_morale_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+
+		NGA_ali_muhammed_khan = {
+
+			picture = generic_air_arab_1
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { air_chief_reform_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NGA_gholam_wali = {
+
+			picture = generic_air_arab_3
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { air_chief_ground_support_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		NGA_nasirullah_husain = {
+
+			picture = generic_navy_arab_2
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { navy_chief_decisive_battle_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		NGA_mohammed_etemadi_khan = {
+
+			picture = generic_navy_arab_1
+
+			allowed = {
+				original_tag = NGA
+			}
+
+			traits = { navy_chief_naval_aviation_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

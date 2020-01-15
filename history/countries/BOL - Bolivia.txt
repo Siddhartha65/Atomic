@@ -1,0 +1,71 @@
+﻿capital = 494
+
+oob = BOL_2136
+
+set_politics = {
+	ruling_party = hoxhaism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+    technicism = 0
+    revelationism = 3
+    posadism = 9
+    hoxhaism = 84
+    raider = 4
+}
+create_country_leader = {
+	name = "Emmanuel Reyes"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Matías Juderías"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Matías_Juderías.png"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {captain_of_industry	great_architect	champion_of_peace_3
+	}
+}
+
+create_country_leader = {
+	name = "Tomas Abasto"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Román Dengra"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = utopianists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Jaime Cortés"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = despot
+	traits = {
+		#
+	}
+}

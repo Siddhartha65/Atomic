@@ -1,0 +1,71 @@
+﻿capital = 126
+
+oob = ENG_2136
+
+set_politics = {
+	ruling_party = revelationism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 25
+    revelationism = 70
+    posadism = 0
+    hoxhaism = 0
+    raider = 5
+}
+create_country_leader = {
+	name = "HM Elizabeth II"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_LIZ.png"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {silent_workhorse indomitable_perseverance popular_queen
+	}
+}
+
+create_country_leader = {
+	name = "Skyla Cole"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "HM Oliver I"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Oliver_Windsor.png"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Delilah Baxter"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Mollie Brown"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

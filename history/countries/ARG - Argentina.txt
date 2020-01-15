@@ -1,0 +1,75 @@
+﻿capital = 278
+
+oob = ARG_2136
+
+create_faction = "Eleventh International - P"
+add_to_faction = ARG
+add_to_faction = JAP
+
+set_politics = {
+	ruling_party = posadism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+    technicism = 8
+    revelationism = 0
+    posadism = 80
+    hoxhaism = 2
+    raider = 10
+}
+create_country_leader = {
+	name = "Carisa DeRose"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = constructionists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Tabor Bravo"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Xenia Escobar"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = integralists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Pancho Mendez"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Pancho_Mendez.png"
+	expire = "2165.1.1"
+	ideology = utopianists
+	traits = {chamberlain_appeaser inexperienced_imperialist rearmer
+	}
+}
+
+create_country_leader = {
+	name = "Ramira Mendoza"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = despot
+	traits = {
+		#
+	}
+}

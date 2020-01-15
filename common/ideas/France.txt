@@ -1,0 +1,277 @@
+ideas = {
+	political_advisor = {
+
+		FRA_haji_faiz_muhammed_zikeria = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { inexperienced_monarch
+			 					 hoxhaist_demagogue	}
+		}
+
+		FRA_mohammad_hashim_khan = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { heels_nipper
+			 					 staunch_raider}
+		}
+
+		FRA_mahmud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { veteran_worker
+									technicist_reformer }
+		}
+
+
+	FRA_mahmud_khan = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = FRA
+		}
+
+		traits = { new_world_sympathizer
+								revelationist_moralizer }
+	}
+	FRA_posad = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = FRA
+		}
+
+		traits = { champion_of_peace_5
+								posadist_revolutionary }
+	}
+
+
+		FRA_muhammed_nowroz = {
+
+			picture = generic_political_advisor_arab_3
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { silent_workhorse
+			 						dealbroker }
+		}
+
+}
+
+
+
+	theorist = {
+
+		FRA_muhammad_amin_bughra = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+
+			traits = { military_theorist }
+		}
+
+		FRA_renato_bardolucci = {
+
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		FRA_mohammed_daoud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { army_armored_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_azam_ataullah = {
+
+			picture = generic_army_arab_2
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { army_infantry_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_aalem_daana = {
+
+			picture = generic_navy_arab_3
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { navy_screen_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_hares_muzafar = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { army_entrenchment_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		FRA_asadullah_seraj_khan = {
+
+			picture = generic_army_arab_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_wazir_akbar_khan = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { army_chief_morale_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+
+		FRA_ali_muhammed_khan = {
+
+			picture = generic_air_arab_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { air_chief_reform_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_gholam_wali = {
+
+			picture = generic_air_arab_3
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { air_chief_ground_support_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		FRA_nasirullah_husain = {
+
+			picture = generic_navy_arab_2
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { navy_chief_decisive_battle_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		FRA_mohammed_etemadi_khan = {
+
+			picture = generic_navy_arab_1
+
+			allowed = {
+				original_tag = FRA
+			}
+
+			traits = { navy_chief_naval_aviation_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

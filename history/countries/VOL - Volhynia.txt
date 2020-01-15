@@ -1,0 +1,71 @@
+﻿capital = 93
+
+set_politics = {
+	ruling_party = technicism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+    technicism = 99
+    revelationism = 0
+    posadism = 0
+    hoxhaism = 0
+    raider = 1
+}
+create_country_leader = {
+	name = "Volodymyr Parubiy"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = constructionists
+	traits = {headstrong
+						assassination_survivor
+						disdain_for_politicians_2
+	}
+}
+
+create_country_leader = {
+	name = "Stepan Yanchuk"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = maoism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Fedir Palij"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ivan Slyusar"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Henadij Volynets"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = despot
+	traits = {
+		#
+	}
+}

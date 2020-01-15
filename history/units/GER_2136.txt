@@ -1,0 +1,259 @@
+﻿division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = GER_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+
+	##### Oberkommando des Heeres #####
+	### 1. Armee (Wehrmacht-Gruppenkommando) ###
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 12
+		}
+		location = 6513
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	# III. Armeekorps
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 478
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 23
+		}
+		location = 478
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	# Panzertruppenkommando
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 6521
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6521
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 6521
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "GER" } }
+	}
+
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 11505
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+	### 3. Armee (Wehrmacht-Gruppenkommando) ###
+	# IV. Armeekorps
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 24
+		}
+		location = 3312
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	# VIII. Armeekorps
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 8
+		}
+		location = 6487
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 18
+		}
+		location = 6487
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+	# I. Armeekorps
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9388
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 11
+		}
+		location = 321
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 21
+		}
+		location = 11415
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "Kavallerie-Kommando Insterburg"
+		location = 11305
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+
+	### 2. Armee (Wehrmacht-Gruppenkommando) ###
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 13
+		}
+		location = 6257
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	# VI. Armeekorps
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 6
+		}
+		location = 3326
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	# IX. Armeekorps
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 9
+		}
+		location = 349
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 15
+		}
+		location = 11402
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 20
+		}
+		location = 3277
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 22
+		}
+		location = 3277
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+	# V. Armeekorps
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 3207
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+	# VII. Armeekorps
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 7
+		}
+		location = 9496
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 10
+		}
+		location = 6377
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+				is_name_ordered = yes
+				name_order = 17
+		}
+		location = 9347
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "Militia"
+		location = 6389
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+}

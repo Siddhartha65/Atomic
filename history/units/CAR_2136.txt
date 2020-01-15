@@ -1,0 +1,127 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = BRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	##### Exército Brasileiro #####
+	division= {	# "1a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 12824
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 12925
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "3a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 10025
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "4a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 10067
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "5a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 4128
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "1a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 9986
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 1968
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 191
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 12907
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2a Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 1181
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+}

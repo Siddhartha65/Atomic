@@ -1,0 +1,3378 @@
+focus_tree = {
+	id = eeu_focus
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = DDR
+		}
+	}
+
+	default = yes
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 100 y = 200 }
+
+	focus = {
+		id = DDR_ongoing_conflict
+		icon = GFX_goal_generic_major_war
+		x = 28
+		y = 0
+		cost = 2
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+													add_war_support = 0.1
+													army_experience = 10
+													navy_experience = 10
+													air_experience = 10
+		}
+	}
+
+
+	focus = {
+		id = DDR_the_final_push
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = DDR_ongoing_conflict }
+		x = -2
+		y = 1
+		relative_position_id = DDR_ongoing_conflict
+		cost = 2
+		available_if_capitulated = yes
+
+		completion_reward = {
+													add_command_power = 100
+													add_equipment_to_stockpile = {
+											    type = infantry_equipment
+											    amount = 100
+											    producer = DDR
+											}
+		}
+	}
+
+	focus = {
+		id = DDR_eye_in_the_sky
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = DDR_ongoing_conflict }
+		x = 2
+		y = 1
+		relative_position_id = DDR_ongoing_conflict
+		cost = 2
+		available_if_capitulated = yes
+
+		completion_reward = {
+													add_ace = {
+																		name = "Visvaldis"
+																		surname = "Laht"
+																		callsign = "King"
+																		type = fighter_genius
+																		is_female = no
+																		}
+													add_equipment_to_stockpile = {
+																													type = fighter_equipment_0
+																													amount = 10
+																													producer = DDR
+																													}
+													air_experience = 10
+
+		}
+	}
+
+	focus = {
+		id = DDR_grzmot_wojny
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = DDR_eye_in_the_sky  focus = DDR_the_final_push}
+		x = 0
+		y = 2
+		relative_position_id = DDR_ongoing_conflict
+		cost = 2
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_equipment_to_stockpile = {
+																		type = tac_bomber_equipment_0
+																		amount = 10
+																		producer = DDR
+																		}
+		add_equipment_to_stockpile = {
+																		type = gw_tank_equipment
+																		amount = 10
+																		producer = DDR
+																	}
+		}
+	}
+
+	focus = {
+		id = DDR_civil_discontent
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = DDR_grzmot_wojny}
+		x = 0
+		y = 3
+		relative_position_id = DDR_ongoing_conflict
+		cost = 2
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_stability = 0.1
+		add_popularity = {
+    ideology = technicism
+    popularity = -0.1
+}
+
+		}
+	}
+
+################## Kommune 2 Wins ##############################
+	focus = {
+		id = DDR_president_peace
+		icon = GFX_goal_ddr_president_peace
+		mutually_exclusive = { focus = DDR_killing_kommunism}
+		prerequisite = { focus = DDR_civil_discontent}
+		available = {
+								 has_country_flag = coup_succ
+		}
+		x = -14
+		y = 4
+		relative_position_id = DDR_ongoing_conflict
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = DDR_failure_of_zinoviev
+		icon = GFX_focus_ddr_oppose_hitler
+		prerequisite = { focus = DDR_president_peace }
+    available = {
+                 NOT = { has_completed_focus = DDR_killing_kommunism }
+    }
+		x = 0
+		y = 1
+		relative_position_id = DDR_president_peace
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = illegitimate_gov
+				add_idea = chaos_gov
+			}
+		}
+	}
+
+##################### Council Meeting ########################################
+	focus = {
+		id = DDR_summon_the_council
+		icon = GFX_goal_generic_treaty
+		prerequisite = { focus = DDR_failure_of_zinoviev }
+		x = -6
+		y = 2
+		relative_position_id = DDR_president_peace
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+		add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = DDR_baltic_lions
+		icon = GFX_goal_ddr_baltic_lions
+		prerequisite = { focus = DDR_summon_the_council }
+		x = -4
+		y = 1
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+							add_ideas = baltic_support
+		}
+	}
+
+	focus = {
+		id = DDR_lithuania_wants_factories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DDR_baltic_lions }
+		x = -6
+		y = 2
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+			189 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+				188 = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = DDR_vilinus_wants_autonomy
+		icon = GFX_goal_generic_special_region
+		prerequisite = { focus = DDR_lithuania_wants_factories }
+		x = -6
+		y = 3
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+													VIL = { add_state_core = 784 add_state_core = 96 }
+													LIT = { remove_state_core = 784 remove_state_core = 96 }
+													add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = DDR_latvia_wants_ports
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = DDR_baltic_lions }
+		x = -4
+		y = 2
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+			12 = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+				190 = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = DDR_kurland_wants_colonies
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = DDR_latvia_wants_ports }
+		x = -4
+		y = 3
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+		  add_named_threat = {
+										    threat = 5
+										    name = Neo-Colonialism
+										}
+			create_wargoal = {
+				type = annex_everything
+				target = CUB
+			}
+			add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = DDR_estonia_wants_both
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = DDR_baltic_lions }
+		x = -2
+		y = 2
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+			191 = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+				13 = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = DDR_naissaar_wants_another_lighthouse
+		icon = GFX_focus_generic_coastal_fort
+		prerequisite = { focus = DDR_estonia_wants_both }
+		x = -2
+		y = 3
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+													13 = {
+																														add_building_construction = {
+																																type = coastal_bunker
+																																level = 3
+																																instant_build = yes
+																																province = {
+																																		all_provinces = yes
+																																		limit_to_border = yes
+																																}
+																														}
+													}
+													add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = DDR_polish_eagle
+		icon = GFX_goal_ddr_polish_eagle
+		prerequisite = { focus = DDR_summon_the_council }
+		x = 2
+		y = 1
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+							add_ideas = polish_support
+		}
+	}
+
+	focus = {
+		id = DDR_poland_demands_airports
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = DDR_polish_eagle }
+		x = 2
+		y = 2
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+			94 = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = air_base
+					level = 1
+					instant_build = yes
+				}
+			}
+				98 = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = air_base
+						level = 1
+						instant_build = yes
+					}
+				}
+		}
+	}
+
+	focus = {
+		id = DDR_warsaw_demands_a_monument
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = DDR_poland_demands_airports }
+		x = 2
+		y = 3
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+			10 = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = DDR_in_roads_to_centralization
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = DDR_summon_the_council }
+		x = 0
+		y = 2
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+			10 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+				5 = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+					784 = {
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+						11 = {
+							limit = {
+								free_building_slots = {
+									building = infrastructure
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = infrastructure
+								level = 1
+								instant_build = yes
+							}
+						}
+							12 = {
+								limit = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 1
+								add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+							}
+								13 = {
+									limit = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+											include_locked = yes
+										}
+									}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+								}
+								190 = {
+									limit = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+											include_locked = yes
+										}
+									}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+								}
+								763 = {
+									limit = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+											include_locked = yes
+										}
+									}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+										type = infrastructure
+										level = 2
+										instant_build = yes
+									}
+								}
+		}
+	}
+
+	focus = {
+		id = DDR_end_the_meeting
+		icon = GFX_goal_ddr_end_meet
+		prerequisite = { focus = DDR_in_roads_to_centralization focus = DDR_lithuania_wants_factories focus = DDR_latvia_wants_ports focus = DDR_estonia_wants_both focus = DDR_poland_demands_airports focus = DDR_vilinus_wants_autonomy focus = DDR_naissaar_wants_another_lighthouse focus = DDR_kurland_wants_colonies focus = DDR_warsaw_demands_a_monument }
+		x = 0
+		y = 4
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+					remove_ideas = chaos_gov
+		}
+	}
+
+	focus = {
+		id = DDR_restoring_our_good_intentions
+		icon = GFX_GFX_goal_unknown.dds
+		mutually_exclusive = { focus =  DDR_abolish_the_presidents }
+		prerequisite = { focus = DDR_end_the_meeting }
+		x = 0
+		y = 6
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+														add_ideas = {
+														              government_in_order
+														}
+                        }
+	}
+
+	focus = {
+		id = DDR_a_union_once_again
+		icon = GFX_goal_unknown.dds
+		prerequisite = { focus = DDR_restoring_our_good_intentions focus = DDR_revolution_in_europe  focus = DDR_long_live_posadas}
+		x = 4
+		y = 7
+		relative_position_id = DDR_summon_the_council
+		cost = 7
+		available_if_capitulated = yes
+
+		completion_reward = {
+                            DDR = { set_cosmetic_tag = KAL }
+														swap_ideas = {
+															remove_idea = government_in_order
+															add_idea = governments_together
+														}
+													if = { limit = { 784 = { is_core_of = VIL } }
+																	release_puppet = VIL
+						                          VIL = {
+																								add_ideas =  idea = governments_together
+						                             }
+															}
+													release_puppet = LIT
+													release_puppet = LAT
+													release_puppet = EST
+													release_puppet = POL
+                          LIT = {
+																		add_ideas = idea = governments_together
+                             }
+                          LAT = {
+																		add_ideas = governments_together
+                             }
+                          EST = {
+																		add_ideas = governments_together
+                             }
+                          POL = {
+																		add_ideas = governments_together
+                             }
+		}
+	}
+
+
+	##################### Hoxha Reaction ########################################
+		focus = {
+			id = DDR_how_did_hoxha_win
+			icon = GFX_goal_DDR_anti_hoxhaism
+			prerequisite = { focus = DDR_failure_of_zinoviev }
+			x = 3
+			y = 2
+			relative_position_id = DDR_president_peace
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+								add_ideas = anti_hoxhaism
+			}
+		}
+
+		focus = {
+			id = DDR_interview_the_devils
+			icon = GFX_goal_DDR_interview_devils
+			mutually_exclusive = { focus = DDR_traitors_amongst_us }
+			prerequisite = { focus = DDR_how_did_hoxha_win }
+			x = -2
+			y = 1
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+								add_ideas = Posadism_1
+								add_country_leader_trait = posadism_sympathies
+
+			}
+		}
+
+		focus = {
+			id = DDR_what_is_revisionism
+			icon = GFX_goal_DDR_what_is_revisionism
+			prerequisite = { focus = DDR_interview_the_devils }
+			x = -4
+			y = 2
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = Posadism_1
+					add_idea = Posadism_2
+				}
+					add_country_leader_trait = anti_imperialist
+			}
+		}
+
+		focus = {
+			id = DDR_where_are_our_physicists
+			icon = GFX_focus_research
+			prerequisite = { focus = DDR_what_is_revisionism }
+			x = -2
+			y = 3
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = Posadism_2
+					add_idea = Posadism_3
+				}
+					add_country_leader_trait = nuclear_scientist
+			}
+		}
+
+		focus = {
+			id = DDR_could_we_do_it
+			icon = GFX_goal_generic_secret_weapon
+			prerequisite = { focus = DDR_where_are_our_physicists }
+			x = -4
+			y = 4
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = Posadism_3
+					add_idea = Posadism_4
+				}
+					add_tech_bonus = {
+						name = nuclear_bonus
+						ahead_reduction = 2
+						uses = 10
+						bonus = 0.5
+						category = nuclear
+					}
+						add_country_leader_trait = permanent_revolutionary
+			}
+		}
+
+		focus = {
+			id = DDR_is_anyone_out_there
+			icon = GFX_goal_generic_radar
+			prerequisite = { focus = DDR_could_we_do_it }
+			x = -2
+			y = 5
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+											set_politics = {
+												ruling_party = posadism
+											}
+
+											create_country_leader = {
+											name = "Christoph Josten"
+											desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+											picture = Portrait_Christoph_Josten.png
+											expire = "2165.1.1"
+											ideology = star_eyes
+											traits = {connected_citizen
+																backroom_backstabber
+																propaganda_expert
+                                posadism_sympathies
+                                anti_imperialist
+                                nuclear_scientist
+                                permanent_revolutionary
+                                posadist_revolutionary
+										           }
+									    }
+											create_country_leader = {
+												name = "Dunja Zinovieva"
+												desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+												picture = "Portrait_Dunja_Zinoviev.png"
+												expire = "2165.1.1"
+												ideology = continuists
+												traits = { liberal_journalist strict_austerity_adherent diplomatic_workhorse
+												}
+											}
+											set_politics = {
+																				ruling_party = posadism
+																			}
+				swap_ideas = {
+					remove_idea = Posadism_4
+					add_idea = Posadism_5
+				}
+					add_tech_bonus = {
+						name = rocketry_bonus
+						ahead_reduction = 2
+						uses = 10
+						bonus = 0.5
+						category = rocketry
+					}
+			}
+		}
+
+		focus = {
+			id = DDR_long_live_posadas
+			icon = GFX_focus_arg
+			prerequisite = { focus = DDR_is_anyone_out_there }
+			mutually_exclusive = { focus = DDR_our_moral_imperative }
+			mutually_exclusive = { focus = DDR_an_alliance_to_take_the_north }
+			mutually_exclusive = { focus = DDR_revolution_in_europe }
+	    available = {
+	        ARG = {has_government = posadism}
+	    }
+			x = -1
+			y = 6
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+													ARG = {
+															country_event = {
+																						    id = arg.2
+																						    days = 1
+
+																						}
+													}
+												}
+		}
+
+		focus = {
+			id = DDR_revolution_in_europe
+			icon = GFX_focus_eeu_p
+			prerequisite = { focus = DDR_is_anyone_out_there }
+			mutually_exclusive = { focus = DDR_our_moral_imperative }
+			mutually_exclusive = { focus = DDR_an_alliance_to_take_the_north }
+			mutually_exclusive = { focus = DDR_long_live_posadas }
+	    bypass = {
+	        has_country_flag = eeu_own_fact
+	    }
+			x = -5
+			y = 6
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+											create_faction = twelfth_international_p
+                      add_ideas = idea = eeu_alone
+			}
+		}
+
+		focus = {
+			id = DDR_traitors_amongst_us
+			icon = GFX_goal_DDR_traitors
+			mutually_exclusive = { focus = DDR_interview_the_devils }
+			prerequisite = { focus = DDR_how_did_hoxha_win }
+			x = 2
+			y = 1
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+								add_ideas = revelationism_1
+								add_country_leader_trait = revelationist_sympathies
+			}
+		}
+
+		focus = {
+			id = DDR_dig_out_the_bunkers
+			icon = GFX_goal_DDR_dig_them_out
+			prerequisite = { focus = DDR_traitors_amongst_us }
+			x = 2
+			y = 2
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = revelationism_1
+					add_idea = revelationism_2
+				}
+						add_country_leader_trait = genial_anti_revolutionary
+			}
+		}
+
+		focus = {
+			id = DDR_fill_them_in
+			icon = GFX_goal_unknown.dds
+			prerequisite = { focus = DDR_dig_out_the_bunkers }
+			x = 1
+			y = 3
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = revelationism_2
+					add_idea = revelationism_3
+				}
+						add_country_leader_trait = anti_communist
+			}
+		}
+
+		focus = {
+			id = DDR_as_above_so_below
+			icon = GFX_goal_generic_support_revelationism
+			prerequisite = { focus = DDR_fill_them_in }
+			x = 2
+			y = 4
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+				swap_ideas = {
+					remove_idea = revelationism_3
+					add_idea = revelationism_4
+				}
+						add_country_leader_trait = revelationist_moralizer
+			}
+		}
+
+		focus = {
+			id = DDR_abolish_the_presidents
+			icon = GFX_goal_DDR_abolish_pres
+			prerequisite = { focus = DDR_as_above_so_below }
+			mutually_exclusive = { focus = DDR_restoring_our_good_intentions }
+			x = 2
+			y = 5
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+											set_politics = {
+												ruling_party = revelationism
+											}
+											create_country_leader = {
+											name = "Christoph Josten"
+											desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+											picture = Portrait_Christoph_Josten.png
+											expire = "2165.1.1"
+											ideology = clericalists
+											traits = {connected_citizen
+																backroom_backstabber
+																propaganda_expert
+                                revelationist_sympathies
+                                genial_anti_revolutionary
+                                anti_communist
+                                revelationist_moralizer
+                                autocratic_imperialist
+										           }
+									    }
+											create_country_leader = {
+												name = "Dunja Zinovieva"
+												desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+												picture = "Portrait_Dunja_Zinoviev.png"
+												expire = "2165.1.1"
+												ideology = continuists
+												traits = { liberal_journalist strict_austerity_adherent diplomatic_workhorse
+												}
+											}
+				swap_ideas = {
+					remove_idea = revelationism_4
+					add_idea = revelationism_5
+				}
+			}
+		}
+
+		focus = {
+			id = DDR_our_moral_imperative
+			icon = GFX_focus_ama
+			prerequisite = { focus = DDR_abolish_the_presidents }
+			mutually_exclusive = { focus = DDR_long_live_posadas }
+			mutually_exclusive = { focus = DDR_an_alliance_to_take_the_north }
+			x = 2
+			y = 6
+			relative_position_id = DDR_how_did_hoxha_win
+			cost = 7
+			available_if_capitulated = yes
+
+			completion_reward = {
+													NGA = {
+															country_event = {
+																						    id = nga.1
+																						    days = 1
+
+																						}
+													}
+			}
+		}
+
+################## Alliance ############
+
+		focus = {
+			id = DDR_rebuilding_the_union
+			icon = GFX_goal_DDR_rebuild_eu
+			prerequisite = { focus = DDR_failure_of_zinoviev }
+			x = 16
+			y = 1
+			relative_position_id = DDR_failure_of_zinoviev
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+															add_war_support = 0.1
+															add_political_power = 50
+			}
+		}
+
+		focus = {
+			id = DDR_meeting_with_royalty
+			icon = GFX_goal_DDR_meeting
+			prerequisite = { focus = DDR_rebuilding_the_union }
+			mutually_exclusive = {focus = DDR_fight_the_west }
+			x = -4
+			y = 1
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+													LUX = {
+															country_event = {
+																						    id = lux.1
+																						    days = 1
+
+																						}
+													}
+													ENG = {
+															country_event = {
+																						    id = eng.1
+																						    days = 1
+
+																						}
+													}
+			}
+		}
+
+		focus = {
+			id = DDR_beneficial_neighbor
+			icon = GFX_goal_DDR_beneficial_neighbors
+			prerequisite = { focus = DDR_meeting_with_royalty }
+	    available = {
+	        NOT = { has_country_flag = eeu_lux_ignore }
+        }
+	    bypass = {
+	        has_country_flag = eeu_lux_ignore
+	    }
+			x = -6
+			y = 2
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+														add_opinion_modifier = {
+    																								target = LUX
+    																								modifier = economy_assist
+																									}
+														LUX = { add_political_power = 100 }
+																									56 = {
+																																										add_building_construction = {
+																																												type = coastal_bunker
+																																												level = 3
+																																												instant_build = yes
+																																												province = {
+																																														all_provinces = yes
+																																														limit_to_border = yes
+																																												}
+																																										}
+																									}
+																																				29 = {
+																																																					add_building_construction = {
+																																																							type = coastal_bunker
+																																																							level = 3
+																																																							instant_build = yes
+																																																							province = {
+																																																									all_provinces = yes
+																																																									limit_to_border = yes
+																																																							}
+																																																					}
+																																				}
+
+																												763 = {
+																																													add_building_construction = {
+																																															type = coastal_bunker
+																																															level = 3
+																																															instant_build = yes
+																																															province = {
+																																																	all_provinces = yes
+																																																	limit_to_border = yes
+																																															}
+																																													}
+																												}
+
+			}
+		}
+
+		focus = {
+			id = DDR_lux_britannia
+			icon = GFX_goal_DDR_lux_britannia
+			prerequisite = { focus = DDR_beneficial_neighbor }
+	    bypass = {
+	        has_country_flag = eeu_eng_ignore
+	    }
+			x = -6
+			y = 3
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+														add_opinion_modifier = {
+    																								target = ENG
+    																								modifier = economy_assist
+																									}
+														ENG = { add_political_power = 100 }
+																									127 = {
+																																										add_building_construction = {
+																																												type = coastal_bunker
+																																												level = 3
+																																												instant_build = yes
+																																												province = {
+																																														all_provinces = yes
+																																														limit_to_border = yes
+																																												}
+																																										}
+																									}
+																																				126 = {
+																																																					add_building_construction = {
+																																																							type = coastal_bunker
+																																																							level = 3
+																																																							instant_build = yes
+																																																							province = {
+																																																									all_provinces = yes
+																																																									limit_to_border = yes
+																																																							}
+																																																					}
+																																				}
+
+																												763 = {
+																																													add_building_construction = {
+																																															type = coastal_bunker
+																																															level = 3
+																																															instant_build = yes
+																																															province = {
+																																																	all_provinces = yes
+																																																	limit_to_border = yes
+																																															}
+																																													}
+																												}
+
+			}
+		}
+
+		focus = {
+			id = DDR_invest_invest_invest
+			icon = GFX_goal_generic_construction
+			prerequisite = { focus = DDR_rebuilding_the_union }
+			x = -2
+			y = 2
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+				763 = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+					10 = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+						784 = {
+							limit = {
+								free_building_slots = {
+									building = arms_factory
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+						}
+							12 = {
+								limit = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							}
+			}
+		}
+
+		focus = {
+			id = DDR_the_land_force_of_europe
+			icon = GFX_goal_generic_army_tanks
+			prerequisite = { focus = DDR_invest_invest_invest }
+			prerequisite = { focus = DDR_beneficial_neighbor }
+	    bypass = {
+	        has_country_flag = eeu_lux_ignore
+	    }
+			x = -4
+			y = 3
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+				763 = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+					8 = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 2
+							instant_build = yes
+						}
+					}
+						6 = {
+							limit = {
+								free_building_slots = {
+									building = arms_factory
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+						}
+							7 = {
+								limit = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							}
+			}
+		}
+
+		focus = {
+			id = DDR_the_royal_fleet
+			icon = GFX_goal_generic_construct_naval_dockyard
+			prerequisite = { focus = DDR_the_land_force_of_europe }
+			prerequisite = { focus = DDR_lux_britannia }
+	    bypass = {
+	        has_country_flag = eeu_eng_ignore
+	    }
+			x = -4
+			y = 4
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+				763 = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+					126 = {
+						limit = {
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+						}
+					}
+						120 = {
+							limit = {
+								free_building_slots = {
+									building = dockyard
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = dockyard
+								level = 2
+								instant_build = yes
+							}
+						}
+							129 = {
+								limit = {
+									free_building_slots = {
+										building = dockyard
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = dockyard
+									level = 2
+									instant_build = yes
+								}
+							}
+			}
+		}
+
+
+		focus = {
+			id = DDR_fly_with_our_strengths
+			icon = GFX_goal_generic_air_doctrine
+			prerequisite = { focus = DDR_invest_invest_invest }
+			x = -2
+			y = 3
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+				air_experience = 50
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 0.5
+					uses = 4
+					technology = early_fighter
+					technology = fighter1
+					technology = fighter2
+					technology = fighter3
+					technology = heavy_fighter1
+					technology = heavy_fighter2
+					technology = heavy_fighter3
+				}
+			}
+		}
+
+		focus = {
+			id = DDR_airfields_everywhere
+			icon = GFX_goal_generic_construct_infrastructure
+			prerequisite = { focus = DDR_fly_with_our_strengths }
+			x = -2
+			y = 4
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+				5 = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+				}
+					190 = {
+						limit = {
+							free_building_slots = {
+								building = air_base
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = air_base
+							level = 2
+							instant_build = yes
+						}
+					}
+						87 = {
+							limit = {
+								free_building_slots = {
+									building = air_base
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+							}
+						}
+							189 = {
+								limit = {
+									free_building_slots = {
+										building = air_base
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							}
+			}
+		}
+
+		focus = {
+			id = DDR_take_em_down
+			icon = GFX_goal_DDR_take_em_down
+			prerequisite = { focus = DDR_airfields_everywhere }
+			x = -2
+			y = 5
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+				5 = {
+					limit = {
+						free_building_slots = {
+							building = anti_air_building
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = anti_air_building
+						level = 2
+						instant_build = yes
+					}
+				}
+					190 = {
+						limit = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = anti_air_building
+							level = 2
+							instant_build = yes
+						}
+					}
+						87 = {
+							limit = {
+								free_building_slots = {
+									building = anti_air_building
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = anti_air_building
+								level = 2
+								instant_build = yes
+							}
+						}
+							189 = {
+								limit = {
+									free_building_slots = {
+										building = anti_air_building
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = anti_air_building
+									level = 2
+									instant_build = yes
+								}
+							}
+			}
+		}
+
+		focus = {
+			id = DDR_reclaim_our_country
+			icon = GFX_goal_DDR_reclaim_our_country
+			prerequisite = { focus = DDR_take_em_down }
+			x = -2
+			y = 6
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			   add_named_threat = {
+												    threat = 10
+												    name = Rekonesans
+												}
+				create_wargoal = {
+					type = annex_everything
+					target = GER
+				}
+					create_wargoal = {
+						type = annex_everything
+						target = DEN
+					}
+			}
+		}
+
+		focus = {
+			id = DDR_an_alliance_to_take_the_north
+			icon = GFX_goal_DDR_an_alliance_to_take_the_north
+			mutually_exclusive = { focus = DDR_our_moral_imperative }
+			mutually_exclusive = { focus = DDR_long_live_posadas }
+			prerequisite = { focus = DDR_the_royal_fleet }
+			x = -4
+			y = 6
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+                           create_faction = neo-european_union
+							 										DDR = { add_to_faction = LUX }
+			 							 						  DDR = { add_to_faction = ENG }
+			}
+		}
+
+		focus = {
+			id = DDR_eliminate_hoxhaism
+			icon = GFX_goal_DDR_eliminate_hoxhaism
+			prerequisite = { focus = DDR_an_alliance_to_take_the_north focus = DDR_our_moral_imperative focus = DDR_long_live_posadas focus = DDR_revolution_in_europe  }
+			prerequisite = { focus = DDR_reclaim_our_country }
+			x = -4
+			y = 7
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			  add_named_threat = {
+											    threat = 20
+											    name = The_Big_War
+											}
+				create_wargoal = {
+					type = annex_everything
+					target = ALB
+				}
+			}
+		}
+
+		focus = {
+			id = DDR_fight_the_west
+			icon = GFX_goal_DDR_fight_the_west
+      mutually_exclusive = { focus = DDR_meeting_with_royalty }
+			prerequisite = { focus = DDR_rebuilding_the_union }
+			x = 4
+			y = 1
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+														add_war_support = 0.1
+														army_experience = 10
+														navy_experience = 10
+														air_experience = 10
+														add_ideas = { fight_the_west }
+			}
+		}
+
+		focus = {
+			id = DDR_appoint_their_presidents
+			icon = GFX_goal_DDR_appoint_their_presidents
+			prerequisite = { focus = DDR_fight_the_west }
+			x = 4
+			y = 3
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+														LUX = { add_political_power = -50
+ 																		add_stability = -0.1
+																		add_popularity = {
+																    ideology = technicism
+																    popularity = 0.15
+																		}
+																	}
+														ENG = { add_political_power = -50
+ 																		add_stability = -0.1
+																		add_popularity = {
+																    ideology = technicism
+																    popularity = 0.15
+																		}
+																	}
+														FRA = { add_political_power = -50
+ 																		add_stability = -0.1
+																		add_popularity = {
+																    ideology = technicism
+																    popularity = 0.15
+																		}
+																	}
+			}
+		}
+
+		focus = {
+			id = DDR_prepare_the_bombers
+			icon = GFX_goal_generic_air_bomber
+			prerequisite = { focus = DDR_appoint_their_presidents }
+			prerequisite = { focus = DDR_fly_with_our_strengths }
+			x = 2
+			y = 5
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+				add_tech_bonus = {
+					name = fighter_bonus
+					bonus = 0.5
+					uses = 4
+					technology = early_fighter
+					technology = fighter1
+					technology = fighter2
+					technology = fighter3
+					technology = heavy_fighter1
+					technology = heavy_fighter2
+					technology = heavy_fighter3
+				}
+			}
+		}
+
+		focus = {
+			id = DDR_fortify_the_german_border
+			icon = GFX_goal_generic_fort
+			prerequisite = { focus = DDR_prepare_the_bombers }
+			x = 2
+			y = 6
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {																									63 = {
+																																													add_building_construction = {
+																																															type = bunker
+																																															level = 3
+																																															instant_build = yes
+																																															province = {
+																																																	all_provinces = yes
+																																																	limit_to_border = yes
+																																															}
+																																													}
+																												}
+68 = {
+																																										add_building_construction = {
+																																												type = bunker
+																																												level = 3
+																																												instant_build = yes
+																																												province = {
+																																														all_provinces = yes
+																																														limit_to_border = yes
+																																												}
+																																										}
+			}
+		}
+}
+
+		focus = {
+			id = DDR_the_last_great_war
+			icon = GFX_goal_generic_fort
+			prerequisite = { focus = DDR_reclaim_our_country }
+			prerequisite = { focus = DDR_appoint_their_presidents }
+			x = 4
+			y = 7
+			relative_position_id = DDR_rebuilding_the_union
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			  add_named_threat = {
+											    threat = 20
+											    name = The_Great_War
+											}
+							create_wargoal = {
+								type = annex_everything
+								target = FRA
+							}
+					create_wargoal = {
+						type = annex_everything
+						target = LUX
+					}
+						create_wargoal = {
+							type = annex_everything
+							target = ENG
+						}
+			}
+		}
+
+		################## EEU Wins ##############################
+			focus = {
+				id = DDR_killing_kommunism
+				icon = GFX_goal_unknown.dds
+				mutually_exclusive = { focus = DDR_president_peace }
+				prerequisite = { focus = DDR_civil_discontent}
+	      available = {
+                     has_country_flag = coup_fail
+								     NOT = { has_completed_focus = DDR_killing_kommunism }
+	      }
+				x = 16
+				y = 1
+				relative_position_id = DDR_civil_discontent
+				cost = 7
+				available_if_capitulated = yes
+
+				completion_reward = {
+				}
+			}
+
+####################### G Pres #################
+
+	focus = {
+		id = DDR_whos_the_german_president
+		icon = GFX_goal_unknown.dds
+		prerequisite = { focus = DDR_killing_kommunism }
+		x = 16
+		y = 2
+		relative_position_id = DDR_killing_kommunism
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = illegitimate_gov
+				add_idea = gov_in_progress
+			}
+		}
+	}
+
+	focus = {
+		id = DDR_let_them_vote
+		icon = GFX_goal_generic_political_effort
+		prerequisite = { focus = DDR_whos_the_german_president }
+		mutually_exclusive { focus = DDR_let_them_vote}
+		x = -2
+		y = 1
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gov_in_progress
+				add_idea = gov_in_voting
+			}
+		}
+	}
+
+	focus = {
+		id = DDR_election_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = DDR_let_them_vote }
+		x = -4
+		y = 2
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+					10 = {
+						limit = {
+							free_building_slots = {
+								building = infrastructure
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+					}
+						5 = {
+							limit = {
+								free_building_slots = {
+									building = infrastructure
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 1
+							add_building_construction = {
+								type = infrastructure
+								level = 1
+								instant_build = yes
+							}
+						}
+							784 = {
+								limit = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 1
+								add_building_construction = {
+									type = infrastructure
+									level = 1
+									instant_build = yes
+								}
+							}
+								11 = {
+									limit = {
+										free_building_slots = {
+											building = infrastructure
+											size > 0
+											include_locked = yes
+										}
+									}
+									add_extra_state_shared_building_slots = 1
+									add_building_construction = {
+										type = infrastructure
+										level = 1
+										instant_build = yes
+									}
+								}
+									12 = {
+										limit = {
+											free_building_slots = {
+												building = infrastructure
+												size > 0
+												include_locked = yes
+											}
+										}
+										add_extra_state_shared_building_slots = 1
+										add_building_construction = {
+											type = infrastructure
+											level = 1
+											instant_build = yes
+										}
+									}
+										13 = {
+											limit = {
+												free_building_slots = {
+													building = infrastructure
+													size > 0
+													include_locked = yes
+												}
+											}
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+												type = infrastructure
+												level = 1
+												instant_build = yes
+											}
+										}
+										190 = {
+											limit = {
+												free_building_slots = {
+													building = infrastructure
+													size > 0
+													include_locked = yes
+												}
+											}
+											add_extra_state_shared_building_slots = 1
+											add_building_construction = {
+												type = infrastructure
+												level = 1
+												instant_build = yes
+											}
+										}
+										763 = {
+											limit = {
+												free_building_slots = {
+													building = infrastructure
+													size > 0
+													include_locked = yes
+												}
+											}
+											add_extra_state_shared_building_slots = 2
+											add_building_construction = {
+												type = infrastructure
+												level = 2
+												instant_build = yes
+											}
+										}
+		}
+	}
+
+	focus = {
+		id = DDR_canidate_vetting
+		icon = GFX_goal_ddr_end_meet
+		prerequisite = { focus = DDR_let_them_vote }
+		x = -2
+		y = 2
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+															create_country_leader = {
+																name = "Theodor Schober"
+																desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+																picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+																expire = "2165.1.1"
+																ideology = hoxhaismD
+																traits = {captain_of_industry
+                                          council_communist
+                                          nationalist_symbol
+													}
+													add_political_power = 50
+                       }
+		}
+	}
+
+	focus = {
+		id = DDR_hand_on_the_scale
+		icon = GFX_goal_generic_support_technism
+		prerequisite = { focus = DDR_canidate_vetting }
+		mutually_exclusive { focus = DDR_let_it_go }
+		x = -2
+		y = 3
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gov_in_voting
+				add_idea = gov_in_voting_tech
+			}
+		}
+	}
+
+	focus = {
+		id = DDR_technical_win
+		icon = GFX_goal_technicism_group
+		prerequisite = { focus = DDR_hand_on_the_scale }
+		mutually_exclusive { focus = DDR_technical_win }
+		x = -2
+		y = 4
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gov_in_voting_tech
+				add_idea = technicism_superior
+			}
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = DDR_let_it_go
+		icon = GFX_goal_generic_support_hoxhaism
+		prerequisite = { focus = DDR_canidate_vetting }
+		mutually_exclusive { focus = DDR_hand_on_the_scale }
+		x = -4
+		y = 3
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gov_in_voting
+				add_idea = gov_in_voting_hox
+			}
+		}
+	}
+
+	focus = {
+		id = DDR_hoxhaistische_partei_victory
+		icon = GFX_goal_hoxhaism_group
+		prerequisite = { focus = DDR_let_it_go }
+		x = -4
+		y = 4
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = gov_in_voting_hox
+				add_idea = hoxhaism_superior
+			}
+                          GER = {
+																create_country_leader = {
+																	name = "Theodor Schober"
+																	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+																	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+																	expire = "2165.1.1"
+																	ideology = hoxhaismD
+																	traits = {captain_of_industry
+	                                          council_communist
+	                                          nationalist_symbol
+														}
+                          }
+			add_research_slot = 1
+		}
+	}
+}
+
+	focus = {
+		id = DDR_the_unity_project
+		icon = GFX_goal_unknown.dds
+		prerequisite = { focus = DDR_whos_the_german_president }
+		x = 2
+		y = 1
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+                        							add_ideas = unity_project
+		}
+	}
+
+	focus = {
+		id = DDR_reduce_presidential_power
+		icon = GFX_goal_unknown.dds
+		prerequisite = { focus = DDR_the_unity_project }
+		mutually_exclusive = {focus = DDR_end_of_federalism}
+		x = 2
+		y = 2
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = unity_project
+				add_idea = unity_project_evolve
+			}
+		}
+	}
+
+	focus = {
+		id = DDR_united_states_of_eastern_europe
+		icon = GFX_goal_DDR_use
+		prerequisite = { focus = DDR_reduce_presidential_power }
+		x = 2
+		y = 3
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = unity_project_evolve
+				add_idea = unity_project_full
+			}
+      59 = {remove_core_of = GER}
+      58 = {remove_core_of = GER}
+      61 = {remove_core_of = GER}
+      64 = {remove_core_of = GER}
+      68 = {remove_core_of = GER remove_core_of = POL}
+      63 = {remove_core_of = GER remove_core_of = POL}
+      86 = {remove_core_of = GER remove_core_of = POL}
+      85 = {remove_core_of = POL}
+      87 = {remove_core_of = POL}
+      90 = {remove_core_of = POL}
+      92 = {remove_core_of = POL}
+      85 = {remove_core_of = POL}
+      10 = {remove_core_of = POL}
+      85 = {remove_core_of = POL}
+      98 = {remove_core_of = POL}
+      5 = {remove_core_of = POL}
+      94 = {remove_core_of = POL}
+      97 = {remove_core_of = POL}
+      95 = {remove_core_of = POL}
+      96 = {remove_core_of = LIT}
+      784 = {remove_core_of = LIT}
+      189 = {remove_core_of = LIT}
+      188 = {remove_core_of = LIT}
+      96 = {remove_core_of = LIT}
+      190 = {remove_core_of = LAT}
+      12 = {remove_core_of = LAT}
+      191 = {remove_core_of = EST}
+      13 = {remove_core_of = EST}
+		}
+	}
+
+	focus = {
+		id = DDR_end_of_federalism
+		icon = GFX_goal_unknown.dds
+		prerequisite = { focus = DDR_the_unity_project}
+		mutually_exclusive { focus = DDR_reduce_presidential_power}
+		x = 4
+		y = 2
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = unity_project
+				add_idea = unity_project_devolve
+			}
+		}
+	}
+
+	focus = {
+		id = DDR_baltics_united
+		icon = GFX_goal_unknown.dds
+		prerequisite = { focus = DDR_end_of_federalism }
+		mutually_exclusive = { focus = DDR_full_devolution }
+		x = 4
+		y = 3
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+                          DDR = { set_cosmetic_tag = BAL }
+													add_ideas = governments_together
+													release_puppet = GER
+													release_puppet = POL
+                          GER = {
+																		add_ideas = governments_together
+                             }
+                          POL = {
+																		add_ideas = governments_together
+                             }
+		}
+	}
+
+	focus = {
+		id = DDR_full_devolution
+		icon = GFX_goal_DDR_full_devolve
+		prerequisite = { focus = DDR_end_of_federalism }
+		mutually_exclusive = { focus = DDR_baltics_united }
+		x = 6
+		y = 3
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+													add_ideas = governments_together
+													release_puppet = LIT
+													release_puppet = LAT
+													release_puppet = EST
+													release_puppet = POL
+                          LIT = {
+																		add_ideas = governments_together
+                             }
+                          LAT = {
+																		add_ideas = governments_together
+                             }
+                          EST = {
+																		add_ideas = governments_together
+                             }
+                          POL = {
+																		add_ideas = governments_together
+                             }
+		}
+	}
+
+	focus = {
+		id = DDR_fly_our_full_flag
+		icon = GFX_goal_unknown.dds
+		prerequisite = { focus = DDR_united_states_of_eastern_europe focus = DDR_full_devolution focus = DDR_baltics_united }
+    prerequisite = {focus = DDR_hoxhaistische_partei_victory focus = DDR_technical_win }
+		x = 0
+		y = 5
+		relative_position_id = DDR_whos_the_german_president
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+      add_ideas = {
+				legitimate_gov
+			}
+		}
+	}
+
+##### T Barb ########
+
+	focus = {
+		id = DDR_barbarism_around_us
+		icon = GFX_goal_DDR_barbarism_around_us
+		prerequisite = { focus = DDR_killing_kommunism }
+		x = 8
+		y = 1
+		relative_position_id = DDR_killing_kommunism
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+													add_war_support = 0.1
+													add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = DDR_the_empire
+		icon = GFX_goal_DDR_the_empire
+		prerequisite = { focus = DDR_barbarism_around_us }
+		x = 2
+		y = 1
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+												CZE = {
+														country_event = {
+																							id = cze.1
+																							days = 1
+																					}
+												}
+		}
+	}
+
+	focus = {
+		id = DDR_exploit_their_division
+		icon = GFX_goal_generic_keep_the_fire
+		prerequisite = { focus = DDR_the_empire }
+		x = 2
+		y = 2
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+          CZE = {
+										add_timed_idea = {
+																		    idea = eeu_influence_1
+																		    days = 200
+                                     }
+
+					set_variable = {
+											var = no_supplies
+											value = 0
+									}
+
+					set_variable = {
+											    var = RUT_supplies
+											    value = 2
+											}
+					set_variable = {
+											    var = GAL_supplies
+											    value = 2
+											}
+					set_variable = {
+											    var = SLO_supplies
+											    value = 2
+											}
+					set_variable = {
+											    var = HUN_supplies
+											    value = 2
+											}
+								}
+
+		}
+	}
+
+	focus = {
+		id = DDR_new_managers
+		icon = GFX_goal_assist_our_allies
+		prerequisite = { focus = DDR_exploit_their_division }
+		x = 2
+		y = 3
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+          CZE = {
+						swap_ideas = {
+							remove_idea = eeu_influence_1
+							add_idea = eeu_influence_2
+						}
+
+					add_to_variable = {
+											    var = RUT_supplies
+											    value = 2
+											}
+					add_to_variable = {
+											    var = GAL_supplies
+											    value = 2
+											}
+					add_to_variable = {
+											    var = SLO_supplies
+											    value = 2
+											}
+					add_to_variable = {
+											    var = HUN_supplies
+											    value = 2
+											}
+								}
+		}
+	}
+
+	focus = {
+		id = DDR_let_em_loose
+		icon = GFX_goal_generic_greater
+		prerequisite = { focus = DDR_new_managers }
+		x = 2
+		y = 4
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+												 CZE = {
+                                 if = {
+																				limit = { AND = { check_variable = {
+																															    var = SLO_supplies
+																															    value = no_supplies
+																															    compare = greater_than
+																															}
+																													check_variable = {
+																																						var = SLO_supplies
+																																						value = slo_h_supplies
+																																						compare = greater_than
+																																					 }
+                                                        }
+																								}
+																					release = SLO
+                                          SLO = { set_country_flag = tech_revolter }
+                                          SLO = { load_oob = SLO_2136 }
+																					SLO = {
+																								 declare_war_on = {
+																							    target = CZE
+																							    type = annex_everything
+																									}
+																						}
+																				}
+                                 if = {
+																				limit = {check_variable = {
+																															    var = slo_h_supplies
+																															    value = SLO_supplies
+																															    compare = greater_than
+																															}
+																								}
+																					release = SLO
+                                          SLO = { set_country_flag = hoxha_revolter
+																					set_politics = {
+																						ruling_party = hoxhaism
+																					}
+																					set_popularities = {
+																						hoxhaism = 50
+																						technicism = 40
+																						posadism = 0
+																						revelationism = 0
+																						raider = 10
+																					}
+                                         }
+                                          SLO = { load_oob = SLO_2136 }
+																					SLO = {
+																								 declare_war_on = {
+																							    target = CZE
+																							    type = annex_everything
+                                                 }
+                                                }
+																		  }
+                                 if = {
+																				limit = { AND = { check_variable = {
+																															    var = HUN_supplies
+																															    value = no_supplies
+																															    compare = greater_than
+																															}
+																													check_variable = {
+																																						var = HUN_supplies
+																																						value = hun_h_supplies
+																																						compare = greater_than
+																																					 }
+                                                        }
+																								}
+																					release = HUN
+                                          HUN = { set_country_flag = tech_revolter }
+                                          HUN = { load_oob = HUN_2136 }
+																					HUN = {
+																								 declare_war_on = {
+																							    target = CZE
+																							    type = annex_everything
+																									}
+																						}
+																				}
+                                 if = {
+																				limit = {check_variable = {
+																															    var = hun_h_supplies
+																															    value = HUN_supplies
+																															    compare = greater_than
+																															}
+																								}
+																					release = HUN
+                                          HUN = { set_country_flag = hoxha_revolter
+																					set_politics = {
+																						ruling_party = hoxhaism
+																					}
+																					set_popularities = {
+																						hoxhaism = 50
+																						technicism = 40
+																						posadism = 0
+																						revelationism = 0
+																						raider = 10
+																					}
+                                         }
+                                          HUN = { load_oob = HUN_2136 }
+																					HUN = {
+																								 declare_war_on = {
+																							    target = CZE
+																							    type = annex_everything
+																									}
+																						}
+																				}
+                                 if = {
+																				limit = { AND = { check_variable = {
+																															    var = GAL_supplies
+																															    value = no_supplies
+																															    compare = greater_than
+																															}
+																													check_variable = {
+																																						var = GAL_supplies
+																																						value = gal_h_supplies
+																																						compare = greater_than
+																																					 }
+                                                        }
+																								}
+																					release = GAL
+                                          GAL = { set_country_flag = tech_revolter }
+                                          GAL = { load_oob = GAL_2136 }
+																					GAL = {
+																								 declare_war_on = {
+																							    target = CZE
+																							    type = annex_everything
+																									}
+																						}
+																				}
+                                 if = {
+																				limit = {check_variable = {
+																															    var = gal_h_supplies
+																															    value = GAL_supplies
+																															    compare = greater_than
+																															}
+																								}
+																					release = GAL
+                                          GAL = { set_country_flag = hoxha_revolter
+																					set_politics = {
+																						ruling_party = hoxhaism
+																					}
+																					set_popularities = {
+																						hoxhaism = 50
+																						technicism = 40
+																						posadism = 0
+																						revelationism = 0
+																						raider = 10
+																					}
+                                         }
+                                          GAL = { load_oob = GAL_2136 }
+																					GAL = {
+																								 declare_war_on = {
+																							    target = CZE
+																							    type = annex_everything
+																									}
+																						}
+																				}
+                                 if = {
+																				limit = { AND = { check_variable = {
+																															    var = RUT_supplies
+																															    value = no_supplies
+																															    compare = greater_than
+																															}
+																													check_variable = {
+																																						var = RUT_supplies
+																																						value = rut_h_supplies
+																																						compare = greater_than
+																																					 }
+                                                        }
+																								}
+																					release = RUT
+                                          RUT = { set_country_flag = tech_revolter }
+                                          RUT = { load_oob = RUT_2136 }
+																					RUT = {
+																								 declare_war_on = {
+																							    target = CZE
+																							    type = annex_everything
+																									}
+																						}
+																				}
+                                 if = {
+																				limit = {check_variable = {
+																															    var = rut_h_supplies
+																															    value = RUT_supplies
+																															    compare = greater_than
+																															}
+																								}
+																					release = RUT
+                                          RUT = { set_country_flag = hoxha_revolter
+																					set_politics = {
+																						ruling_party = hoxhaism
+																					}
+																					set_popularities = {
+																						hoxhaism = 50
+																						technicism = 40
+																						posadism = 0
+																						revelationism = 0
+																						raider = 10
+																					}
+                                         }
+                                          RUT = { load_oob = RUT_2136 }
+																					RUT = {
+																								 declare_war_on = {
+																							    target = CZE
+																							    type = annex_everything
+																									}
+																						}
+																				}
+															}
+																					every_country = {
+																														limit = { has_country_flag = hoxha_revolter }
+																														every_country = {
+																																							limit = { has_country_flag = tech_revolter }
+																																										 declare_war_on = {
+																																									    target = PREV
+																																									    type = puppet_wargoal_focus
+																		                                                 }
+																																						}
+																													}
+																					every_country = {
+																														limit = { has_country_flag = tech_revolter }
+																														every_country = {
+																																							limit = { has_country_flag = hoxha_revolter }
+																																										 declare_war_on = {
+																																									    target = PREV
+																																									    type = puppet_wargoal_focus
+																		                                                 }
+																																						}
+																													}
+		}
+	}
+
+	focus = {
+		id = DDR_baltic_security
+		icon = GFX_goal_DDR_baltic_security
+		mutually_exclusive = { focus = DDR_firm_anti_raider_stance }
+		prerequisite = { focus = DDR_barbarism_around_us }
+		x = -2
+		y = 1
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+												SWE = {
+														country_event = {
+																							id = swe.1
+																							days = 1
+																					}
+												}
+		}
+	}
+
+	focus = {
+		id = DDR_civilizing_influence
+		icon = GFX_goal_generic_reboot
+		prerequisite = { focus = DDR_baltic_security }
+	    available = {
+	        NOT = { has_country_flag = eeu_swe_ignore }
+	    }
+		x = -2
+		y = 2
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+				SWE = {
+									add_timed_idea = {
+																	    idea = swe_eeu_influence
+																	    days = 200
+							}
+							}
+		}
+	}
+
+	focus = {
+		id = DDR_develop_their_fleet
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = DDR_civilizing_influence }
+		x = -2
+		y = 3
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			763 = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+				138 = {
+					limit = {
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+					139 = {
+						limit = {
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = dockyard
+							level = 2
+							instant_build = yes
+						}
+					}
+						124 = {
+							limit = {
+								free_building_slots = {
+									building = dockyard
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = dockyard
+								level = 2
+								instant_build = yes
+							}
+						}
+		}
+	}
+
+	focus = {
+		id = DDR_recommend_their_new_president
+		icon = GFX_goal_build_trust
+		prerequisite = { focus = DDR_develop_their_fleet }
+		x = -2
+		y = 4
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+						if = { limit = { has_completed_focus = DDR_a_softer_union }
+										DDR = { add_to_faction = SWE }
+								 }
+												SWE = {
+																				set_politics = {
+																													ruling_party = technicism
+																												}
+												}
+		}
+	}
+
+	focus = {
+		id = DDR_firm_anti_raider_stance
+		icon = GFX_goal_DDR_anti_raider
+		prerequisite = { focus = DDR_barbarism_around_us }
+		mutually_exclusive = {focus = DDR_baltic_security}
+		x = 0
+		y = 1
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+														add_war_support = 0.1
+														add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = DDR_build_our_planes
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = DDR_firm_anti_raider_stance }
+		x = 0
+		y = 3
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+							add_timed_idea = {
+															    idea = build_our_planes
+															    days = 200
+					}
+						5 = {
+							limit = {
+								free_building_slots = {
+									building = air_base
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = air_base
+								level = 2
+								instant_build = yes
+							}
+						}
+							190 = {
+								limit = {
+									free_building_slots = {
+										building = air_base
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = air_base
+									level = 2
+									instant_build = yes
+								}
+							}
+								87 = {
+									limit = {
+										free_building_slots = {
+											building = air_base
+											size > 0
+											include_locked = yes
+										}
+									}
+									add_extra_state_shared_building_slots = 2
+									add_building_construction = {
+										type = air_base
+										level = 2
+										instant_build = yes
+									}
+								}
+									189 = {
+										limit = {
+											free_building_slots = {
+												building = air_base
+												size > 0
+												include_locked = yes
+											}
+										}
+										add_extra_state_shared_building_slots = 2
+										add_building_construction = {
+											type = air_base
+											level = 2
+											instant_build = yes
+										}
+									}
+		}
+	}
+
+	focus = {
+		id = DDR_bring_them_back
+		icon = GFX_goal_economic_union
+		prerequisite = { focus = DDR_build_our_planes }
+		x = 0
+		y = 4
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			add_named_threat = {
+												threat = 10
+												name = Recivilization
+										}
+			create_wargoal = {
+				type = annex_everything
+				target = SWE
+			}
+		}
+	}
+
+	focus = {
+		id = DDR_a_softer_union
+		icon = GFX_goal_DDR_a_softer_union
+		prerequisite = { focus = DDR_let_em_loose focus = DDR_recommend_their_new_president }
+		mutually_exclusive = { focus = DDR_immediate_intergration }
+    bypass = {
+        is_faction_leader = yes
+    }
+		x = -1
+		y = 5
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+													if = { limit = { is_faction_leader = yes }
+                                          DDR = { add_to_faction = SWE }
+																	else = { create_faction = eastern_defense_league
+                                           DDR = { add_to_faction = SWE } }
+															}
+                          custom_effect_tooltip = eeu_ally_cze
+		}
+	}
+
+	focus = {
+		id = DDR_immediate_intergration
+		icon = GFX_goal_DDR_immediate_integration
+		prerequisite = { focus = DDR_let_em_loose focus = DDR_bring_them_back focus = DDR_recommend_their_new_president }
+		mutually_exclusive = { focus = DDR_a_softer_union }
+		x = 1
+		y = 5
+		relative_position_id = DDR_barbarism_around_us
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+													SWE = {
+																	country_event = {
+																										id = swe.2
+																										days = 1
+																									}
+																}
+
+
+													custom_effect_tooltip = eeu_attack_cze
+		}
+	}
+
+####### Old Friend #####
+
+	focus = {
+		id = DDR_old_friend
+		icon = GFX_goal_DDR_old_friend
+		prerequisite = { focus = DDR_killing_kommunism }
+    mutually_exclusive = {focus = DDR_old_enemies }
+		x = -4
+		y = 1
+		relative_position_id = DDR_killing_kommunism
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+												USA = {
+														country_event = {
+																							id = usa.1
+																							days = 1
+																					}
+												}
+		}
+	}
+
+	focus = {
+		id = DDR_ensuring_compatibility
+		icon = GFX_goal_generic_the_highway
+		prerequisite = { focus = DDR_old_friend }
+	  available = {
+	       NOT = { has_country_flag = eeu_usa_ignore }
+	  }
+		x = 0
+		y = 1
+		relative_position_id = DDR_old_friend
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+							add_ideas =  nato_compatible
+		}
+	}
+
+	focus = {
+		id = DDR_democracy
+		icon = GFX_goal_generic_political_effort
+		prerequisite = { focus = DDR_ensuring_compatibility}
+		x = -2
+		y = 2
+		relative_position_id = DDR_old_friend
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+							add_ideas = eeu_democracy
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes
+							}
+						}
+							random_owned_controlled_state = {
+								limit = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							}
+		}
+	}
+
+	focus = {
+		id = DDR_freedom
+		icon = GFX_goal_DDR_old_freedom
+		prerequisite = { focus = DDR_ensuring_compatibility }
+		x = 0
+		y = 2
+		relative_position_id = DDR_old_friend
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+							add_ideas = eeu_freedom
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = arms_factory
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = arms_factory
+								level = 2
+								instant_build = yes
+							}
+						}
+							random_owned_controlled_state = {
+								limit = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = arms_factory
+									level = 2
+									instant_build = yes
+								}
+							}
+		}
+	}
+
+	focus = {
+		id = DDR_capitalism
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = DDR_ensuring_compatibility }
+		x = 2
+		y = 2
+		relative_position_id = DDR_old_friend
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+							add_ideas = eeu_capitalism
+						random_owned_controlled_state = {
+							limit = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = yes
+								}
+							}
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = industrial_complex
+								level = 2
+								instant_build = yes
+							}
+						}
+							random_owned_controlled_state = {
+								limit = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+								}
+								add_extra_state_shared_building_slots = 2
+								add_building_construction = {
+									type = industrial_complex
+									level = 2
+									instant_build = yes
+								}
+							}
+		}
+	}
+
+	focus = {
+		id = DDR_renew_our_nato_partnership
+		icon = GFX_goal_nato
+		prerequisite = { focus = DDR_freedom }
+		prerequisite = { focus = DDR_democracy }
+		prerequisite = { focus = DDR_capitalism }
+    available = {
+        is_in_faction = no
+    }
+		x = -2
+		y = 3
+		relative_position_id = DDR_old_friend
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+													USA = { add_to_faction = DDR }
+		}
+	}
+
+	focus = {
+		id = DDR_end_the_east_west_divide
+		icon = GFX_goal_nato
+		prerequisite = { focus = DDR_freedom }
+		prerequisite = { focus = DDR_democracy }
+		prerequisite = { focus = DDR_capitalism }
+    available = {
+        is_in_faction = yes
+    }
+		x = 2
+		y = 3
+		relative_position_id = DDR_old_friend
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+												USA = {
+														country_event = {id = usa.2
+														days = 1
+																					}
+												}
+		}
+	}
+
+	focus = {
+		id = DDR_the_point
+		icon = GFX_goal_DDR_enemy_of_freedom
+		prerequisite = { focus = DDR_renew_our_nato_partnership focus = DDR_end_the_east_west_divide }
+		x = 0
+		y = 4
+		relative_position_id = DDR_old_friend
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+      add_named_threat = {
+      threat = 10
+      name = Cold_War
+     }
+			create_wargoal = {
+				type = annex_everything
+				target = RUS
+			}
+		}
+	}
+
+	focus = {
+		id = DDR_enemy_of_freedom
+		icon = GFX_goal_DDR_enemy_of_freedom
+		prerequisite = { focus = DDR_the_point }
+		x = 0
+		y = 5
+		relative_position_id = DDR_old_friend
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			add_named_threat = {
+												threat = 20
+												name = The_Big_War
+										}
+			create_wargoal = {
+				type = annex_everything
+				target = ALB
+			}
+		}
+	}
+
+###### Old Enemy #######
+
+	focus = {
+		id = DDR_old_enemies
+		icon = GFX_goal_DDR_old_enemy
+		prerequisite = { focus = DDR_killing_kommunism }
+    mutually_exclusive = {focus = DDR_old_friend }
+		x = 2
+		y = 1
+		relative_position_id = DDR_killing_kommunism
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+												RUS = {
+														country_event = {id = rus.1
+														days = 1
+																					}
+												}
+		}
+	}
+
+	focus = {
+		id = DDR_acknowledge_belarusian_claims
+		icon = GFX_goal_generic_treaty
+		prerequisite = { focus = DDR_old_enemies}
+		mutually_exclusive = { focus = DDR_reassure_our_citizens }
+	  available = {
+	       NOT = { has_country_flag = eeu_rus_ignore }
+	  }
+		x = -2
+		y = 1
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+													RUS = { add_state_core = 94 add_state_core = 95 add_state_core = 96 }
+		}
+	}
+
+	focus = {
+		id = DDR_something_more
+		icon = GFX_goal_generic_our_way
+		prerequisite = { focus = DDR_acknowledge_belarusian_claims }
+		mutually_exclusive = { focus = DDR_something_more focus = DDR_purely_professional}
+	  available = {
+	       NOT = { has_country_flag = eeu_rus_ignore }
+	  }
+		x = -2
+		y = 2
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+												RUS = {
+														country_event = {
+																							id = rus.2
+																							days = 1
+																					}
+												}
+		}
+	}
+
+	focus = {
+		id = DDR_reassure_our_citizens
+		icon = GFX_goal_generic_the_highway
+		prerequisite = { focus = DDR_old_enemies }
+		mutually_exclusive = { focus = DDR_acknowledge_belarusian_claims }
+	  available = {
+	       NOT = { has_country_flag = eeu_rus_ignore }
+	  }
+		x = 2
+		y = 1
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+													add_stability = 0.1
+													add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = DDR_purely_professional
+		icon = GFX_goal_generic_local_alliance
+		prerequisite = { focus = DDR_reassure_our_citizens focus = DDR_acknowledge_belarusian_claims }
+		if = { limit = { NOT = { has_country_flag = eeu_rus_prof } }
+		mutually_exclusive = { focus = DDR_something_more } }
+		x = 2
+		y = 2
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+												RUS = {
+												}
+		}
+	}
+
+	focus = {
+		id = DDR_stable_institutions
+		icon = GFX_goal_stability
+		prerequisite = { focus = DDR_purely_professional focus = DDR_something_more }
+		x = 0
+		y = 3
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+							add_ideas = eeu_stable
+							RUS = {	add_ideas = eeu_stable
+								}
+		}
+	}
+
+	focus = {
+		id = DDR_eeu_ascendancy
+		icon = GFX_goal_DDR_eeu_ascendancy
+		prerequisite = { focus = DDR_stable_institutions }
+		prerequisite = { focus = DDR_something_more }
+    available = {
+			        NOT = { has_country_flag = eeu_rus_prof }
+			    }
+		x = -2
+		y = 4
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {annex_country = {
+																			    target = RUS
+																			    transfer_troops = yes
+																			}
+		}
+	}
+
+	focus = {
+		id = DDR_the_eastern_defense_organization
+		icon = GFX_goal_DDR_the_eastern_defense_organization
+		prerequisite = { focus = DDR_purely_professional }
+		prerequisite = { focus = DDR_stable_institutions }
+    bypass = {
+        is_faction_leader = yes
+    }
+		x = 2
+		y = 4
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+										create_faction = eastern_defense_organization
+										DDR = { add_to_faction = RUS }
+		}
+	}
+
+	focus = {
+		id = DDR_BSTO
+		icon = GFX_goal_unknown
+		prerequisite = { focus = DDR_the_eastern_defense_organization }
+		prerequisite = { focus = DDR_a_softer_union }
+		x = 3
+		y = 6
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+                   if = { limit = { has_completed_focus = DDR_a_softer_union }
+                          create_faction = BSTO
+                          DDR = { add_to_faction = SWE }
+                        }
+                   if = { limit = { has_completed_focus = DDR_a_softer_union }
+													create_faction = BSTO
+													DDR = { add_to_faction = RUS }
+                        }
+
+		}
+	}
+
+	focus = {
+		id = DDR_reclaim_the_soviets
+		icon = GFX_goal_DDR_reclaim_the_soviets
+		prerequisite = { focus = DDR_the_eastern_defense_organization focus = DDR_eeu_ascendancy }
+		x = 0
+		y = 5
+		relative_position_id = DDR_old_enemies
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+			add_named_threat = {
+												threat = 20
+												name = The_Big_War
+										}
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+	}
+
+}

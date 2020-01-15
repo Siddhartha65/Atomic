@@ -1,0 +1,213 @@
+bohemian_freedom = {
+
+	ally_gal = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = { country_exists = GAL
+                DDR = { has_completed_focus = DDR_a_softer_union }
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										  	DDR = { add_to_faction = GAL}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	ally_rut = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = { country_exists = RUT
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										  	DDR = { add_to_faction = RUT }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	ally_hun = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = { country_exists = HUN
+                DDR = { has_completed_focus = DDR_a_softer_union }
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										  	DDR = { add_to_faction = HUN }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	ally_slo = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = { country_exists = SLO
+                DDR = { has_completed_focus = DDR_a_softer_union }
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										  	DDR = { add_to_faction = SLO }
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+		attack_gal = {
+
+			icon = GFX_decision_generic_industry
+
+			available = {
+			}
+
+			visible = { country_exists = GAL
+	                DDR = { has_completed_focus = DDR_immediate_intergration }
+			}
+
+			fire_only_once = no
+
+			cost = 15
+
+			complete_effect = {
+											  	GAL = {
+															country_event = {
+																								id = swe.2
+																								days = 1
+																						}
+
+                                }
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+		attack_rut = {
+
+			icon = GFX_decision_generic_industry
+
+			available = {
+			}
+
+			visible = { country_exists = RUT
+	                DDR = { has_completed_focus = DDR_immediate_intergration }
+			}
+
+			fire_only_once = no
+
+			cost = 15
+
+			complete_effect = {
+											  	RUT = {
+															country_event = {
+																								id = swe.2
+																								days = 1
+																						}
+
+                                }
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+		attack_hun = {
+
+			icon = GFX_decision_generic_industry
+
+			available = {
+			}
+
+			visible = { country_exists = HUN
+	                DDR = { has_completed_focus = DDR_immediate_intergration }
+			}
+
+			fire_only_once = no
+
+			cost = 15
+
+			complete_effect = {
+											  	HUN = {
+															country_event = {
+																								id = swe.2
+																								days = 1
+																						}
+
+                                }
+			}
+
+			ai_will_do = {
+				base = 1
+			}
+		}
+
+		attack_slo = {
+
+			icon = GFX_decision_generic_industry
+
+			available = {
+			}
+
+			visible = { country_exists = SLO
+	                DDR = { has_completed_focus = DDR_immediate_intergration }
+			}
+
+			fire_only_once = no
+
+			cost = 15
+
+			complete_effect = {
+												  	SLO = {
+																country_event = {
+																									id = swe.2
+																									days = 1
+																							}
+
+	                                }
+				}
+      }
+}

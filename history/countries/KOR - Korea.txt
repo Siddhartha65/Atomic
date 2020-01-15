@@ -1,0 +1,71 @@
+﻿capital = 525 #South Korea - Seoul or Busan
+
+oob = KOR_2136
+
+set_politics = {
+	ruling_party = hoxhaism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 49
+    revelationism = 0
+    posadism = 0
+    hoxhaism = 51
+    raider = 0
+}
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {grand_battle_plan_expert chamberlain_appeaser indomitable_perseverance
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = utopianists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Atomic! Man"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

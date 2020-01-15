@@ -1,0 +1,1134 @@
+focus_tree = {
+	id = arg_focus
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = ARG
+		}
+	}
+
+	default = yes
+	reset_on_civilwar = no
+	continuous_focus_position = { x = 100 y = 2000 }
+
+
+#### Pol Etc ####
+
+	focus = {
+		id = ARG_en_union_y_libertad
+		icon = GFX_goal_unknown
+		x = 6
+		y = 0
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+##### Shadow #######
+	focus = {
+		id = ARG_shadow_of_our_sun
+		icon = GFX_goal_ARG_shadow_of_our_sun
+		prerequisite = { focus = ARG_en_union_y_libertad }
+		x = -2
+		y = 1
+		relative_position_id = ARG_en_union_y_libertad
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+		focus = {
+			id = ARG_rapid_industrialization
+			icon = GFX_goal_generic_production
+			prerequisite = { focus = ARG_shadow_of_our_sun }
+			x = -2
+			y = 1
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_plan_1
+			icon = GFX_goal_ARG_plan_1
+			prerequisite = { focus = ARG_rapid_industrialization}
+			x = -2
+			y = 2
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_reduce_travel_time
+			icon = GFX_goal_ARG_reduce_travel_time
+			prerequisite = { focus = ARG_plan_1 }
+			x = -2
+			y = 3
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_the_impenetrable_highway
+			icon = GFX_goal_generic_construct_infrastructure
+			prerequisite = { focus = ARG_reduce_travel_time }
+			x = -2
+			y = 4
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_plan_2
+			icon = GFX_goal_ARG_plan_2
+			prerequisite = { focus = ARG_rapid_industrialization}
+			x = 0
+			y = 2
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_reduce_civilian_waste
+			icon = GFX_goal_ARG_reduce_civilian_waste
+			prerequisite = { focus = ARG_plan_2 }
+			x = 0
+			y = 3
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_built_in_a_day
+			icon = GFX_goal_generic_construct_civ_factory
+			prerequisite = { focus = ARG_reduce_civilian_waste }
+			x = 0
+			y = 4
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_plan_3
+			icon = GFX_goal_ARG_plan_3
+			prerequisite = { focus = ARG_rapid_industrialization}
+			x = 2
+			y = 2
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_reduce_military_bloat
+			icon = GFX_goal_ARG_reduce_military_bloat
+			prerequisite = { focus = ARG_plan_3 }
+			x = 2
+			y = 3
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_shining_brightly
+			icon = GFX_goal_generic_construct_mil_factory
+			prerequisite = { focus = ARG_reduce_military_bloat }
+			x = 2
+			y = 4
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_make_posadas_proud
+			icon = GFX_focus_research
+			prerequisite = { focus = ARG_the_impenetrable_highway }
+			prerequisite = { focus = ARG_built_in_a_day }
+			prerequisite = { focus = ARG_shining_brightly }
+			x = 0
+			y = 5
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_reach_for_the_stars
+			icon = GFX_goal_ARG_reach_for_the_stars
+			prerequisite = { focus = ARG_make_posadas_proud }
+			x = 0
+			y = 6
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_power_of_rocketry
+			icon = GFX_goal_unknown
+			prerequisite = { focus = ARG_reach_for_the_stars }
+			x = 0
+			y = 7
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_prepare_the_signals
+			icon = GFX_goal_generic_radar
+			prerequisite = { focus = ARG_make_posadas_proud }
+			x = 2
+			y = 6
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_take_to_the_skies
+			icon = GFX_goal_unknown
+			prerequisite = { focus = ARG_reach_for_the_stars }
+			x = 2
+			y = 7
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_like_luna
+			icon = GFX_goal_generic_air_bomber
+			prerequisite = { focus = ARG_take_to_the_skies }
+			mutually_exclusive { focus = ARG_our_control }
+			x = 2
+			y = 8
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_our_control
+			icon = GFX_goal_generic_air_fighter
+			prerequisite = { focus = ARG_take_to_the_skies }
+			mutually_exclusive { focus = ARG_like_luna }
+			x = 4
+			y = 8
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_takeoff
+			icon = GFX_focus_rocketry
+			prerequisite = { focus = ARG_like_luna focus = ARG_our_control }
+			x = 3
+			y = 9
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ARG_signals
+			icon = GFX_focus_wonderweapons
+			prerequisite = { focus = ARG_takeoff }
+			prerequisite = { focus = ARG_power_of_rocketry }
+			x = 1
+			y = 10
+			relative_position_id = ARG_shadow_of_our_sun
+			cost = 7
+			available_if_capitulated = yes
+			completion_reward = {
+			}
+		}
+
+### Neighbors ###
+
+	focus = {
+		id = ARG_our_neighbors
+		icon = GFX_goal_generic_diplo_focus
+		prerequisite = { focus = ARG_en_union_y_libertad }
+		x = 5
+		y = 1
+		relative_position_id = ARG_en_union_y_libertad
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+### Hoxhaists ###
+
+	focus = {
+		id = ARG_hoxhaists
+		icon = GFX_goal_hoxhaism_group
+		prerequisite = { focus = ARG_our_neighbors }
+		x = -2
+		y = 1
+		relative_position_id = ARG_our_neighbors
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_approach_bolivia
+		icon = GFX_goal_AGR_approach_bolivia
+		prerequisite = { focus = ARG_hoxhaists }
+		mutually_exclusive { focus = ARG_real_revolution }
+		x = -1
+		y = 1
+		relative_position_id = ARG_hoxhaists
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_provide_them_port_access
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ARG_approach_bolivia }
+		x = -1
+		y = 2
+		relative_position_id = ARG_hoxhaists
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_international_aid
+		icon = GFX_goal_assist_our_allies
+		prerequisite = { focus = ARG_provide_them_port_access }
+		x = -1
+		y = 3
+		relative_position_id = ARG_hoxhaists
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_martin_y_bolivar
+		icon = GFX_goal_ARG_martin_y_bolivar
+		prerequisite = { focus = ARG_international_aid }
+		x = -1
+		y = 4
+		relative_position_id = ARG_hoxhaists
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_real_revolution
+		icon = GFX_goal_ARG_real_revolution
+		prerequisite = { focus = ARG_hoxhaists }
+		mutually_exclusive { focus = ARG_approach_bolivia }
+		x = 1
+		y = 1
+		relative_position_id = ARG_hoxhaists
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_prepare_for_guerrilla_warfare
+		icon = GFX_goal_ARG_guerrilla_warfare
+		prerequisite = { focus = ARG_real_revolution }
+		x = 1
+		y = 2
+		relative_position_id = ARG_hoxhaists
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_bunker_v_bunker
+		icon = GFX_goal_generic_fort
+		prerequisite = { focus = ARG_prepare_for_guerrilla_warfare }
+		x = 1
+		y = 3
+		relative_position_id = ARG_hoxhaists
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_block_the_blockade
+		icon = GFX_goal_ARG_block_the_blockade
+		prerequisite = { focus = ARG_bunker_v_bunker focus = ARG_martin_y_bolivar }
+		x = 2
+		y = 5
+		relative_position_id = ARG_hoxhaists
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+##### Conservatives ######
+
+	focus = {
+		id = ARG_conservatives
+		icon = GFX_goal_technicism_group
+		prerequisite = { focus = ARG_our_neighbors }
+		x = 7
+		y = 1
+		relative_position_id = ARG_our_neighbors
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_falklands_for_peace
+		icon = GFX_goal_ARG_falklands_for_peace
+		prerequisite = { focus = ARG_conservatives }
+		mutually_exclusive { focus = ARG_demand_their_pacific_holdings }
+		x = 1
+		y = 1
+		relative_position_id = ARG_conservatives
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_eternal_access
+		icon = GFX_goal_ARG_eternal_access
+		prerequisite = { focus = ARG_falklands_for_peace }
+		x = 1
+		y = 2
+		relative_position_id = ARG_conservatives
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_demand_their_pacific_holdings
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_conservatives }
+		mutually_exclusive { focus =  ARG_falklands_for_peace }
+		x = -1
+		y = 1
+		relative_position_id = ARG_conservatives
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_finally_get_the_falklands
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_demand_their_pacific_holdings }
+		x = -1
+		y = 2
+		relative_position_id = ARG_conservatives
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_nuclear_storm
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_finally_get_the_falklands }
+		x = -1
+		y = 3
+		relative_position_id = ARG_conservatives
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+##### Reactionaries ######
+
+	focus = {
+		id = ARG_reactionaries
+		icon = GFX_goal_revelationism_group
+		prerequisite = { focus = ARG_our_neighbors }
+		x = 2
+		y = 1
+		relative_position_id = ARG_our_neighbors
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_prepare_for_the_invasion
+		icon = GFX_goal_ARG_route_to_peru
+		prerequisite = { focus = ARG_reactionaries }
+		x = 2
+		y = 2
+		relative_position_id = ARG_reactionaries
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_perus_descent
+		icon = GFX_goal_ARG_perus_descent
+		prerequisite = { focus = ARG_prepare_for_the_invasion }
+		mutually_exclusive { focus = ARG_reactionaries }
+		x = 2
+		y = 3
+		relative_position_id = ARG_reactionaries
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_the_third_front
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_perus_descent }
+		mutually_exclusive { focus = ARG_reactionaries }
+		x = 2
+		y = 4
+		relative_position_id = ARG_reactionaries
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_two_pronged_assault
+		icon = GFX_goal_generic_special_region
+		prerequisite = { focus = ARG_reactionaries }
+		x = 0
+		y = 2
+		relative_position_id = ARG_reactionaries
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_protecting_the_border
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_two_pronged_assault }
+		x = 0
+		y = 4
+		relative_position_id = ARG_reactionaries
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_end_the_monarchy
+		icon = GFX_goal_ARG_end_monarchy
+		prerequisite = { focus = ARG_protecting_the_border }
+		prerequisite = { focus = ARG_block_the_blockade focus = ARG_the_third_front focus = ARG_nuclear_storm }
+		x = 0
+		y = 6
+		relative_position_id = ARG_reactionaries
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+
+
+
+##### Army ######
+	focus = {
+		id = ARG_backbone_of_the_americas
+		icon = GFX_goal_ARG_backbone_of_the_americas
+		x = 30
+		y = 0
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_pride_in_our_fleet
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_backbone_of_the_americas }
+		x = 2
+		y = 1
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_numbers
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = ARG_pride_in_our_fleet }
+		mutually_exclusive { focus = ARG_size }
+		x = 2
+		y = 2
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_size
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = ARG_pride_in_our_fleet }
+		mutually_exclusive { focus = ARG_numbers }
+		x = 4
+		y = 2
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_brazilian_expedition
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_los_patricios }
+		x = -6
+		y = 2
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_new_brazilian_army
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_brazilian_expedition }
+		x = -6
+		y = 3
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_los_patricios
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_backbone_of_the_americas }
+		x = -2
+		y = 1
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_protectors_of_the_fatherland
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_los_patricios }
+		x = -2
+		y = 2
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_fast_as_light
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = ARG_protectors_of_the_fatherland}
+		mutually_exclusive { focus = ARG_heavy_as_uranium }
+		x = -3
+		y = 5
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_heavy_as_uranium
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = ARG_protectors_of_the_fatherland}
+		mutually_exclusive { focus = ARG_fast_as_light }
+		x = -1
+		y = 5
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_international_forces
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_protectors_of_the_fatherland }
+		x = 0
+		y = 3
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_port_construction
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = ARG_protectors_of_the_fatherland focus = ARG_pride_in_our_fleet }
+		x = 0
+		y = 4
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_submarine_support
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = ARG_support_the_pacific focus = ARG_secure_the_atlantic }
+		x = 2
+		y = 5
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_float_carriers
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = ARG_support_the_pacific focus = ARG_secure_the_atlantic }
+		x = 4
+		y = 5
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_support_the_pacific
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_numbers focus = ARG_size }
+		prerequisite = { focus = ARG_international_forces }
+		x = 2
+		y = 4
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_secure_the_atlantic
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_numbers focus = ARG_size }
+		prerequisite = { focus = ARG_international_forces }
+		x = 4
+		y = 4
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_civilian_forces
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_protectors_of_the_fatherland }
+		x = -4
+		y = 3
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_armed_forces_union
+		icon = GFX_goal_ARG_army_union
+		prerequisite = { focus = ARG_civilian_forces }
+		prerequisite = { focus = ARG_new_brazilian_army }
+		x = -5
+		y = 4
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_autonomy_for_the_army
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_armed_forces_union }
+		x = -5
+		y = 5
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+######## Grand Plan ######
+	focus = {
+		id = ARG_a_grand_plan
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_autonomy_for_the_army }
+		x = -6
+		y = 6
+		relative_position_id = ARG_backbone_of_the_americas
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+######### Posadas #########
+
+focus = {
+	id = ARG_permanent_revolution
+	icon = GFX_goal_ARG_perm_rev
+	prerequisite = { focus = ARG_a_grand_plan }
+	mutually_exclusive { focus = ARG_viva_la_justicialista }
+	mutually_exclusive { focus = ARG_patria_y_honor }
+	x = -6
+	y = 1
+	relative_position_id = ARG_a_grand_plan
+	cost = 7
+	available_if_capitulated = yes
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ARG_order_of_the_liberators
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ARG_permanent_revolution }
+	prerequisite = { focus = ARG_end_the_monarchy }
+	x = -2
+	y = 1
+	relative_position_id = ARG_permanent_revolution
+	cost = 7
+	available_if_capitulated = yes
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ARG_rescue_the_canal
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ARG_order_of_the_liberators }
+	x = -2
+	y = 1
+	relative_position_id = ARG_order_of_the_liberators
+	cost = 7
+	available_if_capitulated = yes
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ARG_liberate_the_state
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ARG_rescue_the_canal }
+	x = -2
+	y = 2
+	relative_position_id = ARG_order_of_the_liberators
+	cost = 7
+	available_if_capitulated = yes
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ARG_new_world_order
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ARG_liberate_the_state }
+	x = -2
+	y = 3
+	relative_position_id = ARG_order_of_the_liberators
+	cost = 7
+	available_if_capitulated = yes
+	completion_reward = {
+	}
+}
+
+
+######### Anti-Posadas #########
+	focus = {
+		id = ARG_viva_la_justicialista
+		icon = GFX_goal_ARG_justicalist
+		prerequisite = { focus = ARG_a_grand_plan }
+		mutually_exclusive { focus = ARG_patria_y_honor }
+		mutually_exclusive { focus = ARG_permanent_revolution }
+		x = 0
+		y = 1
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_patria_y_honor
+		icon = GFX_goal_ARG_patria_y_honor
+		prerequisite = { focus = ARG_a_grand_plan }
+		mutually_exclusive { focus = ARG_viva_la_justicialista }
+		mutually_exclusive { focus = ARG_permanent_revolution }
+		x = 4
+		y = 1
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_army_and_state
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_patria_y_honor }
+		prerequisite = { focus = ARG_fast_as_light focus = ARG_heavy_as_uranium}
+		x = 5
+		y = 2
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_aregentine_island_holdings
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_army_and_state }
+		prerequisite = { focus = ARG_international_forces }
+		x = 7
+		y = 3
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_end_posadist_policy
+		icon = GFX_goal_ARG_end_posadism
+		prerequisite = { focus = ARG_patria_y_honor focus = ARG_viva_la_justicialista }
+		x = 1
+		y = 2
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_dignity_of_work
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_viva_la_justicialista }
+		x = -2
+		y = 3
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_social_capitalism
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_dignity_of_work }
+		x = -2
+		y = 4
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_reconcile_with_chile
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_end_posadist_policy }
+		prerequisite = { focus = ARG_viva_la_justicialista }
+		prerequisite = { focus = ARG_eternal_access }
+    bypass = {
+        has_completed_focus = ARG_nuclear_storm
+    }
+		x = 0
+		y = 3
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_three_heroes_of_america
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_reconcile_with_chile }
+		x = 0
+		y = 4
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_argentinian_sovereignty
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_three_heroes_of_america }
+		prerequisite = { focus = ARG_social_capitalism }
+		x = -1
+		y = 5
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_argentina_alone
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_end_posadist_policy focus = ARG_army_and_state }
+		x = 4
+		y = 3
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_in_defense_of_brazil
+		icon = GFX_goal_ARG_block_the_blockade
+		prerequisite = { focus = ARG_end_posadist_policy focus = ARG_army_and_state }
+		x = 2
+		y = 4
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ARG_japanese_counter_revolution
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ARG_aregentine_island_holdings }
+		prerequisite = { focus = ARG_in_defense_of_brazil }
+		prerequisite = { focus = ARG_argentina_alone }
+		x = 6
+		y = 5
+		relative_position_id = ARG_a_grand_plan
+		cost = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		}
+	}
+
+}

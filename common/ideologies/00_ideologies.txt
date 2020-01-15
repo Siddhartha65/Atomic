@@ -1,0 +1,280 @@
+ideologies = {
+
+	hoxhaism = {
+
+		types = {
+							orthodox_hoxhaism  = {
+							}
+							maoism  = {
+							}
+							hoxhaismD  = {
+							}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_DEMOCRATIC_1"
+			"FACTION_NAME_DEMOCRATIC_2"
+			"FACTION_NAME_DEMOCRATIC_3"
+			"FACTION_NAME_DEMOCRATIC_4"
+			"FACTION_NAME_DEMOCRATIC_5"
+			"FACTION_NAME_DEMOCRATIC_6"
+		}
+
+		color = { 255 0 0 }
+
+		rules = {
+			can_declare_war_on_same_ideology = yes
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+			can_only_justify_war_on_threat_country = no
+			can_guarantee_other_ideologies = yes
+		}
+		modifiers = {
+			industry_air_damage_factor = -0.1
+			drift_defence_factor = 0.25
+			production_oil_factor = 0.1
+
+			generate_wargoal_tension = 0.10
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.1
+			send_volunteers_tension = 0.05
+			guarantee_tension = 0.25
+			take_states_cost_factor = 0.25
+			annex_cost_factor = 0.5
+		}
+
+		can_host_government_in_exile = yes
+
+		war_impact_on_world_tension = 0.25		# no major danger, remember this this the 40s!
+		faction_impact_on_world_tension = 0.1
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+		 # uses the democratic AI behaviour
+	}
+
+
+	posadism = {
+
+		types = {
+							utopianists  = {
+							}
+							star_eyes  = {
+							}
+							posadismD  = {
+							}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+
+		color = { 255 213 0 }
+
+		war_impact_on_world_tension = 0.25		#Commie less threatening
+		faction_impact_on_world_tension = 0.5
+
+		 # uses the commie AI behaviour
+
+		rules = {
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+
+		}
+
+		modifiers = {
+			nuclear_production_factor = 0.25
+		  army_artillery_attack_factor = 0.15
+			partisan_effect = 0.1
+
+			generate_wargoal_tension = 0.10
+			join_faction_tension = 0.25
+			lend_lease_tension = 0.0
+			send_volunteers_tension = 0.0
+			guarantee_tension = 0.25
+			take_states_cost_factor = 0.25
+			annex_cost_factor = 0.5
+
+		}
+
+		can_host_government_in_exile = yes
+
+		war_impact_on_world_tension = 0.25		# no major danger, remember this this the 40s!
+		faction_impact_on_world_tension = 0.2
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+		 # uses the democratic AI behaviour
+	}
+
+	technicism = {
+
+		types = {
+							continuists  = {
+							}
+							constructionists  = {
+							}
+							technicismD  = {
+						  }
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_FASCIST_1"
+			"FACTION_NAME_FASCIST_2"
+			"FACTION_NAME_FASCIST_3"
+			"FACTION_NAME_FASCIST_4"
+			"FACTION_NAME_FASCIST_5"
+		}
+
+		color = { 0 255 233 }
+
+		war_impact_on_world_tension = 1.0			#evil!
+		faction_impact_on_world_tension = 1.0
+
+		rules = {
+			can_force_government = no
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+
+		modifiers = {
+			research_speed_factor = 0.05
+			army_leader_start_level = 2
+			decryption_factor = 0.2
+
+			generate_wargoal_tension = 0.10
+			join_faction_tension = 0.3
+			lend_lease_tension = 0.0
+			send_volunteers_tension = 0.05
+			guarantee_tension = 0.25
+			take_states_cost_factor = 0.25
+			annex_cost_factor = 0.5
+		}
+
+		can_host_government_in_exile = yes
+
+		war_impact_on_world_tension = 0.25		# no major danger, remember this this the 40s!
+		faction_impact_on_world_tension = 0.1
+
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
+		}
+		 # uses the democratic AI behaviour
+	}
+
+	revelationism = {
+
+		types = {
+							clericalists  = {
+							}
+							integralists  = {
+							}
+							revelationismD  = {
+							}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+		}
+
+		color = { 200 0 195 }
+
+
+		war_impact_on_world_tension = 0.25		#no major danger
+		faction_impact_on_world_tension = 0.1
+
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_send_volunteers = no
+		}
+
+		modifiers = {
+			justify_war_goal_time = -0.25
+			conscription_factor = 0.1
+			army_morale_factor = 0.1
+
+			generate_wargoal_tension = 0.10
+			join_faction_tension = 0.3
+			lend_lease_tension = 0.0
+			send_volunteers_tension = 0.05
+			guarantee_tension = 0.25
+			take_states_cost_factor = 0.25
+			annex_cost_factor = 0.5
+		}
+
+		faction_modifiers = {
+		}
+
+		can_be_boosted = no
+		can_collaborate = yes
+
+		 #
+	}
+
+	raider = {
+
+		types = {
+							despot  = {
+							}
+							warlords  = {
+							}
+					    raiderD  = {
+							}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_NONALIGNED_1"
+			"FACTION_NAME_NONALIGNED_2"
+			"FACTION_NAME_NONALIGNED_3"
+			"FACTION_NAME_NONALIGNED_4"
+			"FACTION_NAME_NONALIGNED_5"
+		}
+
+		color = { 0 0 0 }
+
+
+		war_impact_on_world_tension = 0.25		#no major danger
+		faction_impact_on_world_tension = 0.1
+
+		rules = {
+			can_force_government = no
+			can_puppet = yes
+			can_send_volunteers = no
+		}
+
+		modifiers = {
+				training_time_factor = -0.1
+				no_supply_grace = 48
+				consumer_goods_factor = 0.05
+
+				generate_wargoal_tension = 0.10
+				join_faction_tension = 0.35
+				lend_lease_tension = 0.0
+				send_volunteers_tension = 0.05
+				guarantee_tension = 0.25
+				take_states_cost_factor = 0.25
+				annex_cost_factor = 0.5
+		}
+
+		faction_modifiers = {
+		}
+
+		can_be_boosted = no
+		can_collaborate = yes
+
+		 #
+	}
+}

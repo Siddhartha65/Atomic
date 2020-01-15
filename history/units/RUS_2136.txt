@@ -1,0 +1,686 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = KAZ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+##### OOB #####
+units = {
+	##### Severno-Zapadnoe TVD (North West Theatre) -- Archangelsk #####
+
+	##### Zapadnye TVD (Western Theatre Military District) #####
+	#### Leningradskii Voennyii Okrug (Leningrad Military District) -- Leningrad ####
+	# 19ya Strelkoviy Korpus
+	division= {	# "16ya 'Ul'yanovskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 149
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "56ya 'Moskva' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 56
+		}
+		location = 149
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "72ya 'Turkestan.' Gornostrelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 72
+		}
+		location = 3151
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		name = "LVO Mekhanizirovanaya Gruppa"
+		location = 3151
+		division_template = "Militia"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	### Leningraskaya Gruppa Armiya (Leningrad Army Group) -- Leningrad ###
+	#  NKVD Leningradksii Korpus -- NKVD Border Guard and RR units
+	division= {	# "1ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6174
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "4ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 6174
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		name = "7ya Militia"
+		location = 6174
+		division_template = "Militia"		# 2x Mekh Bge, 1x Mot Bge
+		start_experience_factor = 0.3
+	}
+	# Subordinate to AG
+	division= {
+		name = "11ya Militia"
+		location = 149
+		division_template = "Militia"		# 2x Mekh Bge
+		start_experience_factor = 0.3
+	}
+
+
+	#### Belorusskii Voennyii Okrug (Belorussian Military District) -- Velikie Luki, Minsk ####
+	# 4ya Strelkoviy Korpus
+	division= {	# "27ya 'Omskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 104
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "29ya  'Vyatskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 9408
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "33ya 'Belorusskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = 9120
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		name = "1ya BVO Mekhanizirovanaya Gruppa"
+		location = 126
+		division_template = "Militia"		# 3x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 5ya Strelkoviy Korpus
+	division= {	# "5ya 'Vitebskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 415
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "48ya 'Kashino-Tver.' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 48
+		}
+		location = 3310
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "64ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 64
+		}
+		location = 3333
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		name = "2ya BVO Mekhanizirovanaya Gruppa"
+		location = 11202
+		division_template = "Militia"		# 1x Tank Bge, 2x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 6ya Kavaleriyskiy Korpus
+	division= {	# "6ya 'Chongarskaya' Kav. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 6293
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "36ya 'Chongarskaya' Kav. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = 6293
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 11ya Strelkoviy Korpus
+	division= {	# "2ya 'Belorusskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 3219
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "8ya 'Minskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 6371
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "37ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 37
+		}
+		location = 6220
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 3ya Kavaleriyskiy Korpus
+	division= {	# "7ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 3267
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "11ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 11216
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# NKVD Belorusskiy Korpus -- NKVD Border Guard and RR units
+	division= {	# "2ya Militia"
+			division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+	location = 11370
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "3ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11202
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "8ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 306
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+
+	#### Moskva Voennyii Okrug (Moscow Military District) -- Moscow ####
+	# 2ya Strelkoviy Korpus
+	division= {		# "Moskva Proletarskaya Motostrelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6380
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {	# "6ya 'Orlovskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 6380
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "49ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 49
+		}
+		location = 6380
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {
+		name = "MVO Mekhanizirovanaya Gruppa"
+		location = 6380
+		division_template = "Militia"		# 3x Mekh Bge
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 3ya Strelkoviy Korpus
+	division= {	# "17ya 'Gor'kovskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 6262
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "19ya 'Voronezhskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 6262
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "84ya 'Tul'skogo' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 84
+		}
+		location = 6262
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+
+	### Moskva Gruppa Armiya (Moscow Army Group) -- Moscow ###
+	# NKVD Moskva Gruppa -- NKVD Border Guard and RR units
+	division= {	# "14ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 6380
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "17ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 6380
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+	# Subordinate to AG
+	division= {
+		name = "5ya Militia"
+		location = 6380
+		division_template = "Militia"		# 2x Mekh Bge, 1x Mot Bge
+		start_experience_factor = 0.3
+	}
+
+
+	#### Ural'skii Voennyii Okrug (Urals Military District) -- Smolensk ####
+	# 10ya Strelkoviy Korpus
+	division= {	# "14ya 'Krivorozhskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 11241
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "52ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 52
+		}
+		location = 11241
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "55ya 'Kurskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 55
+		}
+		location = 11241
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# Subordinate to VO
+	division= {	# "65ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 65
+		}
+		location = 306
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "82ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 82
+		}
+		location = 306
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "85ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 85
+		}
+		location = 306
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	#### Volga Voennyii Okrug (Volga Military District) -- Hoymel (Gomel) ####
+	# 12ya Strelkoviy Korpus
+	division= {	# "31ya 'Stalingradskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 9288
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "61ya 'Turkestanskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 61
+		}
+		location = 9288
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "70ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 70
+		}
+		location = 9288
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 13ya Strelkoviy Korpus
+	division= {	# "53ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 53
+		}
+		location = 3335
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "86ya 'Kazanskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 86
+		}
+		location = 3335
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 16ya Strelkoviy Korpus
+	division= {	# "4ya 'Smolenskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11271
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "43ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 43
+		}
+		location = 11271
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "81ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 81
+		}
+		location = 11271
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# Subordinate to VO
+	division= {	# "12ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 9288
+		division_template = "Militia"		# NKVD -- older equipment, training
+		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+
+	}
+
+
+	##### Yugo-Zapadnaya Teatr VD (South West TVD) -- Kyiv, Dnipropetrovsk #####
+	#### Kiev Voennyii Okrug (Kiev Military District) -- Kiev ####
+	# 8ya Strelkoviy Korpus
+	division= {	# "24ya 'Samaro-Ulyanovsk' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 215
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "46ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 46
+		}
+		location = 9554
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+	# 15ya Strelkoviy Korpus
+
+	# 1ya Kavaleriyskiy Korpus
+
+
+	#### Kharkov Voenniy Okrug (Kharkov Military District) -- Kharkov ####
+	# 7ya Strelkoviy Korpus
+
+	# 14ya Strelkoviy Korpus
+	division= {	# "23ya 'Khar'kovskaya' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 3580
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "75ya Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 75
+		}
+		location = 3580
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+	division= {	# "80ya 'Donbassa' Strelk. Div."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 80
+		}
+		location = 3580
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.85
+
+	}
+
+
+
+	##### Blizhniy Vostok Teatr VD (Near East Theater) -- Astrakhan #####
+
+
+	#### Severniy Kavkaz Voennyii Okrug (North Caucasus Military District) -- Rostov na Don ####
+
+	# 7ya Kavaleriyskiy Korpus
+
+	# Subordinate to AG

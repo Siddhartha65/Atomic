@@ -1,0 +1,179 @@
+﻿###########################
+# News Events
+###########################
+
+add_namespace = news
+
+# EEU Surr
+news_event = {
+	id = news.1
+	title = news.1.t
+	desc = news.1.d
+	picture = GFX_news_event_001
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.1.a
+		trigger = {
+			NOT = {
+				TAG = DDR
+				TAG = GER
+				TAG = DEN
+			}
+			has_government = technicism
+		}
+	}
+	option = {
+		name = news.1.b
+		trigger = {
+			NOT = {
+				TAG = DDR
+				TAG = GER
+				TAG = DEN
+			}
+			has_government = hoxhaism
+		}
+	}
+	option = {
+		name = news.1.b
+		trigger = {
+			NOT = {
+				TAG = DDR
+				TAG = GER
+				TAG = DEN
+			}
+		}
+	}
+}
+
+# EEU Wins
+news_event = {
+	id = news.2
+	title = news.1.t
+	desc = news.2.d
+	picture = GFX_news_event_018
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.2.a
+		trigger = {
+			NOT = {
+				TAG = DDR
+				TAG = GER
+				TAG = DEN
+			}
+			has_government = technicism
+		}
+	}
+	option = {
+		name = news.2.b
+		trigger = {
+			NOT = {
+				TAG = DDR
+				TAG = GER
+				TAG = DEN
+			}
+			has_government = hoxhaism
+		}
+	}
+	option = {
+		name = news.2.c
+		trigger = {
+			NOT = {
+				TAG = DDR
+				TAG = GER
+				TAG = DEN
+			}
+		}
+	}
+}
+
+# Bra War- Tech Cheat
+news_event = {
+	id = news.3
+	title = news.5.t
+	desc = news.3.d
+	picture = GFX_news_event_003
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.3.a
+		trigger = {
+			NOT = {
+				original_tag = BRA
+			}
+			has_government = technicism
+		}
+	}
+	option = {
+		name = news.3.b
+		trigger = {
+			NOT = {
+				original_tag = BRA
+			}
+			has_government = revelationism
+		}
+	}
+	option = {
+		name = news.3.c
+		trigger = {
+			NOT = {
+				original_tag = BRA
+			}
+		}
+	}
+}
+
+# Bra War- Pos Rev
+news_event = {
+	id = news.4
+	title = news.5.t
+	desc = news.4.d
+	picture = GFX_news_event_004
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news.4.a
+		trigger = {
+			NOT = {
+				original_tag = BRA
+			}
+			has_government = technicism
+		}
+	}
+	option = {
+		name = news.4.b
+		trigger = {
+			NOT = {
+				original_tag = BRA
+			}
+			has_government = posadism
+		}
+	}
+	option = {
+		name = news.4.c
+		trigger = {
+			NOT = {
+				original_tag = BRA
+			}
+			has_government = revelationism
+		}
+	}
+	option = {
+		name = news.4.e
+		trigger = {
+			NOT = {
+				original_tag = BRA
+			}
+			has_government = revelationism
+		}
+	}
+}

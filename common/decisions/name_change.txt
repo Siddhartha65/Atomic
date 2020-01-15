@@ -1,0 +1,181 @@
+player_choices = {
+
+	change_to_simple = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 1
+
+		cost = 0
+
+		complete_effect = {
+											AFG = { set_cosmetic_tag = AFG_SIMPLE }
+											AMA = { set_cosmetic_tag = AMA_SIMPLE }
+											NGA = { set_cosmetic_tag = NGA_SIMPLE }
+											AST = { set_cosmetic_tag = AST_SIMPLE }
+											VOL = { set_cosmetic_tag = VOL_SIMPLE }
+											COL = { set_cosmetic_tag = COL_SIMPLE }
+											PRU = { set_cosmetic_tag = PRU_SIMPLE }
+											USA = { set_cosmetic_tag = USA_SIMPLE }
+											UKR = { set_cosmetic_tag = UKR_SIMPLE }
+											TUR = { set_cosmetic_tag = TUR_SIMPLE }
+											TRA = { set_cosmetic_tag = TRA_SIMPLE }
+											TEX = { set_cosmetic_tag = TEX_SIMPLE }
+											SWI = { set_cosmetic_tag = SWI_SIMPLE }
+											SWE = { set_cosmetic_tag = SWE_SIMPLE }
+											SPR = { set_cosmetic_tag = SPR_SIMPLE }
+											SOV = { set_cosmetic_tag = SOV_SIMPLE }
+											SIA = { set_cosmetic_tag = SIA_SIMPLE }
+											SAU = { set_cosmetic_tag = SAU_SIMPLE }
+											SAF = { set_cosmetic_tag = SAF_SIMPLE }
+											RUS = { set_cosmetic_tag = RUS_SIMPLE }
+											RAJ = { set_cosmetic_tag = RAJ_SIMPLE }
+											PER = { set_cosmetic_tag = PER_SIMPLE }
+											PAN = { set_cosmetic_tag = PAN_SIMPLE }
+											NZL = { set_cosmetic_tag = NZL_SIMPLE }
+											NEP = { set_cosmetic_tag = NEP_SIMPLE }
+											MOR = { set_cosmetic_tag = MOR_SIMPLE }
+											MON = { set_cosmetic_tag = MON_SIMPLE }
+											MEX = { set_cosmetic_tag = MEX_SIMPLE }
+											MAD = { set_cosmetic_tag = MAD_SIMPLE }
+											LUX = { set_cosmetic_tag = LUX_SIMPLE }
+											LIB = { set_cosmetic_tag = LIB_SIMPLE }
+											LBA = { set_cosmetic_tag = LBA_SIMPLE }
+											KOR = { set_cosmetic_tag = KOR_SIMPLE }
+											KEN = { set_cosmetic_tag = KEN_SIMPLE }
+											JAP = { set_cosmetic_tag = JAP_SIMPLE }
+											IRE = { set_cosmetic_tag = IRE_SIMPLE }
+											GER = { set_cosmetic_tag = GER_SIMPLE }
+											FRA = { set_cosmetic_tag = FRA_SIMPLE }
+											ETH = { set_cosmetic_tag = ETH_SIMPLE }
+											ENG = { set_cosmetic_tag = ENG_SIMPLE }
+											EGY = { set_cosmetic_tag = EGY_SIMPLE }
+											DEN = { set_cosmetic_tag = DEN_SIMPLE }
+											DDR = { set_cosmetic_tag = DDR_SIMPLE }
+											CZE = { set_cosmetic_tag = CZE_SIMPLE }
+											CUB = { set_cosmetic_tag = CUB_SIMPLE }
+											CHL = { set_cosmetic_tag = CHL_SIMPLE }
+											CHI = { set_cosmetic_tag = CHI_SIMPLE }
+											CAR = { set_cosmetic_tag = CAR_SIMPLE }
+											CAN = { set_cosmetic_tag = CAN_SIMPLE }
+											BUL = { set_cosmetic_tag = BUL_SIMPLE }
+											BRM = { set_cosmetic_tag = BRM_SIMPLE }
+											BRA = { set_cosmetic_tag = BRA_SIMPLE }
+											BOL = { set_cosmetic_tag = BOL_SIMPLE }
+											ARG = { set_cosmetic_tag = ARG_SIMPLE }
+											ALG = { set_cosmetic_tag = ALG_SIMPLE }
+											ALB = { set_cosmetic_tag = ALB_SIMPLE }
+											POL = { set_cosmetic_tag = POL_SIMPLE }
+											EST = { set_cosmetic_tag = EST_SIMPLE }
+											LAT = { set_cosmetic_tag = LAT_SIMPLE }
+											LIT = { set_cosmetic_tag = LIT_SIMPLE }
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	change_to_standard = {
+
+		icon = generic_industry
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			always = yes
+		}
+
+		fire_only_once = no
+
+		days_remove = 1
+
+		cost = 0
+
+		complete_effect = {
+											AFG = { set_cosmetic_tag = AFG }
+											AMA = { set_cosmetic_tag = AMA }
+											COL = { set_cosmetic_tag = COL }
+											PRU = { set_cosmetic_tag = PRU }
+											NGA = { set_cosmetic_tag = NGA }
+											AST = { set_cosmetic_tag = AST }
+											VOL = { set_cosmetic_tag = VOL }
+											USA = { set_cosmetic_tag = USA }
+											UKR = { set_cosmetic_tag = UKR }
+											TUR = { set_cosmetic_tag = TUR }
+											TRA = { set_cosmetic_tag = TRA }
+											TEX = { set_cosmetic_tag = TEX }
+											SWI = { set_cosmetic_tag = SWI }
+											SWE = { set_cosmetic_tag = SWE }
+											SPR = { set_cosmetic_tag = SPR }
+											SOV = { set_cosmetic_tag = SOV }
+											SIA = { set_cosmetic_tag = SIA }
+											SAU = { set_cosmetic_tag = SAU }
+											SAF = { set_cosmetic_tag = SAF }
+											RUS = { set_cosmetic_tag = RUS }
+											RAJ = { set_cosmetic_tag = RAJ }
+											PER = { set_cosmetic_tag = PER }
+											PAN = { set_cosmetic_tag = PAN }
+											NZL = { set_cosmetic_tag = NZL }
+											NEP = { set_cosmetic_tag = NEP }
+											MOR = { set_cosmetic_tag = MOR }
+											MON = { set_cosmetic_tag = MON }
+											MEX = { set_cosmetic_tag = MEX }
+											MAD = { set_cosmetic_tag = MAD }
+											LUX = { set_cosmetic_tag = LUX }
+											LIB = { set_cosmetic_tag = LIB }
+											LBA = { set_cosmetic_tag = LBA }
+											KOR = { set_cosmetic_tag = KOR }
+											KEN = { set_cosmetic_tag = KEN }
+											JAP = { set_cosmetic_tag = JAP }
+											IRE = { set_cosmetic_tag = IRE }
+											GER = { set_cosmetic_tag = GER }
+											FRA = { set_cosmetic_tag = FRA }
+											ETH = { set_cosmetic_tag = ETH }
+											ENG = { set_cosmetic_tag = ENG }
+											EGY = { set_cosmetic_tag = EGY }
+											DEN = { set_cosmetic_tag = DEN }
+											DDR = { set_cosmetic_tag = DDR }
+											CZE = { set_cosmetic_tag = CZE }
+											CUB = { set_cosmetic_tag = CUB }
+											CHL = { set_cosmetic_tag = CHL }
+											CHI = { set_cosmetic_tag = CHI }
+											CAR = { set_cosmetic_tag = CAR }
+											CAN = { set_cosmetic_tag = CAN }
+											BUL = { set_cosmetic_tag = BUL }
+											BRM = { set_cosmetic_tag = BRM }
+											BRA = { set_cosmetic_tag = BRA }
+											BOL = { set_cosmetic_tag = BOL }
+											ARG = { set_cosmetic_tag = ARG }
+											ALG = { set_cosmetic_tag = ALG }
+											ALB = { set_cosmetic_tag = ALB }
+
+		}
+
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+}

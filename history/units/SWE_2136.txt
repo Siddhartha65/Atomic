@@ -1,0 +1,128 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = SWE_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	######## LAND UNITS ########
+	##### Högkvarteret #####
+	# Southern Military District
+	division = { # "I. Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11160 # Kristianstad
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Södra Militia"
+		location = 11160 # Kristianstad
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# Northern Military District
+	division = { # "VI. Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 11148 # Osterund
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Norra Militia"
+		location = 11148 # Osterund
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	# Western Military District
+	division = { # "III. Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3375 # Skövde
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Västra Militia"
+		location = 3375 # Skovde
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# Eastern Military District
+	division = { # "IV. Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 6050 #Stockholm
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Militia"
+		location = 6050 #Stockholm
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Östra Militia"
+		location = 6050 #Stockholm
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+	# Upper Northern Military District
+	division = { # "V. Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 9186 # Boden
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Övre Norrland Militia"
+		location = 9186 # Boden
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+
+	division = {
+		name = "Gotlands Militia"
+		location = 408 # Gotland
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+	}
+}

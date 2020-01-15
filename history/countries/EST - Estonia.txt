@@ -1,0 +1,67 @@
+﻿capital = 13
+
+set_politics = {
+	ruling_party = technicism
+	last_election = "2132.5.21"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	hoxhaism = 20
+	revelationism = 15
+	posadism = 5
+	technicism = 60
+}
+
+create_country_leader = {
+	name = "Kaja Vosu"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {tenacious_defender	triumphant_revolutionary	leider
+	}
+}
+
+create_country_leader = {
+	name = "Merilin Nurme"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Eili Puhvel"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {#
+	}
+}
+
+create_country_leader = {
+	name = "Merili Jogi"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Irja Kallaste"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

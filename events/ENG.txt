@@ -1,0 +1,40 @@
+﻿###########################
+# German Events
+###########################
+
+add_namespace = eng
+
+
+######## EEU Ally ########
+country_event = {
+	id = eng.1
+	title = eng.1.t
+	desc = eng.1.d
+	picture = GFX_report_event_sata
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+	option = {
+		name = eng.1.a
+												DDR = {
+														country_event = {
+																							id = eeu.6
+																					}
+												}
+	}
+
+		option = {
+			name = eng.1.b
+			trigger = {
+			  is_ai = no
+			}
+													DDR = {
+															country_event = {
+																								id = eeu.7
+																						}
+													}
+		}
+}

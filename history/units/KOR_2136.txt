@@ -1,0 +1,290 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = KOR_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+### OOB ###
+units = {
+	division = {
+		name = "2 Dokuritsu Shubirentai"
+		location = 10541
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = { # "1 Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7697
+		division_template = "Militia"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1 Dokuritsu Shubirentai"
+		location = 7743
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_equipment_factor = 0.7
+	}
+	division = { # "1 'Gyoku' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10612
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "3 Mouko Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 7812
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "4 Mouko Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 104
+		}
+		location = 7812
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "1 Mouko Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 101
+		}
+		location = 12469
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "2 Mouko Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 102
+		}
+		location = 12469
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+
+	division = { # "5 Mouko Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 105
+		}
+		location = 10429
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "6 Mouko Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 106
+		}
+		location = 10429
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "7 Mouko Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 107
+		}
+		location = 3978
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "8 Mouko Kiheishidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 108
+		}
+		location = 3978
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "JAP" } }
+		start_experience_factor = 0.2
+	}
+	division = { # "16 'Kaki' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 9768
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "5 'Koi' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 3955 #East Hebei Autonomous Council
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "11 Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 11822 #East Hebei Autonomous Council
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "10 'Tetsu' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 881
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "1 Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3900 #East Hebei Autonomous Council
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Ryojun Kichi Shubitai"
+		location = 1150 #Dalian
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Manshu Tetsudo Shubitai" # Manchuria Railway Guard
+		location = 11771 #Mukden
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+
+	division = {
+		name = "Kantogun Shureibu Keibitai"
+		location = 4572 #Hsinking
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+	}
+	division = { # "19 'Tora' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 4052 #Pyongyang
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "20 'Asa' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 7125 #Seoul
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Chinkai Kichi Kaiheidan"
+		location = 4056 #Pusan
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = { # "8 'Sugi' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 1807
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "5 Dokuritsu Shubirentai"
+		location = 4829
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "4 Dokuritsu Shubirentai"
+		location = 12263
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "9 'Take' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3944 #Near Changkufeng Lake
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "14 'Sho' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 3843 #Eastern Manchuria
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "6 Dokuritsu Shubirentai"
+		location = 12500
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "12 'Ken' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 7569
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "3 Dokuritsu Shubirentai"
+		location = 10521
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+}

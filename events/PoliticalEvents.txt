@@ -1,0 +1,414 @@
+﻿###########################
+# Political Events
+###########################
+
+add_namespace = political
+
+# Technicism on the Rise
+country_event = {
+	id = political.1
+	title = political.1.t
+	desc = political.1.d
+	picture = GFX_report_event_fascist_gathering
+
+	trigger = {
+		NOT = { has_government = technicism }
+		technicism > 0.6
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# We need a referendum
+	option = {
+		name = political.1.a
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -100
+		set_politics = {
+			ruling_party = technicism
+			elections_allowed = no
+		}
+	}
+
+	# Not right now
+	option = {
+		name = political.1.b
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = impending_civil_war_tt
+		set_country_flag = technicism_popular_movement
+	}
+}
+
+
+# Civil War for technicism
+country_event = {
+	id = political.2
+	title = political.2.t
+	desc = political.2.d
+	picture = GFX_report_event_fascist_gathering
+
+	trigger = {
+		has_idea_with_trait = technicist_reformer
+		NOT = { has_government = technicism }
+		technicism > 0.25
+		OR = {has_country_flag = technicism_popular_movement}
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.75
+			has_country_flag = technicism_popular_movement
+		}
+	}
+
+	option = {
+		name = political.2.a
+				start_civil_war = {
+				ruling_party = technicism
+				ideology = ROOT
+					size = 0.6
+				}
+	}
+	option = {
+		name = political.2.b
+		start_civil_war = {
+		ideology = technicism
+			size = 0.6
+		}
+	}
+	}
+
+# hoxhaism on the Rise
+country_event = {
+	id = political.3
+	title = political.3.t
+	desc = political.3.d
+	picture = GFX_report_event_fascist_gathering
+
+	trigger = {
+		NOT = { has_government = hoxhaism }
+		hoxhaism > 0.6
+	}
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	# We need a referendum
+	option = {
+		name = political.3.a
+		ai_chance = {
+			factor = 3
+		}
+		add_political_power = -100
+		set_politics = {
+			ruling_party = hoxhaism
+			elections_allowed = no
+		}
+	}
+
+	# Not right now
+	option = {
+		name = political.3.b
+		ai_chance = {
+			factor = 1
+		}
+		custom_effect_tooltip = impending_civil_war_tt
+		set_country_flag = hoxhaism_popular_movement
+	}
+}
+
+
+# Civil War for hoxhaism
+country_event = {
+	id = political.4
+	title = political.4.t
+	desc = political.4.d
+	picture = GFX_report_event_fascist_gathering
+
+	trigger = {
+		has_idea_with_trait = hoxhaist_demagogue
+		NOT = { has_government = hoxhaism }
+		hoxhaism > 0.25
+		OR = {has_country_flag = hoxhaism_popular_movement}
+	}
+
+	mean_time_to_happen = {
+		days = 365
+		modifier = {
+			factor = 0.75
+			has_country_flag = hoxhaism_popular_movement
+		}
+	}
+
+	option = {
+		name = political.4.a
+				start_civil_war = {
+				ruling_party = hoxhaism
+				ideology = ROOT
+					size = 0.6
+				}
+	}
+	option = {
+		name = political.4.b
+		start_civil_war = {
+		ideology = hoxhaism
+			size = 0.6
+		}
+	}
+}
+
+
+	# revelationism on the Rise
+	country_event = {
+		id = political.5
+		title = political.5.t
+		desc = political.5.d
+		picture = GFX_report_event_fascist_gathering
+
+		trigger = {
+			NOT = { has_government = revelationism }
+			revelationism > 0.6
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 30
+		}
+
+		# We need a referendum
+		option = {
+			name = political.5.a
+			ai_chance = {
+				factor = 5
+			}
+			add_political_power = -100
+			set_politics = {
+				ruling_party = revelationism
+				elections_allowed = no
+			}
+		}
+
+		# Not right now
+		option = {
+			name = political.5.b
+			ai_chance = {
+				factor = 5
+			}
+			custom_effect_tooltip = impending_civil_war_tt
+			set_country_flag = revelationism_popular_movement
+		}
+	}
+
+
+	# Civil War for revelationism
+	country_event = {
+		id = political.6
+		title = political.6.t
+		desc = political.6.d
+		picture = GFX_report_event_fascist_gathering
+
+		trigger = {
+			has_idea_with_trait = revelationist_moralizer
+			NOT = { has_government = revelationism }
+			revelationism > 0.25
+			OR = {has_country_flag = revelationism_popular_movement}
+		}
+
+		mean_time_to_happen = {
+			days = 365
+			modifier = {
+				factor = 0.75
+				has_country_flag = revelationism_popular_movement
+			}
+		}
+		option = {
+				name = political.6.a
+						start_civil_war = {
+						ruling_party = revelationism
+						ideology = ROOT
+							size = 0.6
+						}
+			}
+			option = {
+				name = political.6.b
+				start_civil_war = {
+				ideology = revelationism
+					size = 0.6
+				}
+			}
+	}
+
+	# posadism on the Rise
+	country_event = {
+		id = political.11
+		title = political.11.t
+		desc = political.11.d
+		picture = GFX_report_event_fascist_gathering
+
+		trigger = {
+			NOT = { has_government = posadism }
+			posadism > 0.6
+		}
+
+		fire_only_once = yes
+
+		mean_time_to_happen = {
+			days = 30
+		}
+
+		# We need a referendum
+		option = {
+			name = political.11.a
+			ai_chance = {
+				factor = 9
+			}
+			add_political_power = -100
+			set_politics = {
+				ruling_party = posadism
+				elections_allowed = no
+			}
+		}
+
+		# Not right now
+		option = {
+			name = political.11.b
+			ai_chance = {
+				factor = 1
+			}
+			custom_effect_tooltip = impending_civil_war_tt
+			set_country_flag = posadism_popular_movement
+		}
+	}
+
+
+	# Civil War for posadism
+	country_event = {
+		id = political.12
+		title = political.12.t
+		desc = political.12.d
+		picture = GFX_report_event_fascist_gathering
+
+		trigger = {
+			has_idea_with_trait = posadist_revolutionary
+
+			NOT = { has_government = posadism }
+			posadism > 0.25
+			OR = {has_country_flag = posadism_popular_movement}
+		}
+
+		mean_time_to_happen = {
+			days = 365
+			modifier = {
+				factor = 0.75
+				has_country_flag = posadism_popular_movement
+			}
+		}
+		option = {
+				name = political.12.a
+						start_civil_war = {
+						ruling_party = posadism
+						ideology = ROOT
+							size = 0.6
+						}
+			}
+			option = {
+				name = political.12.b
+				start_civil_war = {
+				ideology = posadism
+					size = 0.6
+				}
+			}
+	}
+
+		# raider on the Rise
+		country_event = {
+			id = political.9
+			title = political.9.t
+			desc = political.9.d
+			picture = GFX_report_event_fascist_gathering
+
+			trigger = {
+				NOT = { has_government = raider }
+				raider > 0.6
+			}
+
+			fire_only_once = yes
+
+			mean_time_to_happen = {
+				days = 30
+			}
+
+			# We need a referendum
+			option = {
+				name = political.9.a
+				ai_chance = {
+					factor = 9
+				}
+				add_political_power = -100
+				set_politics = {
+					ruling_party = raider
+					elections_allowed = no
+				}
+			}
+
+			# Not right now
+			option = {
+				name = political.9.b
+				ai_chance = {
+					factor = 1
+				}
+				custom_effect_tooltip = impending_civil_war_tt
+				set_country_flag = raider_popular_movement
+			}
+		}
+
+
+		# Civil War for raider
+		country_event = {
+			id = political.10
+			title = political.10.t
+			desc = political.10.d
+			picture = GFX_report_event_fascist_gathering
+
+			trigger = {
+				has_idea_with_trait = staunch_raider
+				NOT = { has_government = raider }
+				raider > 0.25
+				OR = {has_country_flag = raider_popular_movement}
+			}
+
+			mean_time_to_happen = {
+				days = 365
+				modifier = {
+					factor = 0.75
+					has_country_flag = raider_popular_movement
+				}
+			}
+			option = {
+					name = political.10.a
+							start_civil_war = {
+							ruling_party = raider
+							ideology = ROOT
+								size = 0.6
+							}
+				}
+				option = {
+					name = political.10.b
+					start_civil_war = {
+					ideology = raider
+						size = 0.6
+					}
+				}
+		}

@@ -1,0 +1,41 @@
+player_choices = {
+	icon = generic_propaganda
+
+	visible = {
+
+	}
+}
+
+alliance_application = {
+	icon = generic_propaganda
+
+	visible = { is_faction_leader = yes
+
+	}
+}
+
+bohemian_freedom = {
+	icon = GFX_decision_category_generic_propaganda
+
+	visible = {
+							tag = DDR
+						  DDR = {has_completed_focus = DDR_let_em_loose }
+
+	}
+}
+
+preservation_debug = {
+	icon = generic_propaganda
+
+	visible = { tag = NZL
+
+	}
+}
+
+spam_killer = {
+	icon = generic_propaganda
+
+	visible = { is_ai = yes
+
+	}
+}

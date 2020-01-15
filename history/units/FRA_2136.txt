@@ -1,0 +1,284 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = FRA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+##### OOB #####
+units = {
+	##### Northern France Region #####
+	# Ie Corps d'Armée (Région Militaire in 1936) -- Lille
+
+	# IIIe Corps d'Armée (Région Militaire in 1936) -- Rouen
+	division= {	# "5ème Div. d'Infanterie Motorisée"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 11563
+		division_template = "Militia" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+
+	# IVe Corps d'Armée (Région Militaire in 1936) -- Le Mans
+	division= {	# "19ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 19
+		}
+		location = 3509
+		division_template = "Militia" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# Ve Corps d'Armée (Région Militaire in 1936) -- Orleans
+	division= {	# "9ème Div. d'Infanterie Motorisée"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 3509
+		division_template = "Militia" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	# "1ère Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3509
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# IXe Corps d'Armée (Région Militaire in 1936) -- Tours
+	division= {	# "23ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 3671
+		division_template = "Militia" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	# "3ème Div. d'Inf. Nord-Africaine"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 43
+		}
+		location = 3671
+		division_template = "Militia"	 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# XIe Corps d'Armée (Région Militaire in 1936) -- Nantes
+	division= {	# "16ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 3552
+		division_template = "Militia" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "21ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 21
+		}
+		location = 6536
+		division_template = "Militia" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {
+		name = "5ème Militia"
+		location = 11465
+		division_template = "Militia" 		# R-35s
+		start_experience_factor = 0.2
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "FRA" } }
+	}
+
+	# Région Militaire de Paris -- Paris
+	division= {	# "10ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 11506
+		division_template = "Militia" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+#	division= {	# "3ème Div. d'Inf. Coloniale"			# missing from OOB, insterted code but commented out -- balance?
+#		division_name = {
+#			is_name_ordered = yes
+#			name_order = 3
+#		}
+#		location = 11506
+#		division_template = "Militia"	 	# Second line, reserve equipment
+#		start_experience_factor = 0.2
+#		start_equipment_factor = 0.5
+#	}
+	division= {	# "3ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11506
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "5ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 11506
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		name = "4ème Militia"
+		location = 11506
+		division_template = "Militia" 		# R-35s
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "FRA" } }
+	}
+
+	# VIIe Corps d'Armée (Région Militaire in 1936) -- Besançon
+
+	# VIIIe Corps d'Armée (Région Militaire in 1936) -- Dijon
+	division= {	# "15ème Div. d'Infanterie Motorisée"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 3652
+		division_template = "Militia" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	# "24ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 3652
+		division_template = "Militia" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	### Southern France Region
+	# XIIIe Corps d'Armée (Région Militaire in 1936) -- Clermont-Ferrand
+	division= {	# "4ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 11576
+		division_template = "Militia" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "18ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 11576
+		division_template = "Militia" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "25ème Div. d'Infanterie Motorisée"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 11576
+		division_template = "Militia" 	# All motorized are frontline, best equipment
+		start_experience_factor = 0.3
+	}
+
+	# XVIIe Corps d'Armée (Région Militaire in 1936) -- Toulouse
+	division= {	# "22ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 6766
+		division_template = "Militia" 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "4ème Div. d'Inf. Coloniale"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 6766
+		division_template = "Militia"	 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# XVIIIe Corps d'Armée (Région Militaire in 1936) -- Bordeaux
+	division= {	# "36ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = 9737
+		division_template = "Militia" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+	division= {	# "1ère Div. d'Inf. Coloniale"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6657
+		division_template = "Militia"	 	# Second line, reserve equipment
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	# XVe Corps d'Armée (Région Militaire in 1936) -- Marseille
+	# XVIe Corps d'Armée (Région Militaire in 1936) -- Montpellier
+	division= {	# "31ème Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 9898
+		division_template = "Militia" 	# Frontline, best equipment
+		start_experience_factor = 0.3
+	}
+}

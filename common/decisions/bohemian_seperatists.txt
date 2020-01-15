@@ -1,0 +1,282 @@
+bohemian_separatists = {
+
+	block_gal_trade = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = {check_variable = {
+													    var = GAL_supplies
+													    value = no_supplies
+													    compare = greater_than
+													}
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										subtract_from_variable = {
+														var = GAL_supplies
+														value = 1
+
+												}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	block_ruthenian_trade = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = {check_variable = {
+													    var = RUT_supplies
+													    value = no_supplies
+													    compare = greater_than
+													}
+		}
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										subtract_from_variable = {
+														var = RUT_supplies
+														value = 1
+
+												}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	block_hungarian_trade = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = {check_variable = {
+													    var = HUN_supplies
+													    value = no_supplies
+													    compare = greater_than
+													}
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										subtract_from_variable = {
+														var = hun_supplies
+														value = 1
+
+												}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	block_slovakian_trade = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = {check_variable = {
+													    var = SLO_supplies
+													    value = no_supplies
+													    compare = greater_than
+													}
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										subtract_from_variable = {
+														var = SLO_supplies
+														value = 1
+
+												}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+
+
+	block_gal_h_trade = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = {check_variable = {
+													    var = gal_h_supplies
+													    value = no_supplies
+													    compare = greater_than
+													}
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										subtract_from_variable = {
+														var = gal_h_supplies
+														value = 1
+
+												}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	block_rut_h_trade = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = {check_variable = {
+													    var = rut_h_supplies
+													    value = no_supplies
+													    compare = greater_than
+													}
+		}
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										subtract_from_variable = {
+														var = rut_h_supplies
+														value = 1
+
+												}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	block_hun_h__trade = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = {check_variable = {
+													    var = hun_h_supplies
+													    value = no_supplies
+													    compare = greater_than
+													}
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										subtract_from_variable = {
+														var = hun_h_supplies
+														value = 1
+
+												}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+
+	block_slo_h_trade = {
+
+		icon = GFX_decision_generic_industry
+
+		available = {
+		}
+
+		visible = {check_variable = {
+													    var = slo_h_supplies
+													    value = no_supplies
+													    compare = greater_than
+													}
+		}
+
+		fire_only_once = no
+
+		cost = 15
+
+		complete_effect = {
+										subtract_from_variable = {
+														var = slo_h_supplies
+														value = 1
+
+												}
+		}
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_stability < 0.6
+			}
+		}
+	}
+}

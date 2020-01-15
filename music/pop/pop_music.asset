@@ -1,0 +1,107 @@
+music = {
+	name = "You Drive Me Crazy - Britney Spears"
+	file = "You_Drive_Me_Crazy_Britney_Spears.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Wannabe - Spice Girls"
+	file = "Wannabe_Spice_Girls.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "The Sign (K) - Ace Of Base"
+	file = "The_sign_(K)_Ace_Of_Base.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "The Boy Is Mine - Brandy"
+	file = "The_Boy_Is_Mine_Brandy.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "September - Earth Wind And Fire"
+	file = "September_Earth_Wind_and_Fire_.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Say My Name - Destiny's Child"
+	file = "Say_My_Name_Destinys_Child.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Quit_Playin' Games (K) - Backstreet Boys"
+	file = "Quit_Playin_Games_(K)_Backstreet_Boys.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Living La Vida Loca - Ricky Martin"
+	file = "Living_La_Vida_Loca_Ricky_Martin.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "I Want It That Way - Backstreet Boys"
+	file = "I_Want_It_That_Way_Backstreet_Boys.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Ironic - Alanis Morissette"
+	file = "Ironic_Alanis_Morissette.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Ice Ice Baby - Vanilla Ice"
+	file = "Ice_Ice_Baby_Vanilla_Ice.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Genie In A Bottle - Christina Aguilera"
+	file = "Genie_In_A_Bottle_Christina_Aguilera.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Everybody - Backstreet Boys"
+	file = "Everybody_Backstreet_Boys.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Don't Speak - No Doubt"
+	file = "Don't_Speak_No_Doubt.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Blue - Eiffel 64"
+	file = "Blue_Dj_Ali_Eiffel.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Barbie Girl (K)- Aqua"
+	file = "Barbie_Girl_(K)_Aqua.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Baby One More Time (K) - Britney Spears"
+	file = "Baby_One_More_Time_(K)_Britney_Spears.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "All Star - Smash Mouth"
+	file = "All_Star_Smash_Mouth.ogg"
+	volume = 0.7
+}

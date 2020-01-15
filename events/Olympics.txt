@@ -1,0 +1,604 @@
+﻿###########################
+# Olympic Events
+###########################
+
+add_namespace = olympics
+
+# Techlympics
+country_event = {
+	id = olympics.1
+	title = olympics.1.t
+	desc = olympics.1.d
+	picture = GFX_report_tech_oly
+
+
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+		is_faction_leader = yes
+    has_government = technicism
+    NOT = { has_global_flag = tech_olym_host}
+	}
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = olympics.1.a
+    ai_chance = { factor = 80 }
+    set_global_flag = tech_olym_host
+			every_other_country = {
+												limit = {
+																has_government = technicism
+
+															 }
+												country_event = {id = olympics.7}
+															}
+		 set_country_flag = tech_olym_host
+}
+
+option = {
+	name = olympics.1.b
+	ai_chance = { factor = 50 }
+	set_global_flag = tech_olym_host
+			every_other_country = {
+												limit = {OR = {
+																					has_government = technicism
+																					has_government = hoxhaism
+					                            }
+
+															 }
+												country_event = {id = olympics.7}
+															}
+
+		 set_country_flag = tech_olym_host
+}
+
+option = {
+	name = olympics.1.c
+	ai_chance = { factor = 30 }
+	set_global_flag = tech_olym_host
+			every_other_country = {
+												country_event = {id = olympics.7}
+
+															}
+
+		 set_country_flag = tech_olym_host
+}
+
+option = {
+	name = olympics.1.e
+	ai_chance = { factor = 20 }
+  add_political_power = 25
+}
+}
+
+country_event = {
+	id = olympics.7
+	title = olympics.7.t
+	desc = olympics.7.d
+	picture = GFX_report_tech_oly
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = olympics.7.a
+    ai_chance = { factor = 80 }
+		set_country_flag = tech_olympian
+    add_opinion_modifier = { target = FROM modifier = small_increase }
+		FROM = { add_opinion_modifier = { target = ROOT modifier = small_increase }
+             country_event = {id = olympics.6}
+           }
+}
+
+option = {
+	name = olympics.7.b
+	ai_chance = { factor = 20 }
+	add_opinion_modifier = { target = FROM modifier = small_decrease }
+	FROM = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+}
+}
+
+country_event = {
+	id = olympics.6
+	title = olympics.6.t
+	desc = olympics.6.d
+	picture = GFX_report_tech_oly
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+	}
+
+	option = {
+	ai_chance = { factor = 80 }
+		name = olympics.6.a
+					}
+}
+
+# Hoxlympics
+country_event = {
+	id = olympics.2
+	title = olympics.2.t
+	desc = olympics.2.d
+	picture = GFX_report_hox_oly
+
+
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+		is_faction_leader = yes
+    has_government = hoxhaism
+    NOT = { has_global_flag = hox_olym_host}
+	}
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = olympics.2.a
+    ai_chance = { factor = 80 }
+		set_global_flag = hox_olym_host
+			every_other_country = {
+												limit = {
+																has_government = hoxhaism
+
+															 }
+												country_event = {id = olympics.8}
+															}
+
+		 set_country_flag = hox_olym_host
+}
+
+option = {
+	name = olympics.2.b
+	ai_chance = { factor = 30 }
+	set_global_flag = hox_olym_host
+			every_other_country = {
+												limit = {OR = {
+																					has_government = hoxhaism
+																          has_government = posadism
+                                     }
+
+															 }
+												country_event = {id = olympics.8}
+															}
+
+		 set_country_flag = hox_olym_host
+}
+
+option = {
+	name = olympics.2.c
+	ai_chance = { factor = 50 }
+	set_global_flag = hox_olym_host
+			every_other_country = {
+												limit = {
+
+															 }
+												country_event = {id = olympics.8}
+															}
+
+		 set_country_flag = hox_olym_host
+}
+
+option = {
+ai_chance = { factor = 20 }
+	name = olympics.2.e
+  add_political_power = 25
+}
+}
+
+country_event = {
+	id = olympics.8
+	title = olympics.8.t
+	desc = olympics.8.d
+	picture = GFX_report_hox_oly
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = olympics.8.a
+    ai_chance = { factor = 80 }
+		set_country_flag = hox_olympian
+    add_opinion_modifier = { target = FROM modifier = small_increase }
+		FROM = { add_opinion_modifier = { target = ROOT modifier = small_increase }
+             country_event = {id = olympics.6}
+           }
+}
+
+
+option = {
+	name = olympics.8.b
+	ai_chance = { factor = 20 }
+	add_opinion_modifier = { target = FROM modifier = small_decrease }
+	FROM = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+}
+}
+
+
+# REVlympics
+country_event = {
+	id = olympics.3
+	title = olympics.3.t
+	desc = olympics.3.d
+	picture = GFX_report_rev_oly
+
+
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+		is_faction_leader = yes
+    has_government = revelationism
+    NOT = { has_global_flag = rev_olym_host}
+	}
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = olympics.3.a
+    ai_chance = { factor = 80 }
+		set_global_flag = rev_olym_host
+			every_other_country = {
+												limit = {
+																has_government = revelationism
+
+															 }
+												country_event = {id = olympics.9}
+															}
+
+		 set_country_flag = rev_olym_host
+}
+
+option = {
+	name = olympics.3.b
+	ai_chance = { factor = 50 }
+	set_global_flag = rev_olym_host
+			every_other_country = {
+												limit = {OR = {
+																					has_government = revelationism
+																          has_government = technicism
+                                      }
+
+															 }
+												country_event = {id = olympics.9}
+															}
+
+		 set_country_flag = rev_olym_host
+}
+
+option = {
+	name = olympics.3.c
+	ai_chance = { factor = 20 }
+	set_global_flag = rev_olym_host
+			every_other_country = {
+												limit = {
+
+															 }
+												country_event = {id = olympics.9}
+															}
+
+		 set_country_flag = rev_olym_host
+}
+
+
+option = {
+	name = olympics.3.e
+	ai_chance = { factor = 1 }
+  add_political_power = 25
+}
+}
+
+country_event = {
+	id = olympics.9
+	title = olympics.9.t
+	desc = olympics.9.d
+	picture = GFX_report_rev_oly
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = olympics.9.a
+    ai_chance = { factor = 80 }
+		set_country_flag = rev_olympian
+    FROM = { add_opinion_modifier = { target = ROOT modifier = small_increase }
+		             country_event = {id = olympics.6}
+		           }
+		}
+
+
+		option = {
+			name = olympics.9.b
+	    ai_chance = { factor = 20 }
+			add_opinion_modifier = { target = FROM modifier = small_decrease }
+			FROM = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+		}
+}
+
+
+# poslympics
+country_event = {
+	id = olympics.4
+	title = olympics.4.t
+	desc = olympics.4.d
+	picture = GFX_report_pos_oly
+
+
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+		is_faction_leader = yes
+    has_government = posadism
+    NOT = { has_global_flag = pos_olym_host}
+	}
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+	option = {
+		name = olympics.4.a
+    ai_chance = { factor = 50 }
+		set_global_flag = pos_olym_host
+			every_other_country = {
+												limit = {
+																has_government = posadism
+
+															 }
+												country_event = {id = olympics.10}
+															}
+
+		 set_country_flag = pos_olym_host
+}
+
+option = {
+	name = olympics.4.b
+	ai_chance = { factor = 30 }
+	set_global_flag = pos_olym_host
+			every_other_country = {
+												limit = {OR = {
+																					has_government = posadism
+																          has_government = revelationism
+                                      }
+
+															 }
+												country_event = {id = olympics.10}
+															}
+
+		 set_country_flag = pos_olym_host
+}
+
+option = {
+	name = olympics.4.c
+	ai_chance = { factor = 80 }
+	set_global_flag = pos_olym_host
+			every_other_country = {
+												limit = {
+
+															 }
+												country_event = {id = olympics.10}
+															}
+
+		 set_country_flag = pos_olym_host
+}
+
+
+option = {
+	name = olympics.4.e
+	ai_chance = { factor = 20 }
+  add_political_power = 25
+}
+}
+
+country_event = {
+	id = olympics.10
+	title = olympics.10.t
+	desc = olympics.10.d
+	picture = GFX_report_pos_oly
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = olympics.10.a
+    ai_chance = { factor = 80 }
+		set_country_flag = pos_olympian
+		FROM = { add_opinion_modifier = { target = ROOT modifier = small_increase }
+             country_event = {id = olympics.6}
+           }
+		}
+
+
+		option = {
+			name = olympics.10.b
+	    ai_chance = { factor = 50 }
+			add_opinion_modifier = { target = FROM modifier = small_decrease }
+			FROM = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+		}
+}
+
+# railympics
+country_event = {
+	id = olympics.5
+	title = olympics.5.t
+	desc = olympics.5.d
+	picture = GFX_report_rai_oly
+
+
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+		is_faction_leader = yes
+    has_government = raider
+    NOT = { has_global_flag = rai_olym_host}
+	}
+
+	mean_time_to_happen = {
+		days = 200
+	}
+
+option = {
+  ai_chance = { factor = 50 }
+	name = olympics.5.a
+	set_country_flag = rai_olym_host
+}
+
+option = {
+name = olympics.5.b
+ai_chance = { factor = 80 }
+set_global_flag = rai_olym_host
+		every_other_country = {
+											limit = {
+															has_government = raider
+
+														 }
+											country_event = {id = olympics.6}
+														}
+
+	 set_country_flag = rai_olym_host
+}
+
+option = {
+name = olympics.5.c
+ai_chance = { factor = 50 }
+set_global_flag = rai_olym_host
+		every_other_country = {
+											limit = {
+
+														 }
+											country_event = {id = olympics.11}
+														}
+
+	 set_country_flag = rai_olym_host
+}
+
+
+option = {
+  ai_chance = { factor = 20 }
+	name = olympics.5.e
+  add_political_power = 25
+}
+}
+
+country_event = {
+	id = olympics.11
+	title = olympics.11.t
+	desc = olympics.11.d
+	picture = GFX_report_rai_oly
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = olympics.11.a
+    ai_chance = { factor = 80 }
+		set_country_flag = rai_olympian
+		FROM = { add_opinion_modifier = { target = ROOT modifier = small_increase }
+             country_event = {id = olympics.6}
+           }
+		}
+
+
+		option = {
+			name = olympics.11.b
+	    ai_chance = { factor = 80 }
+			add_opinion_modifier = { target = FROM modifier = small_decrease }
+			FROM = { add_opinion_modifier = { target = ROOT modifier = small_decrease } }
+		}
+}
+
+country_event = {
+	id = olympics.12
+	title = olympics.12.t
+	desc = olympics.12.d
+	picture = GFX_report_rai_oly
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = olympics.12.a
+    add_political_power = 100
+    add_war_support = 0.1
+    add_stability = 0.1
+    every_country = {
+                      add_opinion_modifier = {
+                      target = GER
+                      modifier = medium_increase
+                                             }
+                    }
+		}
+}

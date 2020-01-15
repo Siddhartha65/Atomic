@@ -1,0 +1,58 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = SPAN_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	##### Ejército de Chile #####
+	division= {	# "1era División del Ejercito"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 650 # Santiago
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "2da División del Ejercito"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 12994 # Antofagasta
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {	# "3era División del Ejercito"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 5121 # Concepcion
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		name = "Militia"
+		location = 650 # Santiago
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}

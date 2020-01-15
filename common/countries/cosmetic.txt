@@ -1,0 +1,4 @@
+EUR_Cosmetic = {
+ color = rgb { 90  154  214 }
+ color_ui = rgb { 90  154  214 }
+}

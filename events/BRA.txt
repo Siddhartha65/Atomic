@@ -1,0 +1,537 @@
+﻿###########################
+# brazona Events
+###########################
+
+add_namespace = bra
+
+# BRA Coup
+country_event = {
+	id = bra.1
+	title = bra.1.t
+	desc = bra.1.d
+	picture = GFX_report_event_bra_speech
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BRA
+		date > 2136.9.5
+
+	}
+
+	mean_time_to_happen = {
+	days = 1
+}
+
+	option = {
+		name = bra.1.a
+    hidden_effect = {
+											country_event = {
+																			 id = bra.2
+																			 days = 20
+																			}
+                    }
+   set_popularities = {
+										   technicism = 40
+											 revelationism = 20
+											 hoxhaism = 20
+											 posadism = 20
+											 raider = 0
+                      }
+
+   }
+
+	option = {
+		name = bra.1.b
+    hidden_effect = {
+											country_event = {
+																			 id = bra.3
+																			 days = 20
+																			}
+                    }
+   set_popularities = {
+										   technicism = 15
+											 revelationism = 40
+											 hoxhaism = 12
+											 posadism = 23
+											 raider = 10
+                      }
+		set_politics = {
+			ruling_party = revelationism
+		}
+   }
+}
+
+
+country_event = {
+	id = bra.2
+	title = bra.2.t
+	desc = bra.2.d
+	picture = GFX_report_event_bra_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+											BRA = {
+															start_civil_war = {
+																			ruling_party = technicism
+																			ideology = revelationism
+																			size = 0.5
+																			capital = 499
+																			states = { 496 498 499 }
+																		}
+														}
+                      }
+                   }
+
+	option = {
+		name = bra.2.a
+    add_political_power = -50
+   }
+}
+
+
+country_event = {
+	id = bra.3
+	title = bra.3.t
+	desc = bra.3.d
+	picture = GFX_report_event_bra_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+											BRA = {
+															start_civil_war = {
+																			ruling_party = revelationism
+																			ideology = posadism
+																			size = 0.5
+																			capital = 502
+																			states = { 501 502 503 }
+																		}
+														}
+                      }
+                    }
+
+	option = {
+		name = bra.3.a
+    add_political_power = -50
+   }
+}
+
+###### Rev Aid
+country_event = {
+	id = bra.4
+	title = bra.4.t
+	desc = bra.4.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	fire_only_once = yes
+
+	trigger = {
+		has_civil_war = yes
+		original_tag = BRA
+    has_government = revelationism
+	}
+
+	mean_time_to_happen = {
+	days = 10
+}
+
+
+	option = {
+		name = bra.4.a
+		add_political_power = 40
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = bra.4.b
+		ai_chance = { factor = 50 }
+		if = {
+			limit = {
+				AMA = { has_government = revelationism }
+			}
+			AMA = { country_event = { id = bra.5 days = 1 } }
+		}
+	}
+
+  option = {
+		name = bra.4.c
+		ai_chance = { factor = 20 }
+		every_other_country = {
+			limit = {
+				has_government = revelationism
+				NOT = { original_tag = BRA }
+			}
+			country_event = { id = bra.7 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = bra.5
+	title = bra.5.t
+	desc = bra.5.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.5.a
+		add_political_power = 50
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = bra.5.b
+		ai_chance = { factor = 50 }
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 500
+    target = FROM
+    }
+	}
+
+  option = {
+		name = bra.5.c
+		ai_chance = { factor = 1 }
+		FROM = { country_event = { id = bra.6 days = 1 } }
+	}
+}
+
+
+country_event = {
+	id = bra.6
+	title = bra.6.t
+	desc = bra.6.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.6.a
+		add_political_power = 60
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = bra.6.b
+		ai_chance = { factor = 20 }
+    FROM = { puppet = ROOT }
+    }
+	}
+
+country_event = {
+	id = bra.7
+	title = bra.7.t
+	desc = bra.7.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.7.a
+		add_political_power = 25
+		ai_chance = { factor = 70 }
+	}
+
+	option = {
+		name = bra.7.b
+		ai_chance = { factor = 30 }
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 100
+    target = FROM
+    }
+	}
+}
+
+
+###### Pos Aid
+country_event = {
+	id = bra.8
+	title = bra.8.t
+	desc = bra.8.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	fire_only_once = yes
+
+	trigger = {
+		has_civil_war = yes
+		original_tag = BRA
+    has_government = posadism
+	}
+
+	mean_time_to_happen = {
+	days = 10
+}
+
+
+	option = {
+		name = bra.8.a
+		add_political_power = 40
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = bra.8.b
+		ai_chance = { factor = 50 }
+		if = {
+			limit = {
+				ARG = { has_government = posadism }
+			}
+			ARG = { country_event = { id = bra.9 days = 1 } }
+		}
+	}
+
+  option = {
+		name = bra.8.c
+		ai_chance = { factor = 20 }
+		every_other_country = {
+			limit = {
+				has_government = posadism
+				NOT = { original_tag = BRA }
+			}
+			country_event = { id = bra.11 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = bra.9
+	title = bra.9.t
+	desc = bra.9.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.9.a
+		add_political_power = 50
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = bra.9.b
+		ai_chance = { factor = 50 }
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 500
+    target = FROM
+    }
+	}
+
+  option = {
+		name = bra.9.c
+		ai_chance = { factor = 1 }
+		FROM = { country_event = { id = bra.10 days = 1 } }
+	}
+}
+
+
+country_event = {
+	id = bra.10
+	title = bra.10.t
+	desc = bra.10.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.10.a
+		add_political_power = 60
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = bra.10.b
+		ai_chance = { factor = 20 }
+    FROM = { puppet = ROOT }
+    }
+	}
+
+country_event = {
+	id = bra.11
+	title = bra.11.t
+	desc = bra.11.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.11.a
+		add_political_power = 25
+		ai_chance = { factor = 70 }
+	}
+
+	option = {
+		name = bra.11.b
+		ai_chance = { factor = 30 }
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 100
+    target = FROM
+    }
+	}
+}
+
+###### Tech Aid
+country_event = {
+	id = bra.12
+	title = bra.12.t
+	desc = bra.12.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	fire_only_once = yes
+
+	trigger = {
+		has_civil_war = yes
+		original_tag = BRA
+    has_government = technicism
+	}
+
+	mean_time_to_happen = {
+	days = 10
+}
+
+
+	option = {
+		name = bra.12.a
+		add_political_power = 40
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = bra.12.b
+		ai_chance = { factor = 50 }
+		if = {
+			limit = {
+				ARG = { has_government = technicism }
+			}
+			ARG = { country_event = { id = bra.13 days = 1 } }
+		}
+	}
+
+  option = {
+		name = bra.12.c
+		ai_chance = { factor = 20 }
+		every_other_country = {
+			limit = {
+				has_government = technicism
+				NOT = { original_tag = BRA }
+			}
+			country_event = { id = bra.15 days = 1 }
+		}
+	}
+}
+
+country_event = {
+	id = bra.13
+	title = bra.13.t
+	desc = bra.13.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.13.a
+		add_political_power = 50
+		ai_chance = { factor = 20 }
+	}
+
+	option = {
+		name = bra.13.b
+		ai_chance = { factor = 50 }
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 500
+    target = FROM
+    }
+	}
+
+  option = {
+		name = bra.13.c
+		ai_chance = { factor = 1 }
+		FROM = { country_event = { id = bra.14 days = 1 } }
+	}
+}
+
+
+country_event = {
+	id = bra.14
+	title = bra.14.t
+	desc = bra.14.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.14.a
+		add_political_power = 60
+		ai_chance = { factor = 80 }
+	}
+
+	option = {
+		name = bra.14.b
+		ai_chance = { factor = 20 }
+    FROM = { puppet = ROOT }
+    }
+	}
+
+country_event = {
+	id = bra.15
+	title = bra.15.t
+	desc = bra.15.d
+	picture = GFX_report_event_bra_civil_war_volunteers_01
+
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = bra.15.a
+		add_political_power = 25
+		ai_chance = { factor = 70 }
+	}
+
+	option = {
+		name = bra.15.b
+		ai_chance = { factor = 30 }
+		send_equipment = {
+    equipment = infantry_equipment
+    amount = 100
+    target = FROM
+    }
+	}
+}

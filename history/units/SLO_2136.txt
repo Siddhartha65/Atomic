@@ -1,0 +1,71 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = USA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+	#### Československá Vojenská Jednotka #####
+	# directly subordinate
+	division = {
+		name = "1. Militia"
+		location = 9692  # Prague
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "1. fast"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11539  # Prague
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+		force_equipment_variants = { light_tank_equipment_1 = { owner = "CZE" } }
+	}
+	division = { # "4. divize"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 3581  # Prague
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "12. divize"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 6573  # Prague
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "16. divize"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 3484 # Brno
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}
+}

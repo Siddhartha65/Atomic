@@ -1,0 +1,2182 @@
+focus_tree = {
+	id = albanian_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = ALB
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 50 y = 1600 }
+
+######### Europe #########
+	focus = {
+		id = ALB_revisionism_in_europe
+		icon = GFX_goal_revisionism_europe
+		x = 10
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+
+		completion_reward = {
+                         add_political_power = 50
+		}
+	}
+
+################ Kommune ##############
+
+########### Kommune Wins ##########
+	focus = {
+		id = ALB_victory_in_berlin
+		icon = GFX_goal_victory_in_berlin
+		prerequisite = { focus = ALB_revisionism_in_europe }
+		mutually_exclusive = { focus = ALB_imperialist_scum }
+    bypass = { DDR = { has_country_flag = coup_succ} }
+		x = -2
+		y = 1
+		relative_position_id = ALB_revisionism_in_europe
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_kommunist_komrades
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_victory_in_berlin }
+		x = -2
+		y = 1
+		relative_position_id = ALB_victory_in_berlin
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+                            GER = {
+															 add_opinion_modifier = {
+																											 target = ALB
+																											 modifier = large_increase
+																										 }
+                                   }
+		}
+	}
+
+	focus = {
+		id = ALB_rebuild_berlin
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_kommunist_komrades }
+		x = 0
+		y = 1
+		relative_position_id = ALB_kommunist_komrades
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+			64 = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+					64 = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					64 = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+		}
+	}
+
+	focus = {
+		id = ALB_the_denmark_discussion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_rebuild_berlin }
+		x = 0
+		y = 2
+		relative_position_id = ALB_kommunist_komrades
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+		}
+	}
+
+	####### Soviet ##############
+
+		focus = {
+			id = ALB_international_relations
+			icon = GFX_goal_unknown
+			prerequisite = { focus = ALB_victory_in_berlin }
+			x = -6
+			y = 2
+			relative_position_id = ALB_victory_in_berlin
+			cost = 10
+			ai_will_do = {
+				factor = 8
+			}
+
+			completion_reward = {
+                            every_country = {
+                                             limit = { is_in_faction_with = ALB}
+                                             														add_opinion_modifier = {
+																						     																								target = ALB
+																						     																								modifier = large_increase
+																						 																									}
+                                            }
+			}
+		}
+
+		focus = {
+			id = ALB_bogdani_development_doctrine
+			icon = GFX_goal_unknown
+			prerequisite = { focus = ALB_international_relations }
+			x = 0
+			y = 1
+			relative_position_id = ALB_international_relations
+			cost = 10
+			ai_will_do = {
+				factor = 8
+			}
+
+			completion_reward = {
+      586 = {
+				limit = {
+					free_building_slots = {
+						building = bunker
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = bunker
+					level = 5
+					instant_build = yes
+				}
+			}
+					586 = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+					586 = {
+						limit = {
+							free_building_slots = {
+								building = industrial_complex
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = industrial_complex
+							level = 1
+							instant_build = yes
+						}
+					}
+			}
+		}
+
+		focus = {
+			id = ALB_pro_prole_puddy_policy
+			icon = GFX_goal_unknown
+			prerequisite = { focus = ALB_bogdani_development_doctrine }
+			x = 0
+			y = 2
+			relative_position_id = ALB_international_relations
+			cost = 10
+			ai_will_do = {
+				factor = 8
+			}
+
+			completion_reward = {
+                           SOV = {
+                                  random_owned_controlled_state = {
+                                                                    add_resource = {
+																																										    type = oil
+																																										    amount = 10
+																																										}
+                                                                  }
+																			                                   random_owned_controlled_state = {
+																			                                                                     add_resource = {
+																			 																																										    type = oil
+																			 																																										    amount = 10
+																			 																																										}
+																			                                                                   }
+																																							                                  random_owned_controlled_state = {
+																																							                                                                    add_resource = {
+																																																																																	    type = oil
+																																																																																	    amount = 10
+																																																																																	}
+																																							                                                                  }
+                                 }
+			}
+		}
+
+############# Commie Meeting ##########
+	focus = {
+		id = ALB_the_communist_congress
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_the_denmark_discussion}
+		prerequisite = { focus = ALB_pro_prole_puddy_policy}
+		x = -2
+		y = 1
+		relative_position_id = ALB_the_denmark_discussion
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_albania_supreme
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_the_communist_congress}
+		mutually_exclusive = { focus = ALB_the_eleventh_international }
+		mutually_exclusive = { focus = ALB_all_together_now }
+    bypass = { has_country_flag = albania_supreme}
+    available = { has_country_flag = albania_supreme}
+		x = -2
+		y = 1
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_removing_the_bulagarian_border
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_albania_supreme}
+		x = -2
+		y = 2
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+			create_wargoal = {
+						type = annex_everything
+						target = BUL
+					}
+		}
+	}
+
+	focus = {
+		id = ALB_union_of_soviet_hoxhaist_states
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_removing_the_bulagarian_border}
+		x = -2
+		y = 3
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+													every_country = {
+																						limit = {is_in_faction_with = ALB
+																										 NOT = {tag = ALB}
+														                        }
+																							country_event = {id = alb.1}
+												}
+		}
+	}
+
+	focus = {
+		id = ALB_the_eleventh_international
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_the_communist_congress}
+		mutually_exclusive = { focus = ALB_albania_supreme }
+		mutually_exclusive = { focus = ALB_all_together_now }
+    bypass = { has_country_flag = eleven_inter }
+    available = { has_country_flag = eleven_inter }
+		x = 0
+		y = 1
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_rebuilding_soviet_trust
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_the_eleventh_international}
+		x = 0
+		y = 2
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_what_to_do_now
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_rebuilding_soviet_trust}
+		x = 0
+		y = 3
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+			create_wargoal = {
+						type = annex_everything
+						target = RUS
+					}
+		}
+	}
+
+	focus = {
+		id = ALB_all_together_now
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_the_communist_congress}
+		mutually_exclusive = { focus = ALB_albania_supreme }
+		mutually_exclusive = { focus = ALB_the_eleventh_international}
+		x = 2
+		y = 1
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+													every_country = {
+																						limit = {is_in_faction_with = ALB
+														                        }
+																						add_to_tech_sharing_group = hoxha_crew
+												}
+		}
+	}
+
+	focus = {
+		id = ALB_picture_perfect_research
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_all_together_now}
+		x = 2
+		y = 2
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+													every_country = {
+																						limit = {is_in_faction_with = ALB
+														                        }
+																						add_research_slot = 1
+												}
+		}
+	}
+
+	focus = {
+		id = ALB_eyes_up
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_picture_perfect_research}
+		x = 2
+		y = 3
+		relative_position_id = ALB_the_communist_congress
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+													every_country = {
+																						limit = {is_in_faction_with = ALB
+														                        }
+																							random_owned_controlled_state = {
+																																						add_building_construction = {
+																																						    type = bunker
+																																						    level = 5
+																																						    instant_build = yes
+																																						    province = {
+																																						        all_provinces = yes
+																																						        limit_to_border = yes
+																																						    }
+																																						}
+																					}
+												}
+		}
+	}
+
+	focus = {
+		id = ALB_save_bohemia
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_eyes_up focus = ALB_what_to_do_now focus = ALB_union_of_soviet_hoxhaist_states }
+		prerequisite = { focus = ALB_decimate }
+		x = -2
+		y = 5
+		relative_position_id = ALB_the_denmark_discussion
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+													create_wargoal = {
+													type = annex_everything
+													target = CZE
+													}
+		}
+	}
+
+	focus = {
+		id = ALB_seize_swiss_ports
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_eyes_up focus = ALB_what_to_do_now focus = ALB_union_of_soviet_hoxhaist_states }
+		prerequisite = { focus = ALB_decimate }
+		x = 2
+		y = 5
+		relative_position_id = ALB_the_denmark_discussion
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+													create_wargoal = {
+													type = annex_everything
+													target = SWE
+													}
+		}
+	}
+
+	focus = {
+		id = ALB_finish_the_job
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_save_bohemia }
+		prerequisite = { focus = ALB_seize_swiss_ports }
+		x = 0
+		y = 6
+		relative_position_id = ALB_the_denmark_discussion
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+													create_wargoal = {
+													type = annex_everything
+													target = DDR
+													}
+		}
+	}
+
+############# Kommune Loses ########
+	focus = {
+		id =  ALB_imperialist_scum
+		icon = GFX_goal_imperialist_scum
+		prerequisite = { focus = ALB_revisionism_in_europe }
+		mutually_exclusive = { focus = ALB_victory_in_berlin }
+		x = 2
+		y = 1
+		relative_position_id = ALB_revisionism_in_europe
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+		}
+	}
+
+######## Sabotage Imperials ###########
+	focus = {
+		id =  ALB_sabotage
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_imperialist_scum }
+		x = 9
+		y = 2
+		relative_position_id = ALB_revisionism_in_europe
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+                         add_political_power = 50
+		}
+	}
+
+	focus = {
+		id =  ALB_raider_neighbors
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_sabotage }
+		x = -2
+		y = 1
+		relative_position_id = ALB_sabotage
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+ 												 SWE = {
+														add_opinion_modifier = {
+																										target = ALB
+																										modifier = large_decrease
+																									}
+																}
+ 												 BUL = {
+														add_opinion_modifier = {
+																										target = ALB
+																										modifier = large_decrease
+																									}
+																}
+		}
+	}
+
+	focus = {
+		id =  ALB_safety_at_sea
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_raider_neighbors }
+		x = -4
+		y = 2
+		relative_position_id = ALB_sabotage
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SWE
+			}
+		}
+	}
+
+	focus = {
+		id =  ALB_removing_border_checks
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_raider_neighbors }
+		x = -2
+		y = 2
+		relative_position_id = ALB_sabotage
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = BUL
+			}
+		}
+	}
+
+	focus = {
+		id =  ALB_siberian_liberation_project
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_removing_border_checks }
+		prerequisite = { focus = ALB_saefty_at_sea }
+		x = -2
+		y = 3
+		relative_position_id = ALB_sabotage
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MON
+			}
+		}
+	}
+
+	focus = {
+		id =  ALB_mao_hoxha_split
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_siberian_liberation_project }
+		x = -4
+		y = 4
+		relative_position_id = ALB_sabotage
+		mutually_exclusive = { focus = ALB_mending_the_schism }
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KOR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = CHI
+			}
+		}
+	}
+
+	focus = {
+		id = ALB_mending_the_schism
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_siberian_liberation_project }
+		x = -2
+		y = 4
+		relative_position_id = ALB_sabotage
+		mutually_exclusive = { focus = ALB_mao_hoxha_split }
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+
+		completion_reward = {
+                          if = {
+                                limit = {
+                                          CHI = { has_government = hoxhaism }
+                                        }
+                                CHI = {
+													             country_event = { id = alb.2 }
+
+													            }
+                               }
+
+											if = {
+														limit = {
+																			KOR = { has_government = hoxhaism }
+																		}
+														KOR = {
+																	 country_event = { id = alb.2 }
+
+																	}
+													 }
+		}
+	}
+
+########## The Kingdoms #######
+	focus = {
+		id =  ALB_bohemias_rhapsody
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_sabotage }
+		x = 4
+		y = 1
+		relative_position_id = ALB_sabotage
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+                         add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = ALB_malotovs_legacy
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_bohemias_rhapsody }
+		mutually_exclusive = { focus = ALB_czech_their_class }
+		x = -2
+		y = 1
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+ 												 CZE = {
+														add_opinion_modifier = {
+																										target = ALB
+																										modifier = large_increase
+																									}
+																}
+		}
+	}
+
+	focus = {
+		id =  ALB_czech_their_class
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_bohemias_rhapsody }
+		mutually_exclusive = { focus = ALB_malotovs_legacy }
+		x = 2
+		y = 1
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+ 												 CZE = {
+														add_opinion_modifier = {
+																										target = ALB
+																										modifier = large_decrease
+																									}
+																}
+		}
+	}
+
+	focus = {
+		id =  ALB_shock_to_the_system
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_czech_their_class focus = ALB_malotovs_legacy }
+	  available = { DDR = { has_completed_focus = DDR_exploit_their_division } }
+		x = 0
+		y = 2
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+													if = {
+                                limit = {
+                                         has_completed_focus = ALB_malotovs_legacy
+                                        }
+														CZE = {
+																	 country_event = { id = alb.3 }
+																	}
+                               }
+													if = {
+                                limit = {
+                                         has_completed_focus = ALB_czech_their_class
+                                        }
+											          CZE = {
+																set_variable = {
+																						    var = rut_h_supplies
+																						    value = 3
+																						}
+																set_variable = {
+																						    var = gal_h_supplies
+																						    value = 3
+																						}
+																set_variable = {
+																						    var = slo_h_supplies
+																						    value = 3
+																						}
+																set_variable = {
+																						    var = hun_h_supplies
+																						    value = 3
+																						}
+																			}
+                               }
+		}
+	}
+	focus = {
+		id =  ALB_darkest_moment
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_shock_to_the_system }
+		prerequisite = { focus = ALB_malotovs_legacy }
+		x = -2
+		y = 3
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+                         add_ideas = darkest_moment
+		}
+	}
+
+	focus = {
+		id =  ALB_national_movement
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_darkest_moment }
+		x = -2
+		y = 4
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+                           remove_ideas = darkest_moment
+                    CZE = {
+										       add_ideas = national_movement
+                          }
+    }
+	}
+
+	focus = {
+		id =  ALB_zinovias_projects
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_shock_to_the_system }
+		prerequisite = { focus = ALB_czech_their_class }
+    available = { any_country = { has_country_flag = tech_revolter } }
+		x = 0
+		y = 3
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+																					every_country = {
+																														limit = { has_country_flag = tech_revolter }
+																														ALB = {
+																																					create_wargoal = {
+																																						type = puppet_wargoal_focus
+																																						target = FROM
+																																					}
+																																		}
+																													}
+		}
+	}
+
+	focus = {
+		id =  ALB_send_in_the_tanks
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_zinovias_projects }
+		x = 0
+		y = 4
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+																					every_country = {
+																														limit = { has_country_flag = tech_revolter }
+                                                            add_ideas = rolling_tanks
+																									}
+		}
+	}
+
+	focus = {
+		id = ALB_new_balkans
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_shock_to_the_system }
+		prerequisite = { focus = ALB_czech_their_class }
+    available = { any_country = { has_country_flag = hoxha_revolter } }
+		x = 2
+		y = 3
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+																					every_country = {
+																														limit = { has_country_flag = hoxha_revolter }
+                                                            add_ideas = rolling_tanks
+																									}
+
+		}
+	}
+
+	focus = {
+		id = ALB_international_expansion
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_new_balkans }
+		x = 2
+		y = 4
+		relative_position_id = ALB_bohemias_rhapsody
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+																					every_country = {
+																														limit = { has_country_flag = hoxha_revolter }
+                                                            remove_ideas = rolling_tanks
+																														ALB = {
+																																					puppet = FROM
+																																		}
+																													}
+		}
+	}
+
+
+
+########## Army Branch ##########
+focus = {
+	id = ALB_review_with_our_commanders
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_victory_in_berlin focus = ALB_imperialist_scum }
+	x = 0
+	y = 2
+	relative_position_id = ALB_revisionism_in_europe
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+
+	completion_reward = {
+                       army_experience = 25
+	}
+}
+
+########## Army Kommune Wins ###############
+focus = {
+	id = ALB_preeminent_revolution
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_review_with_our_commanders }
+	prerequisite = { focus = ALB_victory_in_berlin }
+	x = -2
+	y = 1
+	relative_position_id = ALB_review_with_our_commanders
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+}
+
+focus = {
+	id = ALB_every_man_a_gun
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_preeminent_revolution }
+	x = -2
+	y = 2
+	relative_position_id = ALB_review_with_our_commanders
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+		army_experience = 5
+		add_tech_bonus = {
+			name = land_doc_bonus
+			bonus = 1.0
+			uses = 1
+			category = land_doctrine
+		}
+	}
+	}
+}
+
+focus = {
+	id = ALB_mind_the_proles
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_every_man_a_gun }
+	x = -2
+	y = 3
+	relative_position_id = ALB_review_with_our_commanders
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+
+	add_tech_bonus = {
+		name = motorized_bonus
+		bonus = 1.0
+		uses = 3
+		technology = motorised_infantry
+	}
+
+	}
+}
+
+########## Army Kommune Loses ###############
+focus = {
+	id = ALB_socialism_in_one_country
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_review_with_our_commanders }
+	prerequisite = { focus = ALB_imperialist_scum }
+	x = 2
+	y = 1
+	relative_position_id = ALB_review_with_our_commanders
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = industrial_complex
+									size > 0
+									include_locked = yes
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = ALB_every_man_a_bunker
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_socialism_in_one_country }
+	x = 2
+	y = 2
+	relative_position_id = ALB_review_with_our_commanders
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+random_owned_controlled_state = {
+													add_building_construction = {
+															type = bunker
+															level = 5
+															instant_build = yes
+															province = {
+																	all_provinces = yes
+																	limit_to_border = yes
+															}
+													}
+}
+random_owned_controlled_state = {
+													add_building_construction = {
+															type = bunker
+															level = 5
+															instant_build = yes
+															province = {
+																	all_provinces = yes
+																	limit_to_border = yes
+															}
+													}
+}
+random_owned_controlled_state = {
+													add_building_construction = {
+															type = bunker
+															level = 5
+															instant_build = yes
+															province = {
+																	all_provinces = yes
+																	limit_to_border = yes
+															}
+													}
+}
+random_owned_controlled_state = {
+													add_building_construction = {
+															type = bunker
+															level = 5
+															instant_build = yes
+															province = {
+																	all_provinces = yes
+																	limit_to_border = yes
+															}
+													}
+}
+random_owned_controlled_state = {
+													add_building_construction = {
+															type = bunker
+															level = 5
+															instant_build = yes
+															province = {
+																	all_provinces = yes
+																	limit_to_border = yes
+															}
+													}
+}
+random_owned_controlled_state = {
+													add_building_construction = {
+															type = bunker
+															level = 5
+															instant_build = yes
+															province = {
+																	all_provinces = yes
+																	limit_to_border = yes
+															}
+													}
+}
+	}
+}
+
+focus = {
+	id = ALB_artillery_defense_force
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_every_man_a_bunker }
+	x = 2
+	y = 3
+	relative_position_id = ALB_review_with_our_commanders
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 3.0
+			uses = 3
+			category = infantry_weapons
+			category = artillery
+		}
+	}
+}
+
+########## Boats and Planes ############
+focus = {
+	id = ALB_admirals_of_air_you_sea
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_mind_the_proles focus = ALB_artillery_defense_force }
+	x = 0
+	y = 4
+	relative_position_id = ALB_review_with_our_commanders
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+                       navy_experience = 25
+										   air_experience = 25
+									 			navy_experience = 25
+									 			if = {
+									 				limit = {
+									 					NOT = {
+									 						any_owned_state = {
+									 							dockyard > 0
+									 							free_building_slots = {
+									 								building = dockyard
+									 								size > 2
+									 								include_locked = yes
+									 							}
+									 						}
+									 					}
+									 					any_owned_state = {
+									 						is_coastal = yes
+									 					}
+									 				}
+									 				random_owned_controlled_state = {
+									 					limit = {
+									 						is_coastal = yes
+									 						free_building_slots = {
+									 							building = dockyard
+									 							size > 2
+									 							include_locked = yes
+									 						}
+									 					}
+									 					add_extra_state_shared_building_slots = 3
+									 					add_building_construction = {
+									 						type = dockyard
+									 						level = 3
+									 						instant_build = yes
+									 					}
+									 				}
+									 				set_country_flag = naval_effort_built
+									 			}
+									 			if = {
+									 				limit = {
+									 					NOT = { has_country_flag = naval_effort_built }
+									 					any_owned_state = {
+									 						dockyard > 0
+									 						free_building_slots = {
+									 							building = dockyard
+									 							size > 2
+									 							include_locked = yes
+									 						}
+									 					}
+									 				}
+									 				random_owned_controlled_state = {
+									 					limit = {
+									 						dockyard > 0
+									 						free_building_slots = {
+									 							building = dockyard
+									 							size > 2
+									 							include_locked = yes
+									 						}
+									 					}
+									 					add_extra_state_shared_building_slots = 3
+									 					add_building_construction = {
+									 						type = dockyard
+									 						level = 3
+									 						instant_build = yes
+									 					}
+									 				}
+									 				set_country_flag = naval_effort_built
+									 			}
+									 			if = {
+									 				limit = {
+									 					NOT = { has_country_flag = naval_effort_built }
+									 					NOT = {
+									 						any_owned_state = {
+									 							free_building_slots = {
+									 								building = dockyard
+									 								size > 2
+									 								include_locked = yes
+									 							}
+									 						}
+									 					}
+									 				}
+									 				random_owned_controlled_state = {
+									 					limit = {
+									 						controller = { tag = ROOT }
+									 						free_building_slots = {
+									 							building = dockyard
+									 							size > 2
+									 							include_locked = yes
+									 						}
+									 					}
+									 					add_extra_state_shared_building_slots = 3
+									 					add_building_construction = {
+									 						type = dockyard
+									 						level = 3
+									 						instant_build = yes
+									 					}
+									 				}
+									 			}
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+	}
+}
+
+focus = {
+	id = ALB_steal_the_means
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_mind_the_proles }
+	prerequisite = { focus = ALB_admirals_of_air_you_sea }
+	x = -2
+	y = 1
+	relative_position_id = ALB_admirals_of_air_you_sea
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+
+	}
+}
+
+focus = {
+	id = ALB_decimate
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_steal_the_means }
+	x = -2
+	y = 2
+	relative_position_id = ALB_admirals_of_air_you_sea
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+	}
+}
+
+focus = {
+	id = ALB_mine_the_seas
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_artillery_defense_force }
+	prerequisite = { focus = ALB_admirals_of_air_you_sea }
+	x = 2
+	y = 1
+	relative_position_id = ALB_admirals_of_air_you_sea
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+	}
+}
+
+focus = {
+	id = ALB_put_down_the_dogfights
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_mine_the_seas }
+	x = 2
+	y = 2
+	relative_position_id = ALB_admirals_of_air_you_sea
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = anti_air_building
+												size > 0
+												include_locked = yes
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = anti_air_building
+							level = 1
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = anti_air_building
+												size > 0
+												include_locked = yes
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = anti_air_building
+							level = 1
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = anti_air_building
+												size > 0
+												include_locked = yes
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = anti_air_building
+							level = 1
+							instant_build = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = anti_air_building
+								size > 0
+								include_locked = yes
+							}
+							OR = {
+								is_in_home_area = yes
+								NOT = {
+									owner = {
+										any_owned_state = {
+											free_building_slots = {
+												building = anti_air_building
+												size > 0
+												include_locked = yes
+											}
+											is_in_home_area = yes
+										}
+									}
+								}
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = anti_air_building
+							level = 1
+							instant_build = yes
+						}
+					}
+	}
+}
+
+
+######## Internal And Overseas ########
+	focus = {
+		id = ALB_revisionism_internally
+		icon = GFX_goal_revisionism_internally
+		x = 32
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+############ Mob #########
+	focus = {
+		id = ALB_investigate_the_mob
+		icon = GFX_goal_investigate_mob
+		prerequisite = { focus = ALB_revisionism_internally }
+		x = -4
+		y = 1
+		relative_position_id = ALB_revisionism_internally
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_purge_the_ranks
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_investigate_the_mob }
+		mutually_exclusive = { focus = ALB_pardon_them }
+		x = -2
+		y = 1
+		relative_position_id = ALB_investigate_the_mob
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_replacements
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_purge_the_ranks }
+		x = -2
+		y = 2
+		relative_position_id = ALB_investigate_the_mob
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_pardon_them
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_investigate_the_mob }
+		mutually_exclusive = { focus = ALB_purge_the_ranks }
+		x = 0
+		y = 1
+		relative_position_id = ALB_investigate_the_mob
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_comrades_in_high_places
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_pardon_them }
+		x = 0
+		y = 2
+		relative_position_id = ALB_investigate_the_mob
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+########## Pure Ideology ##########
+	focus = {
+		id = ALB_pure_ideology
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_revisionism_internally }
+		x = 6
+		y = 1
+		relative_position_id = ALB_revisionism_internally
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_hoxhaist_bogdanism
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_pure_ideology }
+		mutually_exclusive = { focus = ALB_attempt_reconciliation }
+		x = -3
+		y = 1
+		relative_position_id = ALB_pure_ideology
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_cultural_revolution
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_hoxhaist_bogdanism }
+		x = -3
+		y = 2
+		relative_position_id = ALB_pure_ideology
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_rehabilitate_noli
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_cultural_revolution }
+		x = -3
+		y = 3
+		relative_position_id = ALB_pure_ideology
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+
+		focus = {
+			id = ALB_attempt_reconciliation
+			icon = GFX_goal_unknown
+			prerequisite = { focus = ALB_pure_ideology }
+			mutually_exclusive =  {focus = ALB_hoxhaist_bogdanism }
+			x = 3
+			y = 1
+			relative_position_id = ALB_pure_ideology
+			cost = 10
+			ai_will_do = {
+				factor = 8
+			}
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ALB_two_party_state
+			icon = GFX_goal_unknown
+			prerequisite = { focus = ALB_attempt_reconciliation }
+			x = 3
+			y = 2
+			relative_position_id = ALB_pure_ideology
+			cost = 10
+			ai_will_do = {
+				factor = 8
+			}
+			completion_reward = {
+			}
+		}
+
+		focus = {
+			id = ALB_the_best_defense
+			icon = GFX_goal_unknown
+			prerequisite = { focus = ALB_two_party_state }
+			x = 3
+			y = 3
+			relative_position_id = ALB_pure_ideology
+			cost = 10
+			ai_will_do = {
+				factor = 8
+			}
+			completion_reward = {
+			}
+		}
+
+############## Infrastructure ######
+
+focus = {
+	id = ALB_industrial_push
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = ALB_revisionism_internally }
+	x = 0
+	y = 1
+	relative_position_id = ALB_revisionism_internally
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_luxury_communism
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_industrial_push }
+	x = 0
+	y = 2
+	relative_position_id = ALB_revisionism_internally
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_a_bunker_in_every_town
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_luxury_communism }
+	x = 0
+	y = 3
+	relative_position_id = ALB_revisionism_internally
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_safe_ports
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_a_bunker_in_every_town }
+	x = 0
+	y = 4
+	relative_position_id = ALB_revisionism_internally
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_wartime_communism
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_safe_ports }
+	x = 0
+	y = 5
+	relative_position_id = ALB_revisionism_internally
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+############## Infrastructure ######
+
+focus = {
+	id = ALB_revisionism_abroad
+	icon = GFX_goal_revisionism_abroad
+	x = 40
+	y = 0
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_once_a_revisionist
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_revisionism_abroad }
+	prerequisite = { focus = ALB_hoxhaist_bogdanism }
+	x = -3
+	y = 3
+	relative_position_id = ALB_revisionism_abroad
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_bunker_island
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_once_a_revisionist }
+	x = -3
+	y = 4
+	relative_position_id = ALB_revisionism_abroad
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_antarctic_alliance
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_bunker_island }
+	x = -3
+	y = 5
+	relative_position_id = ALB_revisionism_abroad
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_mutual_enemies
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_revisionism_abroad }
+	prerequisite = { focus = ALB_attempt_reconciliation }
+	x = -1
+	y = 3
+	relative_position_id = ALB_revisionism_abroad
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_denounce_the_reactionaries
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_mutual_enemies }
+	x = -1
+	y = 4
+	relative_position_id = ALB_revisionism_abroad
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_inclusive_international
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_denounce_the_reactionaries }
+	x = -1
+	y = 5
+	relative_position_id = ALB_revisionism_abroad
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+focus = {
+	id = ALB_deal_with_the_devil
+	icon = GFX_goal_unknown
+	prerequisite = { focus = ALB_antarctic_alliance focus = ALB_inclusive_international }
+	x = -2
+	y = 6
+	relative_position_id = ALB_revisionism_abroad
+	cost = 10
+	ai_will_do = {
+		factor = 8
+	}
+	completion_reward = {
+	}
+}
+
+	focus = {
+		id = ALB_legacy_of_gaddafi
+		icon = GFX_goal_lyb
+		prerequisite = { focus = ALB_revisionism_abroad }
+		x = 5
+		y = 1
+		relative_position_id = ALB_revisionism_abroad
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_to_each_their_own
+		icon = GFX_goal_to_each_our_own
+		prerequisite = { focus = ALB_legacy_of_gaddafi }
+		mutually_exclusive = { focus = ALB_the_modern_tito }
+		x = -2
+		y = 1
+		relative_position_id = ALB_legacy_of_gaddafi
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_read_the_green_book
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_to_each_their_own }
+		x = -2
+		y = 2
+		relative_position_id = ALB_legacy_of_gaddafi
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_open_our_embassy
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_read_the_green_book}
+		x = -2
+		y = 3
+		relative_position_id = ALB_legacy_of_gaddafi
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_the_modern_tito
+		icon = GFX_goal_modern_tito
+		prerequisite = { focus = ALB_legacy_of_gaddafi }
+		mutually_exclusive = { focus = ALB_to_each_their_own }
+		x = 2
+		y = 1
+		relative_position_id = ALB_legacy_of_gaddafi
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_succeed_where_hoxha_failed
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_the_modern_tito }
+		x = 2
+		y = 2
+		relative_position_id = ALB_legacy_of_gaddafi
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_our_way
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_succeed_where_hoxha_failed }
+		x = 2
+		y = 3
+		relative_position_id = ALB_legacy_of_gaddafi
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ALB_mediterranean_socialist_union
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_open_our_embassy focus = ALB_our_way }
+		x = 0
+		y = 4
+		relative_position_id = ALB_legacy_of_gaddafi
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+
+######## Misc #######
+
+	focus = {
+		id = ALB_the_last_great_patriotic_war
+		icon = GFX_goal_unknown
+		prerequisite = { focus = ALB_mao_hoxha_split focus = ALB_mending_the_schism }
+		prerequisite = { focus = ALB_put_down_the_dogfights }
+		x = -3
+		y = 3
+		relative_position_id = ALB_mending_the_schism
+		cost = 10
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+		}
+	}
+}

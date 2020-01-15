@@ -1,0 +1,277 @@
+ideas = {
+	political_advisor = {
+
+		SWI_florinus_rubi = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { naval_manufacturer
+			 					 hoxhaist_demagogue	}
+		}
+
+		SWI_nias_suter = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { CAS_manufacturer
+			 					 staunch_raider}
+		}
+
+		SWI_valentin_ruffner = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { editor
+									technicist_reformer }
+		}
+
+
+	SWI_nordin_feldmann = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = SWI
+		}
+
+		traits = { quartermaster_general
+								revelationist_moralizer }
+	}
+	SWI_posad = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = SWI
+		}
+
+		traits = { revelationist_sympathies
+								posadist_revolutionary }
+	}
+
+
+		SWI_raul_hersperger = {
+
+			picture = generic_political_advisor_arab_3
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { artillery_manufacturer
+			 						snuggler }
+		}
+
+}
+
+
+
+	theorist = {
+
+		SWI_luca_grutter = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+
+			traits = { military_theorist }
+		}
+
+		SWI_urban_bettler = {
+
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		SWI_elijan_oehrli = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { army_armored_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWI_niemir_huber = {
+
+			picture = generic_army_arab_2
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { army_infantry_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWI_andrea_benoit = {
+
+			picture = generic_navy_arab_3
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { navy_screen_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWI_sebastian_stauffer = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { army_entrenchment_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		SWI_rayan_stahel_khan = {
+
+			picture = generic_army_arab_1
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWI_benjamin_salmen = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { army_chief_morale_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+
+		SWI_florentinus_berger = {
+
+			picture = generic_air_arab_1
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { air_chief_reform_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWI_paschalis_braun = {
+
+			picture = generic_air_arab_3
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { air_chief_ground_support_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		SWI_william_stilli = {
+
+			picture = generic_navy_arab_2
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { navy_chief_decisive_battle_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		SWI_rato_hefti = {
+
+			picture = generic_navy_arab_1
+
+			allowed = {
+				original_tag = SWI
+			}
+
+			traits = { navy_chief_naval_aviation_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

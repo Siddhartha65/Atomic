@@ -1,0 +1,29 @@
+﻿###########################
+# GenericDiplo Events
+###########################
+
+add_namespace = alb
+
+country_event = {
+	id = alb.1
+	title = alb.1.t
+	desc = alb.1.d
+	picture = GFX_report_event_alb_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = alb.1.a
+		From =  {
+							puppet = ROOT
+		}
+}
+	option = {
+		name = alb.1.b
+		FROM = {
+		leave_faction = yes
+		}
+	}
+}

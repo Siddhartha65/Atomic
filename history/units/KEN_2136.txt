@@ -1,0 +1,51 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = RAJ_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+units = {
+division= {	# "24ya 'Samaro-Ulyanovsk' Strelk. Div."
+	division_name = {
+		is_name_ordered = yes
+		name_order = 24
+	}
+	location = 1939
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 0.85
+
+division= {	# "24ya 'Samaro-Ulyanovsk' Strelk. Div."
+	division_name = {
+		is_name_ordered = yes
+		name_order = 24
+	}
+	location = 5210
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 0.85
+
+}
+division= {	# "24ya 'Samaro-Ulyanovsk' Strelk. Div."
+	division_name = {
+		is_name_ordered = yes
+		name_order = 24
+	}
+	location = 2196
+	division_template = "Militia"
+	start_experience_factor = 0.2
+	start_equipment_factor = 0.85
+
+}
+}
+
+}

@@ -1,0 +1,377 @@
+﻿###########################
+# GenericDiplo Events
+###########################
+
+add_namespace = wardiplo
+add_namespace = nicediplo
+add_namespace = allydiplo
+
+# Give Wargoal
+country_event = {
+	id = wardiplo.1
+	title = wardiplo.1.t
+	desc = wardiplo.1.d
+	picture = GFX_report_event_wardiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+		FROM = {
+		country_event = {id = wardiplo.2}
+		}
+	}
+
+	option = {
+		name = wardiplo.1.a
+
+}
+}
+
+country_event = {
+	id = wardiplo.2
+	title = wardiplo.2.t
+	desc = wardiplo.2.d
+	picture = GFX_report_event_wardiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	create_wargoal= {
+	target = FROM
+	type = annex_everything
+   }
+	}
+
+	option = {
+		name = wardiplo.2.a
+		every_state = {
+			limit = {
+								is_owned_by = FROM
+							}
+			add_core_of = ROOT
+						}
+
+}
+}
+
+country_event = {
+	id = wardiplo.3
+	title = wardiplo.3.t
+	desc = wardiplo.3.d
+	picture = GFX_report_event_wardiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+		FROM = {
+		country_event = {id = wardiplo.4}
+		}
+	}
+
+	option = {
+		name = wardiplo.3.a
+
+}
+}
+
+country_event = {
+	id = wardiplo.4
+	title = wardiplo.4.t
+	desc = wardiplo.4.d
+	picture = GFX_report_event_wardiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	create_wargoal= {
+	target = FROM
+	type = annex_everything
+   }
+	}
+
+	option = {
+		name = wardiplo.4.a
+		every_state = {
+			limit = {
+								is_owned_by = FROM
+							}
+			add_core_of = ROOT
+      }
+  }
+}
+
+
+
+country_event = {
+	id = wardiplo.5
+	title = wardiplo.5.t
+	desc = wardiplo.5.d
+	picture = GFX_report_event_wardiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+		FROM = {
+		country_event = {id = wardiplo.6}
+		}
+	}
+
+	option = {
+		name = wardiplo.5.a
+
+}
+}
+
+country_event = {
+	id = wardiplo.6
+	title = wardiplo.6.t
+	desc = wardiplo.6.d
+	picture = GFX_report_event_wardiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	immediate = {
+	create_wargoal= {
+	target = FROM
+	type = annex_everything
+   }
+	}
+
+	option = {
+		name = wardiplo.6.a
+		every_state = {
+			limit = {
+								is_owned_by = FROM
+							}
+			add_core_of = ROOT
+      }
+}
+}
+
+# Trust Events
+country_event = {
+	id = nicediplo.1
+	title = nicediplo.1.t
+	desc = nicediplo.1.d
+	picture = GFX_report_event_nicediplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = nicediplo.1.a
+		FROM = {
+		country_event = {id = nicediplo.2}
+		}
+		add_opinion_modifier = { target = FROM modifier = large_increase }
+		set_country_flag = trust_achieved
+}
+	option = {
+		name = nicediplo.1.b
+		FROM = {
+		country_event = {id = nicediplo.3}
+		}
+	}
+}
+
+
+country_event = {
+	id = nicediplo.2
+	title = nicediplo.2.t
+	desc = nicediplo.2.d
+	picture = GFX_report_event_nicediplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = nicediplo.2.a
+		add_opinion_modifier = { target = FROM modifier = large_increase }
+		set_country_flag = trust_achieved_lead
+}
+}
+
+country_event = {
+	id = nicediplo.3
+	title = nicediplo.3.t
+	desc = nicediplo.3.d
+	picture = GFX_report_event_nicediplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = nicediplo.3.a
+		add_opinion_modifier = { target = FROM modifier = large_decrease }
+}
+}
+
+country_event = {
+	id = nicediplo.4
+	title = nicediplo.4.t
+	desc = nicediplo.3.d
+	picture = GFX_report_event_nicediplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = nicediplo.3.a
+		From =  {
+							puppet = ROOT
+		}
+}
+	option = {
+		name = nicediplo.1.b
+		FROM = {
+		leave_faction = yes
+		}
+	}
+}
+
+# Alliances
+
+country_event = {
+	id = allydiplo.1
+	title = allydiplo.1.t
+	desc = allydiplo.1.d
+	picture = GFX_report_event_allydiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = allydiplo.1.a
+		FROM = {
+		country_event = {id = allydiplo.2}
+		}
+		add_opinion_modifier = { target = FROM modifier = large_increase }
+}
+	option = {
+		name = allydiplo.1.b
+		FROM = {
+		country_event = {id = allydiplo.3}
+		}
+	}
+}
+
+country_event = {
+	id = allydiplo.2
+	title = allydiplo.2.t
+	desc = allydiplo.2.d
+	picture = GFX_report_event_allydiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = allydiplo.2.a
+		create_faction = FACTION_NAME_LOCAL_1
+		ROOT = { add_to_faction = FROM }
+}
+}
+
+country_event = {
+	id = allydiplo.3
+	title = allydiplo.3.t
+	desc = allydiplo.3.d
+	picture = GFX_report_event_allydiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = allydiplo.3.a
+		add_opinion_modifier = { target = FROM modifier = large_decrease }
+}
+
+	option = {
+		name = allydiplo.3.b
+		add_opinion_modifier = { target = FROM modifier = large_decrease }
+		create_faction = FACTION_NAME_LOCAL_1
+}
+}
+
+country_event = {
+	id = allydiplo.4
+	title = allydiplo.4.t
+	desc = allydiplo.4.d
+	picture = GFX_report_event_allydiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+
+	option = {
+		name = allydiplo.4.a
+		FROM = {
+		country_event = {id = allydiplo.5}
+		}
+		add_opinion_modifier = { target = FROM modifier = large_increase }
+}
+	option = {
+		name = allydiplo.4.b
+		FROM = {
+		country_event = {id = allydiplo.6}
+		}
+	}
+}
+
+country_event = {
+	id = allydiplo.5
+	title = allydiplo.5.t
+	desc = allydiplo.5.d
+	picture = GFX_report_event_allydiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = allydiplo.5.a
+		create_faction = FACTION_NAME_LOCAL_1
+		ROOT = { add_to_faction = FROM }
+}
+}
+
+country_event = {
+	id = allydiplo.6
+	title = allydiplo.6.t
+	desc = allydiplo.6.d
+	picture = GFX_report_event_allydiplo_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = no
+
+	option = {
+		name = allydiplo.6.a
+		add_opinion_modifier = { target = FROM modifier = large_decrease }
+}
+	option = {
+		name = allydiplo.6.b
+		add_opinion_modifier = { target = FROM modifier = large_decrease }
+		create_faction = FACTION_NAME_LOCAL_1
+}
+
+}

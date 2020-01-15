@@ -1,0 +1,399 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = USA_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+###### OOB ######
+units = {
+	####### CONUS Theater #######
+	### Carribean Forces ###
+	division = {
+		name = "Bahama Assistance Department"
+		location = 13010
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}
+	division = {
+		name = "New England Defense Force"
+		location = 598
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}
+
+	### 1st Army -- note: Armies only paper organizations in 1936 ###
+	# I Army Corps #
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 26
+		}
+		location = 6732
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 43
+		}
+		location = 6732
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# II Army Corps #
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 3878
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 27
+		}
+		location = 3878
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 44
+		}
+		location = 3878
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# III Army Corps #
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 28
+		}
+		location = 6984
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 29
+		}
+		location = 6984
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+
+	### 2nd Army -- note: Armies only paper organizations in 1936 ###
+	# V Army Corps #
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 37
+		}
+		location = 6855
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 38
+		}
+		location = 6855
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# VI Army Corps #
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 32
+		}
+		location = 9450
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 33
+		}
+		location = 9450
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+
+	### 3rd Army -- note: Armies only paper organizations in 1936 ###
+	# IV Army Corps #
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 30
+		}
+		location = 12384
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 31
+		}
+		location = 12384
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# VIII Army Corps #
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 12313
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 36
+		}
+		location = 7485
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 45
+		}
+		location = 4567
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1534
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+	### 4th Army -- note: Armies only paper organizations in 1936 ###
+	# VII Army Corps (CO: Bishop) #
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 34
+		}
+		location = 10717
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 35
+		}
+		location = 10391
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	# IX Army Corps (CO: DeWitt) #
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 12577
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 40
+		}
+		location = 11971
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+	division= {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 41
+		}
+		location = 1560
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+
+	####### Pacific Theater	#######
+	### Alaska Defense Command ###
+	division = {
+		name = "Alaska Defense Command"
+		location = 6710
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.15
+
+	}
+	division= {
+		name = "Newfoundland Port Garrison"
+		location = 373
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+
+	### Hawaiian Department ###
+	division = {
+		name = "Hawaiian Division"
+		location = 6778
+		division_template = "Militia"		# older equipment, less training than NG division
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+
+	# North Pacific Defenses #
+	division= {
+		name = "Midway Island Garrison"
+		location = 10341
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+	division= {
+		name = "Iceland Garrison"
+		location = 12674
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+	division= {
+		name = "Greenland Garrison"
+		location = 12512
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+
+	# South Pacific Defenses #
+	division= {
+		name = "Christmas Island Garrison"
+		location = 3602
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+	division= {
+		name = "Jarvis Island Garrison"
+		location = 7629
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+	division= {
+		name = "Palmyra Garrison"
+		location = 12202
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+	division= {
+		name = "Phoenix Island Garrison"
+		location = 12221
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+	division= {
+		name = "Johnston Island Garrison"
+		location = 9678
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.15
+
+	}
+
+	### U.S. Army Forces in the Far East ###
+	division = {
+		name = "Newfoundland Division"
+		location = 12698
+		division_template = "Militia"			# older equipment, less training than NG division
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.3
+
+	}
+}

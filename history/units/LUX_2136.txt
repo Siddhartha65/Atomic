@@ -1,0 +1,149 @@
+division_template = {
+	name = "Militia"				# Militia units (lowest experience, oldest equipment)
+
+	division_names_group = LUX_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	priority = 0
+}
+
+
+### OOB ###
+units = {
+	##### L'Armée Belge #####
+	# I Corps d'Armée
+	division= {	# "4ème Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 6488  # Hoeselt
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# II Corps d'Armée
+	division= {	# "6ème Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 6
+		}
+		location = 575  # Leuven
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# III Corps d'Armée
+	division= {	# "2ème Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6585  # Liege
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "3ème Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 551  # Liege
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# IV Corps d'Armée
+	division= {	# "5ème Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 516  #Brussels
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# Corps d'Cavalerie
+	division= {	# "1ère Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 6531  # Liege
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+	division= {	# "2ème Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 6598  # Leuven
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division= {
+		name = "Brigade de Militia"
+		location = 3314  # Leuven
+		division_template = "Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+
+	}
+
+	# Groupement K
+	division= {	# "1ère Division de Chasseurs Ardennais"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 101
+		}
+		location = 5291  # St Hubert
+		division_template = "Militia"		# elite bicycle infantry
+		start_experience_factor = 0.3
+	}
+	division= {	# "1ère Militia"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 3558  # St Hubert
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+
+	### Belgian Congo ###
+	division= {
+		name = "Force Publique du Congo Belge"
+		location = 6583  # Leopoldville
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "BEL" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+}

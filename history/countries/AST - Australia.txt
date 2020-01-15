@@ -1,0 +1,77 @@
+﻿capital = 285
+
+oob = AST_2136
+
+create_faction = "SEA Force"
+add_to_faction = AST
+add_to_faction = MAD
+
+puppet = MAD
+
+set_politics = {
+	ruling_party = raider
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 30
+    revelationism = 5
+    posadism = 5
+    hoxhaism = 0
+    raider = 60
+}
+create_country_leader = {
+	name = "Zahra Thomson"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = constructionists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Grace Harman"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = maoism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Chloe Kaplan"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = integralists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Isabella Jones"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Patrick Helman"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Patrick_Helman.png"
+	expire = "2165.1.1"
+	ideology = despot
+	traits = {socialite_connections	new_world_sympathizer	leider
+	}
+}

@@ -1,0 +1,77 @@
+﻿###########################
+# German Events
+###########################
+
+add_namespace = arg
+
+# arg Coup
+country_event = {
+	id = arg.1
+	title = arg.1.t
+	desc = arg.1.d
+	picture = GFX_report_event_sata
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+			set_country_flag = coup_succ
+     }
+
+	}
+
+	trigger = {
+		tag = ARG
+		GER = { exists = yes }
+	}
+
+	mean_time_to_happen = {
+	days = 52
+}
+
+	option = {
+		name = arg.1.a
+	}
+
+		option = {
+			name = arg.1.b
+		}
+
+			option = {
+				name = arg.1.c
+			}
+}
+
+######## EEU Ally ########
+country_event = {
+	id = arg.2
+	title = arg.2.t
+	desc = arg.2.d
+	picture = GFX_report_event_sata
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+	option = {
+		name = arg.2.a
+		ARG = { add_to_faction = DDR }
+												DDR = {
+														country_event = {
+																							id = eeu.2
+																					}
+												}
+	}
+
+		option = {
+			name = arg.2.b
+													DDR = {
+															country_event = {
+																								id = eeu.3
+																						}
+													}
+		}
+}

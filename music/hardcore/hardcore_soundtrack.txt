@@ -1,0 +1,43 @@
+
+music_station = "101.4_hardcore"
+
+music = {
+	song = "1979 - Smashing Pumpkins"
+
+}
+music = {
+	song = "Black Hole Sun - Soundgarden"
+
+}
+music = {
+	song = "Freedom - Rage Against The Machine"
+
+}
+music = {
+	song = "Holiday In Cambodia - Dead Kennedys"
+
+}
+music = {
+	song = "My Name Is - Eminem"
+
+}
+music = {
+	song = "Rebel Yell - Billy Idol"
+
+}
+music = {
+	song = "Sex Thing - Stone Temple Pilots"
+
+}
+music = {
+	song = "Smells Like Teen Spirit (1) - Nirvana"
+
+}
+music = {
+	song = "Superman - Goldfinger"
+
+}
+music = {
+	song = "What's My Age Again - Blink 182"
+
+}

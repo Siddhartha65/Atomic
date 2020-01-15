@@ -1,0 +1,67 @@
+alliance_application = {
+
+let_t_in = {
+
+
+    available = {
+    FROM = { has_country_flag = technic_search }
+    }
+    complete_effect = {
+        add_to_faction = FROM
+        FROM = {
+            clr_country_flag = technic_search
+        }
+    	}
+		}
+
+  let_h_in = {
+
+      available = {
+      FROM = { has_country_flag = hoxh_search }
+      }
+      complete_effect = {
+          add_to_faction = FROM
+          FROM = {
+              clr_country_flag = hoxha_search
+          }
+      	}
+  		}
+  let_ra_in = {
+
+      available = {
+      FROM = { has_country_flag = raid_search }
+      }
+      complete_effect = {
+          add_to_faction = FROM
+          FROM = {
+              clr_country_flag = raid_search
+          }
+      	}
+  		}
+
+  let_re_in = {
+
+      available = {
+      FROM = { has_country_flag = reve_search }
+      }
+      complete_effect = {
+          add_to_faction = FROM
+          FROM = {
+              clr_country_flag = reve_search
+          }
+      	}
+  		}
+  let_p_in = {
+
+      available = {
+      FROM = { has_country_flag = posad_search }
+      }
+      complete_effect = {
+          add_to_faction = FROM
+          FROM = {
+              clr_country_flag = posad_search
+          }
+      	}
+  		}
+
+}

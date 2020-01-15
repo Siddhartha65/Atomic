@@ -1,0 +1,59 @@
+music = {
+	name = "1979 - Smashing Pumpkins"
+	file = "1979_Smashing_Pumpkins.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Black Hole Sun - Soundgarden"
+	file = "Black_Hole_Sun_Soundgarden.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Freedom - Rage Against The Machine"
+	file = "Freedom_Rage_Against_The_Machine.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Holiday In Cambodia - Dead Kennedys"
+	file = "Holiday_In_Cambodia_Dead Kennedys.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "My Name Is - Eminem"
+	file = "My_Name_Is_Eminem.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Rebel Yell - Billy Idol"
+	file = "Rebel_Yell_Billy_Idol.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Sex Thing - Stone Temple Pilots"
+	file = "Sex_Thing_Stone_Temple_Pilots.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Smells Like Teen Spirit (1) - Nirvana"
+	file = "Smells_Like-Teen-Spirit-1_Nirvana.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Superman - Goldfinger"
+	file = "Superman_Goldfinger.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "What's My Age Again - Blink 182"
+	file = "Whats_My_Age_Again_Blink_182.ogg"
+	volume = 0.7
+}

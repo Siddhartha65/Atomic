@@ -1,0 +1,1052 @@
+ideas = {
+
+######## Government ##########
+	country = {
+		illegitimate_gov = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.5
+				drift_defence_factor = -0.5
+				technicism_drift = -0.01
+			}
+		}
+
+gov_in_progress = {
+	picture = DDR_gov_in_progress
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		political_power_gain = -0.1
+		drift_defence_factor = -0.3
+		technicism_drift = 0.01
+		revelationism_drift = -0.01
+		posadism_drift = -0.01
+			}
+}
+
+gov_in_voting = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		political_power_gain = 0.1
+		drift_defence_factor = -0.4
+		technicism_drift = 0.02
+		hoxhaism_drift = 0.01
+		revelationism_drift = -0.01
+		posadism_drift = -0.01
+			}
+}
+
+gov_in_voting_tech = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		political_power_gain = 0.1
+		drift_defence_factor = -0.6
+		technicism_drift = 0.03
+		hoxhaism_drift = -0.01
+		revelationism_drift = -0.01
+		posadism_drift = -0.01
+			}
+}
+
+technicism_superior = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		political_power_gain = 0.1
+		drift_defence_factor = 0.5
+		technicism_drift = 0.03
+		hoxhaism_drift = -0.01
+		revelationism_drift = -0.01
+		posadism_drift = -0.01
+		research_speed_factor = 0.05
+			}
+}
+
+gov_in_voting_hox = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		political_power_gain = 0.1
+		technicism_drift = 0.02
+		hoxhaism_drift = 0.01
+		drift_defence_factor = -0.7
+		revelationism_drift = -0.01
+		posadism_drift = -0.01
+			}
+}
+
+
+hoxhaism_superior = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		political_power_gain = 0.3
+		drift_defence_factor = 0.5
+		production_speed_bunker_factor = 0.3
+		production_speed_coastal_bunker_factor = 0.3
+		revelationism_drift = -0.01
+		posadism_drift = -0.01
+		research_speed_factor = 0.05
+			}
+}
+
+legitimate_gov = {
+	picture = DDR_gov_in_progress
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+				political_power_gain = 0.5
+				drift_defence_factor = 0.5
+				technicism_drift = 0.01
+			}
+}
+
+		chaos_gov = {
+			picture = DDR_gov_in_progress
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+				drift_defence_factor = -0.3
+				technicism_drift = -0.05
+				revelationism_drift = 0.01
+				posadism_drift = 0.01				}
+		}
+
+		baltic_support = {
+			picture = DDR_baltic_support
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_weekly = 0.01
+				foreign_subversive_activites = -0.25
+				production_factory_max_efficiency_factor = 0.1
+				research_bonus = { industry = 0.08 }
+					}
+		}
+
+		polish_support = {
+			picture = DDR_polish_support
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_weekly = 0.01
+				foreign_subversive_activites = -0.25
+				production_speed_air_base_factor = 0.15
+				research_bonus = { air_doctrine = 0.08 }
+					}
+		}
+
+		government_in_order = {
+			picture = DDR_gov_in_progress
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.5
+				stability_weekly = 0.01
+				political_advisor_cost_factor = -0.25
+				trade_laws_cost_factor = -0.25
+				mobilization_laws_cost_factor  = -0.25
+				economy_cost_factor = -0.25
+					}
+		}
+
+		eeu_alone = {
+			picture = DDR_eeu_alone
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+					}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+		governments_together = {
+			picture = gov_togather
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.8
+				stability_weekly = 0.03
+				political_advisor_cost_factor = -0.25
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+					}
+		}
+
+		unity_project = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+        production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+					}
+		}
+
+		unity_project_evolve = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+        production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+					}
+		}
+
+		unity_project_full = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+        production_speed_industrial_complex_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+					}
+		}
+		unity_project_devolve = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.1
+        production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+					}
+		}
+
+######## Anti-Hoxha #########
+
+anti_hoxhaism = {
+	picture = DDR_anti_hoxhaism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		political_power_gain = -0.1
+		hoxhaism_drift = -0.01
+			}
+}
+
+####### Posadism ########
+
+Posadism_1 = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		posadism_drift = 0.01
+			}
+}
+
+Posadism_2 = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		posadism_drift = 0.02
+		technicism_drift = -0.05
+			}
+}
+
+Posadism_3 = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		posadism_drift = 0.03
+		technicism_drift = -0.05
+		research_speed_factor = 0.05
+			}
+}
+
+Posadism_4 = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		posadism_drift = 0.04
+		technicism_drift = -0.10
+		research_speed_factor = 0.06
+			}
+}
+
+Posadism_5 = {
+	picture = DDR_posadism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		posadism_drift = 0.05
+		technicism_drift = -0.05
+		research_speed_factor = 0.15
+			}
+			rule = {
+				can_create_factions = yes
+			}
+}
+
+
+
+####### revelationism ########
+
+revelationism_1 = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		revelationism_drift = 0.01
+			}
+}
+
+revelationism_2 = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		revelationism_drift = 0.02
+		technicism_drift = -0.05
+			}
+}
+
+revelationism_3 = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		revelationism_drift = 0.03
+		technicism_drift = -0.05
+		research_speed_factor = 0.05
+			}
+}
+
+revelationism_4 = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		revelationism_drift = 0.04
+		technicism_drift = -0.05
+		foreign_subversive_activites = -0.30
+		military_leader_cost_factor = -0.30
+		conscription_factor = 0.05
+			}
+}
+
+revelationism_5 = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		revelationism_drift = 0.04
+		technicism_drift = -0.05
+		foreign_subversive_activites = -0.50
+		military_leader_cost_factor = -0.50
+		conscription_factor = 0.1
+		stability_factor = 0.10
+			}
+			rule = {
+				can_create_factions = yes
+			}
+}
+
+fight_the_west = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = no
+	}
+
+	removal_cost = -1
+
+
+
+	modifier = {
+		army_core_defence_factor = 0.2
+		army_core_attack_factor = 0.2
+	}
+}
+
+nato_compatible = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = no
+	}
+
+	removal_cost = -1
+
+
+
+	modifier = {
+		economy_cost_factor = -0.25
+		license_production_speed = -0.5
+		conversion_cost_civ_to_mil_factor = -0.2
+	}
+}
+
+eeu_democracy = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = no
+	}
+
+	removal_cost = -1
+
+
+
+	modifier = {
+		technicism_drift = 0.25
+		 	political_power_gain = 0.25
+	}
+}
+
+eeu_freedom = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = no
+	}
+
+	removal_cost = -1
+
+
+
+	modifier = {
+		license_purchase_cost = -0.5
+		subversive_activites_upkeep = -0.1
+		production_speed_arms_factory_factor = 0.1
+	}
+}
+
+eeu_capitalism = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = no
+	}
+
+	removal_cost = -1
+
+
+
+	modifier = {
+		production_speed_industrial_complex_factor = 0.1
+		trade_opinion_factor = 0.25
+		production_speed_buildings_factor = 0.1
+		production_speed_industrial_complex_factor = 0.1
+	}
+}
+
+eeu_stable = {
+	picture = DDR_revelationism
+	allowed = {
+		always = no
+	}
+	allowed_civil_war = {
+		always = no
+	}
+
+	removal_cost = -1
+
+
+
+	modifier = {
+		license_purchase_cost = -0.5
+		foreign_subversive_activites = -0.50
+		production_speed_arms_factory_factor = 0.1
+		revelationism_drift = -0.01
+	  posadism_drift = -0.01
+	  hoxhaism_drift = -0.01
+	  raider_drift = -0.01
+	}
+}
+
+
+
+		rule_the_skies = {
+			picture = air_support_focus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				air_chief_cost_factor = 0.5
+				air_ace_generation_chance_factor   = 0.1
+				air_night_penalty  = -0.1
+				air_weather_penalty  = -0.1
+			}
+			rule = {
+				can_create_factions = yes
+			}
+		}
+
+
+build_our_planes = {
+	picture = great_depression
+	allowed = {
+		always = no
+	}
+
+	allowed_civil_war = {
+		always = yes
+	}
+
+	removal_cost = -1
+
+	modifier = {
+		political_power_gain = 0.1
+		stability_weekly = 0.01
+		foreign_subversive_activites = -0.25
+		production_speed_air_base_factor = 0.15
+		research_bonus = { air_doctrine = 0.08 }
+			}
+}
+}
+
+
+
+
+
+############## Advisors #################
+
+
+
+
+
+	political_advisor = {
+
+		DDR_haji_faiz_muhammed_zikeria = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { champion_of_peace_5
+			 					 hoxhaist_demagogue	}
+		}
+
+		DDR_mohammad_hashim_khan = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { popular_figurehead2
+			 					 staunch_raider}
+		}
+
+		DDR_mahmud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { ideological_crusader
+									technicist_reformer }
+		}
+
+
+	DDR_mahmud_khan = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = DDR
+		}
+
+		traits = { autocratic_imperialist
+								revelationist_moralizer }
+	}
+	DDR_posad = {
+
+		picture = generic_political_advisor_arab_1
+
+		allowed = {
+			original_tag = DDR
+		}
+
+		traits = { great_war_hero
+								posadist_revolutionary }
+	}
+
+
+		DDR_muhammed_nowroz = {
+
+			picture = generic_political_advisor_arab_3
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { veteran_worker
+			 						war_industrialist}
+		}
+
+}
+	theorist = {
+
+		DDR_muhammad_amin_bughra = {
+
+			picture = generic_political_advisor_arab_2
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+
+			traits = { military_theorist }
+		}
+
+		DDR_renato_bardolucci = {
+
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+
+			traits = { air_warfare_theorist }
+		}
+	}
+
+	high_command = {
+
+		DDR_mohammed_daoud_khan = {
+
+			picture = generic_political_advisor_arab_1
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { army_armored_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		DDR_azam_ataullah = {
+
+			picture = generic_army_arab_2
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { army_infantry_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		DDR_aalem_daana = {
+
+			picture = generic_navy_arab_3
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { navy_screen_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		DDR_hares_muzafar = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { army_entrenchment_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	# MILITARY
+	army_chief = {
+
+		DDR_asadullah_seraj_khan = {
+
+			picture = generic_army_arab_1
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		DDR_wazir_akbar_khan = {
+
+			picture = generic_army_arab_3
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { army_chief_morale_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	air_chief = {
+
+
+		DDR_ali_muhammed_khan = {
+
+			picture = generic_air_arab_1
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { air_chief_reform_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		DDR_gholam_wali = {
+
+			picture = generic_air_arab_3
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { air_chief_ground_support_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	navy_chief = {
+
+		DDR_nasirullah_husain = {
+
+			picture = generic_navy_arab_2
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { navy_chief_decisive_battle_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		DDR_mohammed_etemadi_khan = {
+
+			picture = generic_navy_arab_1
+
+			allowed = {
+				original_tag = DDR
+			}
+
+			traits = { navy_chief_naval_aviation_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

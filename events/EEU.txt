@@ -1,0 +1,623 @@
+﻿###########################
+# German Events
+###########################
+
+add_namespace = eeu
+
+# EEU Coup
+country_event = {
+	id = eeu.1
+	title = eeu.1.t
+	desc = eeu.1.d
+	picture = GFX_report_event_eeu_speech
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = DDR
+		GER = { exists = yes
+            surrender_progress < 0.5
+          }
+		date > 2136.3.26
+    NOT = { has_country_flag = coup_succ}
+    NOT = { has_country_flag = coup_fail }
+	}
+
+	immediate = {
+      hidden_effect = {
+			set_country_flag = coup_succ
+
+		every_country = {
+                      limit = {
+												NOT = {
+													TAG = DDR
+													TAG = GER
+													TAG = DEN
+												}
+                       }
+                      news_event = { id = news.1 days = 1 }
+                     }
+
+     		DDR = { white_peace = GER }
+		 		DDR = { white_peace = DEN }
+		 }
+    }
+
+
+
+
+
+	mean_time_to_happen = {
+	days = 1
+}
+
+	option = {
+		name = eeu.1.a
+
+		DDR = { white_peace = GER }
+		DDR = { white_peace = DEN }
+
+		create_country_leader = {
+		name = "Christoph Josten"
+		desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+		picture = Portrait_Christoph_Josten.png
+		expire = "2165.1.1"
+		ideology = technicismD
+		traits = {connected_citizen
+ 							backroom_backstabber
+							propaganda_expert
+							genial_anti_revolutionary
+	}
+}
+complete_national_focus = DDR_president_peace
+}
+}
+
+# EEU Coup
+country_event = {
+	id = eeu.21
+	title = eeu.21.t
+	desc = eeu.21.d
+	picture = GFX_report_event_eeu_speech
+
+
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+			set_country_flag = coup_fail
+
+		news_event = { id = nuke_dropped.1 days = 1 }
+		 complete_national_focus = DDR_killing_kommunism
+		 }
+    }
+
+	trigger = {
+		tag = DDR
+		OR = {
+          AND = {
+          country_exists = GER
+          surrender_progress > 0.5
+          }
+          GER = { is_subject_of = DDR }
+         NOT = {
+                  country_exists = GER
+               }
+         }
+		date > 2136.3.26
+    NOT = { has_country_flag = coup_succ}
+    NOT = { has_country_flag coup_fail }
+	}
+
+	mean_time_to_happen = {
+	days = 1
+}
+
+	option = {
+		name = eeu.21.a
+		 complete_national_focus = DDR_killing_kommunism
+}
+}
+
+# EEU ARG Ally
+country_event = {
+	id = eeu.2
+	title = eeu.2.t
+	desc = eeu.2.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+		news_event = { id = nuke_dropped.1 days = 1 }
+    }
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.2.a
+    ARG = { add_to_faction = DDR }
+	}
+}
+
+country_event = {
+	id = eeu.3
+	title = eeu.3.t
+	desc = eeu.3.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.3.a
+    add_ideas = eeu_alone
+    set_country_flag = eeu_alone
+    add_political_power = -25
+	}
+}
+
+# EEU NGA Ally
+country_event = {
+	id = eeu.22
+	title = eeu.22.t
+	desc = eeu.22.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+		news_event = { id = nuke_dropped.1 days = 1 }
+    }
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.22.a
+    NGA = { add_to_faction = DDR }
+	}
+}
+
+country_event = {
+	id = eeu.23
+	title = eeu.23.t
+	desc = eeu.23.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.3.a
+    add_ideas = eeu_alone
+    set_country_flag = eeu_alone
+    add_political_power = -25
+	}
+}
+
+
+# EEU EURO Ally
+country_event = {
+	id = eeu.4
+	title = eeu.4.t
+	desc = eeu.4.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+		news_event = { id = nuke_dropped.1 days = 1 }
+   }
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.4.a
+    add_political_power = 25
+		add_opinion_modifier = { target = LUX modifier = large_increase }
+		LUX = { add_opinion_modifier = { target = DDR modifier = large_increase } }
+	}
+}
+
+country_event = {
+	id = eeu.5
+	title = eeu.5.t
+	desc = eeu.5.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.5.a
+    set_country_flag = eeu_lux_ignore
+    add_political_power = -25
+	}
+}
+
+country_event = {
+	id = eeu.6
+	title = eeu.6.t
+	desc = eeu.6.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+		news_event = { id = nuke_dropped.1 days = 1 }
+   }
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.6.a
+    add_political_power = 25
+		add_opinion_modifier = { target = ENG modifier = large_increase }
+		ENG = { add_opinion_modifier = { target = DDR modifier = large_increase } }
+	}
+}
+
+country_event = {
+	id = eeu.7
+	title = eeu.7.t
+	desc = eeu.7.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.7.a
+    set_country_flag = eeu_eng_ignore
+    add_political_power = -25
+	}
+}
+
+country_event = {
+	id = eeu.20
+	title = eeu.20.t
+	desc = eeu.20.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+	trigger = {
+             has_country_flag = eeu_lux_ignore
+					   has_country_flag = eeu_eng_ignore
+	}
+
+	option = {
+		name = eeu.20.a
+		complete_national_focus = DDR_fight_the_west
+    add_political_power = -25
+	}
+}
+
+# SWE ally
+
+country_event = {
+	id = eeu.8
+	title = eeu.8.t
+	desc = eeu.8.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+		news_event = { id = nuke_dropped.1 days = 1 }
+   }
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.8.a
+    add_political_power = 25
+		add_opinion_modifier = { target = SWE modifier = large_increase }
+		SWE = { add_opinion_modifier = { target = DDR modifier = large_increase } }
+	}
+}
+
+country_event = {
+	id = eeu.9
+	title = eeu.9.t
+	desc = eeu.9.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.9.a
+    set_country_flag = eeu_swe_ignore
+    add_political_power = -25
+		complete_national_focus = DDR_firm_anti_raider_stance
+	}
+}
+
+# SWE ATTACK
+
+country_event = {
+	id = eeu.10
+	title = eeu.10.t
+	desc = eeu.10.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.10.a
+			create_wargoal = {
+				type = annex_everything
+				target = SWE
+			}
+    add_political_power = -25
+	}
+}
+
+# USA ally
+
+country_event = {
+	id = eeu.11
+	title = eeu.11.t
+	desc = eeu.11.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+		news_event = { id = nuke_dropped.1 days = 1 }
+   }
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.11.a
+    add_political_power = 25
+		add_opinion_modifier = { target = USA modifier = large_increase }
+		USA = { add_opinion_modifier = { target = DDR modifier = large_increase } }
+	}
+}
+
+country_event = {
+	id = eeu.12
+	title = eeu.12.t
+	desc = eeu.12.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.12.a
+    set_country_flag = eeu_usa_ignore
+    add_political_power = -25
+	}
+}
+
+country_event = {
+	id = eeu.17
+	title = eeu.17.t
+	desc = eeu.17.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = eeu.17.a
+    add_political_power = 25
+    USA = {create_faction = csto }
+										    every_country = {
+										                     limit = { AND = { is_in_faction_with = DDR is_in_faction_with = USA } }
+										                      country_event = {id = eeu.19 }
+								 												}
+    dismantle_faction = yes
+            }
+}
+
+country_event = {
+	id = eeu.18
+	title = eeu.18.t
+	desc = eeu.18.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.18.a
+    add_political_power = -25
+	}
+}
+
+country_event = {
+	id = eeu.19
+	title = eeu.19.t
+	desc = eeu.19.d
+	picture = GFX_report_event_sata
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+
+	option = {
+		name = eeu.19.a
+												USA = { add_to_faction = ROOT }
+												}
+
+		option = {
+			trigger = {
+			  is_ai = no
+			}
+			name = eeu.19.b
+    leave_faction = yes
+
+		}
+}
+
+
+# RUS ally
+
+country_event = {
+	id = eeu.13
+	title = eeu.13.t
+	desc = eeu.13.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+    hidden_effect = {
+		news_event = { id = nuke_dropped.1 days = 1 }
+   }
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.13.a
+    add_political_power = 25
+		add_opinion_modifier = { target = RUS modifier = large_increase }
+		RUS = { add_opinion_modifier = { target = DDR modifier = large_increase } }
+	}
+}
+
+country_event = {
+	id = eeu.14
+	title = eeu.14.t
+	desc = eeu.14.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.14.a
+    set_country_flag = eeu_rus_ignore
+    add_political_power = -25
+	}
+}
+
+
+country_event = {
+	id = eeu.15
+	title = eeu.15.t
+	desc = eeu.15.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+	}
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.15.a
+    add_political_power = 25
+		add_opinion_modifier = { target = RUS modifier = large_increase }
+		puppet = RUS
+	}
+}
+
+country_event = {
+	id = eeu.16
+	title = eeu.16.t
+	desc = eeu.16.d
+	picture = GFX_report_event_eeu_speech
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+	}
+
+	option = {
+		name = eeu.16.a
+    set_country_flag = eeu_rus_prof
+    add_political_power = -25
+	}
+}

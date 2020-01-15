@@ -1,0 +1,75 @@
+
+music_station = "97.3_the_pop"
+
+music = {
+	song = "You Drive Me Crazy - Britney Spears"
+
+}
+music = {
+	song = "Wannabe - Spice Girls"
+
+}
+music = {
+	song = "The Sign (K) - Ace Of Base"
+
+}
+music = {
+	song = "The Boy Is Mine - Brandy"
+
+}
+music = {
+	song = "September - Earth Wind And Fire"
+
+}
+music = {
+	song = "Say My Name - Destiny's Child"
+
+}
+music = {
+	song = "Quit_Playin' Games (K) - Backstreet Boys"
+
+}
+music = {
+	song = "Living La Vida Loca - Ricky Martin"
+
+}
+music = {
+	song = "I Want It That Way - Backstreet Boys"
+
+}
+music = {
+	song = "Ironic - Alanis Morissette"
+
+}
+music = {
+	song = "Ice Ice Baby - Vanilla Ice"
+
+}
+music = {
+	song = "Genie In A Bottle - Christina Aguilera"
+
+}
+music = {
+	song = "Everybody - Backstreet Boys"
+
+}
+music = {
+	song = "Don't Speak - No Doubt"
+
+}
+music = {
+	song = "Blue - Eiffel 64"
+
+}
+music = {
+	song = "Barbie Girl (K)- Aqua"
+
+}
+music = {
+	song = "Baby One More Time (K) - Britney Spears"
+
+}
+music = {
+	song = "All Star - Smash Mouth"
+
+}

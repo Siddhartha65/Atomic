@@ -1,0 +1,23 @@
+olympics = {
+	icon = generic_propaganda
+
+	visible = {
+							OR = {
+                     OR = {
+                           has_country_flag = tech_olym_host
+			                     has_country_flag = rev_olym_host
+                           has_country_flag = pos_olym_host
+			                     has_country_flag = hox_olym_host
+			                     has_country_flag = raid_olym_host
+                           }
+                     OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+
+	}
+}
+}

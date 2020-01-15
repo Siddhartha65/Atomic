@@ -1,0 +1,68 @@
+﻿capital = 12
+
+set_politics = {
+	ruling_party = technicism
+	last_election = "2131.10.3"
+	election_frequency = 108
+	elections_allowed = no
+}
+set_popularities = {
+	hoxhaism = 30
+	revelationism = 15
+	posadism = 15
+	raider = 0
+	technicism = 40
+}
+
+create_country_leader = {
+	name = "Greta Balode"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {tenacious_defender	triumphant_revolutionary	leider
+	}
+}
+
+create_country_leader = {
+	name = "Amelija Niedra"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Rinalts Dzenis"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {#
+	}
+}
+
+create_country_leader = {
+	name = "Astrida Zarina"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = utopianists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ivans Lasmanis"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = despot
+	traits = {
+		#
+	}
+}

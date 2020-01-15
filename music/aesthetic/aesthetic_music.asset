@@ -1,0 +1,89 @@
+music = {
+	name = "Angel Wings - Sirius Beat"
+	file = "Angel_Wings_Sirius_Beat.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Call Me - Zai Kowen"
+	file = "Call_Me_Zai_Kowen.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Captive_Korine - Korine"
+	file = "Captive_Korine.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Confusions - Thrifter Records"
+	file = "Confusions_Thrifter_Records.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Elecctrik Funk - The APX"
+	file = "Electrik_Funk_The_APX.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Feel The Funk - Peyruis"
+	file = "Feel_The_Funk_Peyruis.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Forever Midnight - Zadig The Jasp"
+	file = "Forever_Midnight_Zadig_The_Jasp.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "I N T E R S T E L L A R  C A P I T A L I S M - Anonymous420"
+	file = "Ｉｎｔｅｒｓｔｅｌｌａｒ_Ｃａｐｉｔａｌｉｓｍ_Anonymous420.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "I Want You - Desired"
+	file = "I_Want_You_Desired.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "J-U-P-I-T-E-R - Deoxys Beats"
+	file = "j-u-p-i-t-e-r_deoxys_beats.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Sea Dreams - The Majestic Robot"
+	file = "Sea_Dreams_The _Majestic_Robot.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Soft And Furious - Alpha Hydrae"
+	file = "Soft_and_Furious_Alpha_Hydrae.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "Tasogare - Zai Kowen"
+	file = "Tasogare_Zai_Kowen.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "The Countdown - Aries Beats"
+	file = "The_Countdown_Aries_Beats.ogg"
+	volume = 0.7
+}
+
+music = {
+	name = "We're Finally Landing - HOME"
+	file = "Were_Finally_Landing_HOME.ogg"
+	volume = 0.7
+}

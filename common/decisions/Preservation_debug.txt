@@ -1,0 +1,226 @@
+preservation_debug = {
+                         	change_to_hoxha = {
+
+                         		icon = generic_industry
+
+                         		available = {
+                         			is_ai = no
+                         		}
+
+                         		visible = {
+                         			always = yes
+                         		}
+
+                         		fire_only_once = no
+
+                         		days_remove = 1
+
+                         		cost = 0
+
+                        		complete_effect = {
+                                               every_country = {
+                                                                 set_politics = {
+                                                                                	ruling_party = hoxhaism
+                                                                                }
+                                                                set_popularities = {
+                                                                	hoxhaism = 100
+                                                                	technicism = 0
+                                                                	revelationism = 0
+                                                                	posadism = 0
+                                                                	raider = 0
+                                                                }
+                                                               }
+                                              }
+                                          }
+
+
+                         	change_to_tech = {
+
+                         		icon = generic_industry
+
+                         		available = {
+                         			is_ai = no
+                         		}
+
+                         		visible = {
+                         			always = yes
+                         		}
+
+                         		fire_only_once = no
+
+                         		days_remove = 1
+
+                         		cost = 0
+
+                        		complete_effect = {
+                                               every_country = {
+                                                                 set_politics = {
+                                                                                	ruling_party = technicism
+                                                                                }
+                                                                set_popularities = {
+                                                                	hoxhaism = 0
+                                                                	technicism = 100
+                                                                	revelationism = 0
+                                                                	posadism = 0
+                                                                	raider = 0
+                                                                }
+                                                               }
+                                              }
+                                          }
+
+
+                         	change_to_rev = {
+
+                         		icon = generic_industry
+
+                         		available = {
+                         			is_ai = no
+                         		}
+
+                         		visible = {
+                         			always = yes
+                         		}
+
+                         		fire_only_once = no
+
+                         		days_remove = 1
+
+                         		cost = 0
+
+                        		complete_effect = {
+                                               every_country = {
+                                                                 set_politics = {
+                                                                                	ruling_party = revelationism
+                                                                                }
+                                                                set_popularities = {
+                                                                	hoxhaism = 0
+                                                                	technicism = 0
+                                                                	revelationism = 100
+                                                                	posadism = 0
+                                                                	raider = 0
+                                                                }
+                                                               }
+                                              }
+                                          }
+
+
+
+change_to_posad = {
+
+icon = generic_industry
+
+available = {
+is_ai = no
+}
+
+visible = {
+always = yes
+}
+
+fire_only_once = no
+
+days_remove = 1
+
+cost = 0
+
+complete_effect = {
+     every_country = {
+                       set_politics = {
+                                        ruling_party = posadism
+                                      }
+                      set_popularities = {
+                        hoxhaism = 0
+                        technicism = 0
+                        revelationism = 0
+                        posadism = 100
+                        raider = 0
+                      }
+                     }
+    }
+}
+
+
+
+change_to_raid = {
+
+icon = generic_industry
+
+available = {
+is_ai = no
+}
+
+visible = {
+always = yes
+}
+
+fire_only_once = no
+
+days_remove = 1
+
+cost = 0
+
+complete_effect = {
+     every_country = {
+                       set_politics = {
+                                        ruling_party = raider
+                                      }
+                      set_popularities = {
+                        hoxhaism = 0
+                        technicism = 0
+                        revelationism = 0
+                        posadism = 0
+                        raider = 100
+                      }
+                     }
+    }
+}
+
+
+end = {
+
+icon = generic_industry
+
+available = {
+is_ai = no
+}
+
+visible = {
+always = yes
+}
+
+fire_only_once = no
+
+days_remove = 1
+
+cost = 0
+
+complete_effect = {
+     random_other_country = { annex = NZL }
+    }
+}
+
+help = {
+
+icon = generic_industry
+
+available = {
+is_ai = no
+}
+
+visible = {
+always = yes
+}
+
+fire_only_once = no
+
+days_remove = 1
+
+cost = 0
+
+complete_effect = {
+     custom_effect_tooltip = help_tt
+     ############## If you are able to see this, email thepreservationproject2136@gmail.com.
+    }
+}
+
+}

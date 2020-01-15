@@ -1,0 +1,72 @@
+﻿capital = 660
+
+oob = CAR_2136
+
+
+set_politics = {
+	ruling_party = posadism
+	last_election = "2136.1.1"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+    technicism = 12
+    revelationism = 0
+    posadism = 75
+    hoxhaism = 13
+    raider = 0
+}
+create_country_leader = {
+	name = "Andre Patasse"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Monica Dako"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = maoism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Allison Maidou"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = integralists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Naveah Frank"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Naveah_Frank.png"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {dealbroker permanent_revolutionary veteran_worker
+	}
+}
+
+create_country_leader = {
+	name = "Felix Nguendet"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = despot
+	traits = {
+		#
+	}
+}

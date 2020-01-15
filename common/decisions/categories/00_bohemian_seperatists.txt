@@ -1,0 +1,9 @@
+bohemian_separatists = {
+	icon = GFX_decision_category_generic_propaganda
+
+	visible = {
+							tag = CZE
+						  DDR = {has_completed_focus = DDR_exploit_their_division }
+
+	}
+}

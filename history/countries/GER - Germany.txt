@@ -1,0 +1,75 @@
+﻿capital = 64
+
+oob = GER_2136
+
+create_faction = "Revolution League"
+add_to_faction = GER
+add_to_faction = DEN
+
+set_politics = {
+	ruling_party = hoxhaism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 15
+    revelationism = 0
+    posadism = 5
+    hoxhaism = 80
+    raider = 0
+}
+create_country_leader = {
+	name = "Lara Staffel"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Lara_Staffel.png"
+	expire = "2165.1.1"
+	ideology = constructionists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ben Bahr"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Ben_Bahr.png"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {captain_of_industry council_communist nationalist_symbol
+	}
+}
+
+create_country_leader = {
+	name = "Konrad Seitz"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Konrad_Seitz.png"
+	expire = "2165.1.1"
+	ideology = integralists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Lina Sanner"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Lina_Sanner.png"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Stella Goldblum"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Stella_Goldblum.png"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

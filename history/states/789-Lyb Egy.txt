@@ -1,0 +1,20 @@
+state={
+	id=789
+	name="STATE_789"
+	state_category = rural
+	history={
+		owner = LBA
+		buildings = {
+			infrastructure = 4
+
+		}
+		add_core_of = LBA
+
+	}
+
+	provinces={
+		7987 8103 10869 10900 10907 12733
+	}
+	manpower=1
+	buildings_max_level_factor=1.000
+}

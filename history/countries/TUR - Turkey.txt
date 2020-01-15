@@ -1,0 +1,74 @@
+﻿capital = 49Z
+
+oob = TUR_2136
+
+set_politics = {
+	ruling_party = posadism
+	last_election = "2136.1.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+set_popularities = {
+    technicism = 8
+    revelationism = 20
+    posadism = 72
+    hoxhaism = 0
+    raider = 0
+}
+create_country_leader = {
+	name = "Emre Onan"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Irfan Cicek"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Itibar Onan"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Semiha Ergun"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Semiha_Ergun.png"
+	expire = "2165.1.1"
+	ideology = utopianists
+	traits = {old_figurehead
+						red_army_organizer
+						famous_aviator
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Hurriyet Adivar"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

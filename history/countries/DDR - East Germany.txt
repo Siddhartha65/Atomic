@@ -1,0 +1,127 @@
+﻿capital = 763
+
+oob = EEU_2136
+set_naval_oob = "EEU_2136_naval"
+
+set_research_slots = 4
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	early_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	basic_battleship = 1
+	early_battlecruiser = 1
+	transport = 1
+}
+
+if = {
+	limit = {
+		has_start_date < 2136.01.02
+	}
+
+	declare_war_on = {
+		target = DEN
+		type = annex_everything
+	}
+
+	declare_war_on = {
+		target = GER
+		type = annex_everything
+	}
+}
+
+add_ideas = {
+	rule_the_skies
+	illegitimate_gov
+}
+
+set_politics = {
+	ruling_party = technicism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 60
+    revelationism = 5
+    posadism = 0
+    hoxhaism = 30
+    raider = 5
+}
+create_country_leader = {
+	name = "Dunja Zinovieva"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Dunja_Zinoviev.png"
+	expire = "2165.1.1"
+	ideology = continuists
+	traits = { liberal_journalist strict_austerity_adherent diplomatic_workhorse
+	}
+}
+
+create_country_leader = {
+	name = "Emanuel Funke"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Emanuel_Funke.png"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Agota Bedulskyte"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Agota_Bedulskyte.png"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Saija Volle"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Saija_Volle.png"
+	expire = "2165.1.1"
+	ideology = utopianists
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Elvi Lepp"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Elvi_Lepp.png"
+	expire = "2165.1.1"
+	ideology = warlords
+	traits = {
+		#
+	}
+}

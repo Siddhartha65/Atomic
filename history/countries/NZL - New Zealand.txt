@@ -1,0 +1,77 @@
+﻿capital = 284
+
+oob = NZL_2136
+
+set_politics = {
+	ruling_party = technicism
+	last_election = "2136.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    technicism = 100
+    revelationism = 0
+    posadism = 0
+    hoxhaism = 0
+    raider = 0
+}
+create_country_leader = {
+	name = "George II"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_George.png"
+	expire = "2165.1.1"
+	ideology = constructionists
+	traits = { headstrong
+						 old_figurehead
+						 great_architect
+	}
+}
+
+create_country_leader = {
+	name = "George II"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = orthodox_hoxhaism
+	traits = { headstrong
+						 old_figurehead
+						 great_architect
+	}
+}
+
+create_country_leader = {
+	name = "George II"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = clericalists
+	traits = { headstrong
+						 old_figurehead
+						 great_architect
+	}
+}
+
+create_country_leader = {
+	name = "George II"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = star_eyes
+	traits = { headstrong
+						 old_figurehead
+						 great_architect
+	}
+}
+
+create_country_leader = {
+	name = "George II"
+	desc = "POLITICS_MOHAMMED_ZAHIR_SHAH_DESC"
+	picture = "Portrait_Afghanistan_Mohammed_Zahir_Shah.dds"
+	expire = "2165.1.1"
+	ideology = despot
+	traits = { headstrong
+						 old_figurehead
+						 great_architect
+	}
+}

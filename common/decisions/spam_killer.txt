@@ -1,0 +1,51 @@
+spam_killer = {
+                         	division_ender = {
+
+                         		icon = generic_industry
+
+                         		available = {
+                         			is_ai = yes
+                              has_war = no
+                              OR = {has_army_size = {
+                                                        size > 100
+                                                        type = infantry
+                                                    }
+                                    has_army_size = {
+                                                        size > 100
+                                                        type = support
+                                                    }
+                                    has_army_size = {
+                                                        size > 100
+                                                        type = armor
+                                                    }
+                                    has_army_size = {
+                                                        size > 100
+                                                        type = artillery
+                                                    }
+                                    has_army_size = {
+                                                        size > 100
+                                                        type = anti_tank
+                                                    }
+
+                                   }
+                         		}
+
+                         		visible = {
+                         			is_ai = yes
+                         		}
+		ai_will_do = {
+			factor = 100
+		}
+
+                         		fire_only_once = no
+
+                         		days_re_enable = 10
+
+                         		cost = 0
+
+                        		complete_effect = {
+                                               set_equipment_fraction = 0.5
+                                              }
+                                          }
+
+}

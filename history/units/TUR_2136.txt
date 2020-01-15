@@ -1,0 +1,359 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = TUR_INF_02
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	######## LAND UNITS ########
+	##### Türk Ordusu #####
+	division = {
+		#name = "14. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 11811
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## VI. Kolordu ##
+	division = {
+		#name = "7. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 11811
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "17. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 17
+		}
+		location = 11811
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "20. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 20
+		}
+		location = 11811
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	### Birinci Ordu ###
+	division = {
+		#name = "11. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 9833
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "2. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 9833
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## III. Kolordu ##
+	division = {
+		#name = "1. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6994
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "23. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 23
+		}
+		location = 904
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "24. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 24
+		}
+		location = 9932
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## IV. Kolordu ##
+	division = {
+		#name = "8. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 8
+		}
+		location = 11747
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "22. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 22
+		}
+		location = 11747
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1. Militiai"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11747
+		division_template = "Militiai"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	### Ikinci Ordu Ordu ###
+	division = {
+		#name = "39. Militiai"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 39
+		}
+		location = 947
+		division_template = "Militiai"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## I. Kolordu ##
+	division = {
+		#name = "6. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 4112
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "16. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 16
+		}
+		location = 4112
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "Çanakkale Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 4112
+		division_template = "Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "TUR" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	## II.  Kolordu ##
+	division = {
+		#name = "4. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 1005
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "18. Militiai"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 18
+		}
+		location = 11756
+		division_template = "Militiai"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## V. Kolordu ##
+	division = {
+		#name = "5. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 947
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "25. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 25
+		}
+		location = 947
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+	### Üçüncüsü Ordu ###
+	## VII. Kolordu ##
+	division = {
+		#name = "2. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6813
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "10. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 10
+		}
+		location = 10497
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## VIII. Kolordu ##
+	division = {
+		#name = "12. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 11881
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "15. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 15
+		}
+		location = 11881
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	## IX. Kolordu ##
+	division = {
+		#name = "3. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 10403
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "9. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 10472
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+	division = {
+		#name = "1. Militia"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10472
+		division_template = "Militia"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}
+
+}

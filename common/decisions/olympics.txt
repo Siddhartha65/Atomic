@@ -1,0 +1,2449 @@
+olympics = {
+
+######## Host ########
+build_a_stadium = {
+    cost = 50
+    fire_only_once = yes
+		visible = {
+                     OR = {
+                           has_country_flag = tech_olym_host
+			                     has_country_flag = rev_olym_host
+                           has_country_flag = pos_olym_host
+			                     has_country_flag = hox_olym_host
+			                     has_country_flag = raid_olym_host
+                           }
+		}
+    complete_effect = {
+                        capital_scope = {
+													add_building_construction = {
+																										    type = infrastructure
+																										    level = 3
+																										    instant_build = yes
+                                                      }
+                         }
+                        if = {
+                               limit = {
+                                         has_country_flag = tech_olym_host
+                                       }
+					                        every_country = {
+					                                          limit = {
+					                                                    has_country_flag = tech_olympian
+					                                                  }
+                                                   set_country_flag = send_all_s_teams
+																					         set_country_flag = send_all_a_teams
+			                                             set_country_flag = send_all_b_teams
+					                        }
+                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = pos_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = pos_olympian
+							                                                  }
+		                                                   set_country_flag = send_all_s_teams
+																							         set_country_flag = send_all_a_teams
+					                                             set_country_flag = send_all_b_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rai_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rai_olympian
+							                                                  }
+		                                                   set_country_flag = send_all_s_teams
+																							         set_country_flag = send_all_a_teams
+					                                             set_country_flag = send_all_b_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rev_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rev_olympian
+							                                                  }
+		                                                   set_country_flag = send_all_s_teams
+																							         set_country_flag = send_all_a_teams
+					                                             set_country_flag = send_all_b_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = hox_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = hox_olympian
+							                                                  }
+		                                                   set_country_flag = send_all_s_teams
+																							         set_country_flag = send_all_a_teams
+					                                             set_country_flag = send_all_b_teams
+							                        }
+		                             }
+
+    	}
+		}
+
+the_marathon = {
+    cost = 15
+    fire_only_once = yes
+		visible = {
+                     OR = {
+                           has_country_flag = tech_olym_host
+			                     has_country_flag = rev_olym_host
+                           has_country_flag = pos_olym_host
+			                     has_country_flag = hox_olym_host
+			                     has_country_flag = raid_olym_host
+                           }
+		}
+    complete_effect = {
+                        army_experience = 100
+                        if = {
+                               limit = {
+                                         has_country_flag = tech_olym_host
+                                       }
+					                        every_country = {
+					                                          limit = {
+					                                                    has_country_flag = tech_olympian
+					                                                  }
+                                                   set_country_flag = send_s_marathon_teams
+																					         set_country_flag = send_a_marathon_teams
+			                                             set_country_flag = send_b_marathon_teams
+					                        }
+                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = pos_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = pos_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_marathon_teams
+																							         set_country_flag = send_a_marathon_teams
+					                                             set_country_flag = send_b_marathon_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rai_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rai_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_marathon_teams
+																							         set_country_flag = send_a_marathon_teams
+					                                             set_country_flag = send_b_marathon_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rev_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rev_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_marathon_teams
+																							         set_country_flag = send_a_marathon_teams
+					                                             set_country_flag = send_b_marathon_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = hox_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = hox_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_marathon_teams
+																							         set_country_flag = send_a_marathon_teams
+					                                             set_country_flag = send_b_marathon_teams
+							                        }
+		                             }
+
+
+    	}
+		}
+
+feat_of_strength = {
+    cost = 15
+    fire_only_once = yes
+		visible = {
+                     OR = {
+                           has_country_flag = tech_olym_host
+			                     has_country_flag = rev_olym_host
+                           has_country_flag = pos_olym_host
+			                     has_country_flag = hox_olym_host
+			                     has_country_flag = raid_olym_host
+                           }
+		}
+    complete_effect = {
+                        add_war_support = 0.1
+                        if = {
+                               limit = {
+                                         has_country_flag = tech_olym_host
+                                       }
+					                        every_country = {
+					                                          limit = {
+					                                                    has_country_flag = tech_olympian
+					                                                  }
+                                                   set_country_flag = send_s_stregnth_teams
+																					         set_country_flag = send_a_stregnth_teams
+			                                             set_country_flag = send_b_stregnth_teams
+					                        }
+                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = pos_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = pos_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_stregnth_teams
+																							         set_country_flag = send_a_stregnth_teams
+					                                             set_country_flag = send_b_stregnth_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rai_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rai_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_stregnth_teams
+																							         set_country_flag = send_a_stregnth_teams
+					                                             set_country_flag = send_b_stregnth_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rev_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rev_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_stregnth_teams
+																							         set_country_flag = send_a_stregnth_teams
+					                                             set_country_flag = send_b_stregnth_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = hox_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = hox_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_stregnth_teams
+																							         set_country_flag = send_a_stregnth_teams
+					                                             set_country_flag = send_b_stregnth_teams
+							                        }
+		                             }
+
+
+    	}
+		}
+
+acrobatics = {
+    cost = 15
+    fire_only_once = yes
+		visible = {
+                     OR = {
+                           has_country_flag = tech_olym_host
+			                     has_country_flag = rev_olym_host
+                           has_country_flag = pos_olym_host
+			                     has_country_flag = hox_olym_host
+			                     has_country_flag = raid_olym_host
+                           }
+		}
+    complete_effect = {
+                        army_experience = 25
+										    army_experience = 75
+                        if = {
+                               limit = {
+                                         has_country_flag = tech_olym_host
+                                       }
+					                        every_country = {
+					                                          limit = {
+					                                                    has_country_flag = tech_olympian
+					                                                  }
+                                                   set_country_flag = send_s_acrobatics_teams
+																					         set_country_flag = send_a_acrobatics_teams
+			                                             set_country_flag = send_b_acrobatics_teams
+					                        }
+                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = pos_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = pos_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_acrobatics_teams
+																							         set_country_flag = send_a_acrobatics_teams
+					                                             set_country_flag = send_b_acrobatics_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rai_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rai_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_acrobatics_teams
+																							         set_country_flag = send_a_acrobatics_teams
+					                                             set_country_flag = send_b_acrobatics_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rev_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rev_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_acrobatics_teams
+																							         set_country_flag = send_a_acrobatics_teams
+					                                             set_country_flag = send_b_acrobatics_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = hox_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = hox_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_acrobatics_teams
+																							         set_country_flag = send_a_acrobatics_teams
+					                                             set_country_flag = send_b_acrobatics_teams
+							                        }
+		                             }
+
+
+    	}
+		}
+
+racing = {
+    cost = 15
+    fire_only_once = yes
+		visible = { AND = {
+                       has_tech = motorised_infantry
+                     OR = {
+                           has_country_flag = tech_olym_host
+			                     has_country_flag = rev_olym_host
+                           has_country_flag = pos_olym_host
+			                     has_country_flag = hox_olym_host
+			                     has_country_flag = raid_olym_host
+                           }
+                        }
+                }
+    complete_effect = {
+												add_equipment_to_stockpile = {
+																					type = motorized_equipment
+																					amount = 100
+																				}
+                        if = {
+                               limit = {
+                                         has_country_flag = tech_olym_host
+                                         has_tech = motorised_infantry
+                                       }
+					                        every_country = {
+					                                          limit = {
+					                                                    has_country_flag = tech_olympian
+					                                                  }
+                                                   set_country_flag = send_s_racing_teams
+																					         set_country_flag = send_a_racing_teams
+			                                             set_country_flag = send_b_racing_teams
+					                        }
+                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = pos_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = pos_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_racing_teams
+																							         set_country_flag = send_a_racing_teams
+					                                             set_country_flag = send_b_racing_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rai_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rai_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_racing_teams
+																							         set_country_flag = send_a_racing_teams
+					                                             set_country_flag = send_b_racing_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rev_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rev_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_racing_teams
+																							         set_country_flag = send_a_racing_teams
+					                                             set_country_flag = send_b_racing_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = hox_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = hox_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_racing_teams
+																							         set_country_flag = send_a_racing_teams
+					                                             set_country_flag = send_b_racing_teams
+							                        }
+		                             }
+
+
+    	}
+		}
+
+archery = {
+    cost = 15
+    fire_only_once = yes
+		visible = {
+                     OR = {
+                           has_country_flag = tech_olym_host
+			                     has_country_flag = rev_olym_host
+                           has_country_flag = pos_olym_host
+			                     has_country_flag = hox_olym_host
+			                     has_country_flag = raid_olym_host
+                           }
+		}
+    complete_effect = {
+												add_equipment_to_stockpile = {
+																					type = infantry_equipment
+																					amount = 100
+																				}
+                        if = {
+                               limit = {
+                                         has_country_flag = tech_olym_host
+                                       }
+					                        every_country = {
+					                                          limit = {
+					                                                    has_country_flag = tech_olympian
+					                                                  }
+                                                   set_country_flag = send_s_archery_teams
+																					         set_country_flag = send_a_archery_teams
+			                                             set_country_flag = send_b_archery_teams
+					                        }
+                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = pos_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = pos_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_archery_teams
+																							         set_country_flag = send_a_archery_teams
+					                                             set_country_flag = send_b_archery_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rai_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rai_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_archery_teams
+																							         set_country_flag = send_a_archery_teams
+					                                             set_country_flag = send_b_archery_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rev_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = rev_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_archery_teams
+																							         set_country_flag = send_a_archery_teams
+					                                             set_country_flag = send_b_archery_teams
+							                        }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = hox_olym_host
+		                                       }
+							                        every_country = {
+							                                          limit = {
+							                                                    has_country_flag = hox_olympian
+							                                                  }
+		                                                   set_country_flag = send_s_archery_teams
+																							         set_country_flag = send_a_archery_teams
+					                                             set_country_flag = send_b_archery_teams
+							                        }
+		                             }
+
+
+    	}
+		}
+
+begin_the_games = {
+    cost = 50
+    fire_only_once = yes
+		visible = {
+                     OR = {
+                           has_country_flag = tech_olym_host
+			                     has_country_flag = rev_olym_host
+                           has_country_flag = pos_olym_host
+			                     has_country_flag = hox_olym_host
+			                     has_country_flag = raid_olym_host
+                           }
+		}
+    complete_effect = {
+                        if = {
+                               limit = {
+                                         has_country_flag = tech_olym_host
+                                       }
+                              random_list = {
+                                             50 = {
+                                                    random_country = {
+                                                                      limit = {
+                                                                                has_country_flag = tech_olym_host
+                                                                              }
+                                                                      country_event = {
+                                                                                       id = olympics.12
+                                                                                       days = 10
+                                                                                      }
+                                                                     }
+                                                  }
+                                             40 = {
+                                                    random_country = {
+                                                                      limit = {
+                                                                                has_country_flag = tech_olympian
+					                                                                      has_country_flag = s_marathon_team
+                                                                              }
+                                                                      country_event = {
+                                                                                       id = olympics.12
+                                                                                       days = 10
+                                                                                      }
+                                                                     }
+                                                  }
+                                             30 = {
+                                                    random_country = {
+                                                                      limit = {
+                                                                                has_country_flag = tech_olympian
+					                                                                      has_country_flag = a_marathon_team
+                                                                              }
+                                                                      country_event = {
+                                                                                       id = olympics.12
+                                                                                       days = 10
+                                                                                      }
+                                                                     }
+                                                  }
+                                             20 = {
+                                                    random_country = {
+                                                                      limit = {
+                                                                                has_country_flag = tech_olympian
+					                                                                      has_country_flag = b_marathon_team
+                                                                              }
+                                                                      country_event = {
+                                                                                       id = olympics.12
+                                                                                       days = 10
+                                                                                      }
+                                                                     }
+                                                  }
+                                            }
+		                               random_list = {
+		                                              50 = {
+		                                                     random_country = {
+		                                                                       limit = {
+		                                                                                 has_country_flag = tech_olym_host
+		                                                                               }
+		                                                                       country_event = {
+		                                                                                        id = olympics.12
+		                                                                                        days = 10
+		                                                                                       }
+		                                                                      }
+		                                                   }
+		                                              40 = {
+		                                                     random_country = {
+		                                                                       limit = {
+		                                                                                 has_country_flag = tech_olympian
+		 					                                                                      has_country_flag = s_stregnth_team
+		                                                                               }
+		                                                                       country_event = {
+		                                                                                        id = olympics.12
+		                                                                                        days = 10
+		                                                                                       }
+		                                                                      }
+		                                                   }
+		                                              30 = {
+		                                                     random_country = {
+		                                                                       limit = {
+		                                                                                 has_country_flag = tech_olympian
+		 					                                                                      has_country_flag = a_stregnth_team
+		                                                                               }
+		                                                                       country_event = {
+		                                                                                        id = olympics.12
+		                                                                                        days = 10
+		                                                                                       }
+		                                                                      }
+		                                                   }
+		                                              20 = {
+		                                                     random_country = {
+		                                                                       limit = {
+		                                                                                 has_country_flag = tech_olympian
+		 					                                                                      has_country_flag = b_stregnth_team
+		                                                                               }
+		                                                                       country_event = {
+		                                                                                        id = olympics.12
+		                                                                                        days = 10
+		                                                                                       }
+		                                                                      }
+		                                                   }
+		                                             }
+		 		                               random_list = {
+		 		                                              50 = {
+		 		                                                     random_country = {
+		 		                                                                       limit = {
+		 		                                                                                 has_country_flag = tech_olym_host
+		 		                                                                               }
+		 		                                                                       country_event = {
+		 		                                                                                        id = olympics.12
+		 		                                                                                        days = 10
+		 		                                                                                       }
+		 		                                                                      }
+		 		                                                   }
+		 		                                              40 = {
+		 		                                                     random_country = {
+		 		                                                                       limit = {
+		 		                                                                                 has_country_flag = tech_olympian
+		 		 					                                                                      has_country_flag = s_acrobatics_team
+		 		                                                                               }
+		 		                                                                       country_event = {
+		 		                                                                                        id = olympics.12
+		 		                                                                                        days = 10
+		 		                                                                                       }
+		 		                                                                      }
+		 		                                                   }
+		 		                                              30 = {
+		 		                                                     random_country = {
+		 		                                                                       limit = {
+		 		                                                                                 has_country_flag = tech_olympian
+		 		 					                                                                      has_country_flag = a_acrobatics_team
+		 		                                                                               }
+		 		                                                                       country_event = {
+		 		                                                                                        id = olympics.12
+		 		                                                                                        days = 10
+		 		                                                                                       }
+		 		                                                                      }
+		 		                                                   }
+		 		                                              20 = {
+		 		                                                     random_country = {
+		 		                                                                       limit = {
+		 		                                                                                 has_country_flag = tech_olympian
+		 		 					                                                                      has_country_flag = b_acrobatics_team
+		 		                                                                               }
+		 		                                                                       country_event = {
+		 		                                                                                        id = olympics.12
+		 		                                                                                        days = 10
+		 		                                                                                       }
+		 		                                                                      }
+		 		                                                   }
+		 		                                             }
+				 		                               random_list = {
+				 		                                              50 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = tech_olym_host
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              40 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = tech_olympian
+				 		 					                                                                      has_country_flag = s_racing_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              30 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = tech_olympian
+				 		 					                                                                      has_country_flag = a_racing_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              20 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = tech_olympian
+				 		 					                                                                      has_country_flag = b_racing_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                             }
+						 		                               random_list = {
+						 		                                              50 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = tech_olym_host
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              40 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = tech_olympian
+						 		 					                                                                      has_country_flag = s_stregnth_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              30 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = tech_olympian
+						 		 					                                                                      has_country_flag = a_stregnth_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              20 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = tech_olympian
+						 		 					                                                                      has_country_flag = b_stregnth_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                             }
+								 		                               random_list = {
+								 		                                              50 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = tech_olym_host
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              40 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = tech_olympian
+								 		 					                                                                      has_country_flag = s_archery_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              30 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = tech_olympian
+								 		 					                                                                      has_country_flag = a_archery_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              20 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = tech_olympian
+								 		 					                                                                      has_country_flag = b_archery_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                             }
+                               clr_country_flag = tech_olym_host
+                               every_country = {
+                                                clr_country_flag = tech_olympian
+                                               }
+                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = hox_olym_host
+		                                       }
+		                              random_list = {
+		                                             50 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = hox_olym_host
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             40 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = hox_olympian
+							                                                                      has_country_flag = s_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             30 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = hox_olympian
+							                                                                      has_country_flag = a_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             20 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = hox_olympian
+							                                                                      has_country_flag = b_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                            }
+				                               random_list = {
+				                                              50 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = hox_olym_host
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              40 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = hox_olympian
+				 					                                                                      has_country_flag = s_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              30 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = hox_olympian
+				 					                                                                      has_country_flag = a_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              20 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = hox_olympian
+				 					                                                                      has_country_flag = b_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                             }
+				 		                               random_list = {
+				 		                                              50 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = hox_olym_host
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              40 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = hox_olympian
+				 		 					                                                                      has_country_flag = s_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              30 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = hox_olympian
+				 		 					                                                                      has_country_flag = a_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              20 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = hox_olympian
+				 		 					                                                                      has_country_flag = b_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                             }
+						 		                               random_list = {
+						 		                                              50 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = hox_olym_host
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              40 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = hox_olympian
+						 		 					                                                                      has_country_flag = s_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              30 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = hox_olympian
+						 		 					                                                                      has_country_flag = a_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              20 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = hox_olympian
+						 		 					                                                                      has_country_flag = b_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                             }
+								 		                               random_list = {
+								 		                                              50 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = hox_olym_host
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              40 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = hox_olympian
+								 		 					                                                                      has_country_flag = s_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              30 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = hox_olympian
+								 		 					                                                                      has_country_flag = a_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              20 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = hox_olympian
+								 		 					                                                                      has_country_flag = b_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                             }
+										 		                               random_list = {
+										 		                                              50 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = hox_olym_host
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              40 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = hox_olympian
+										 		 					                                                                      has_country_flag = s_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              30 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = hox_olympian
+										 		 					                                                                      has_country_flag = a_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              20 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = hox_olympian
+										 		 					                                                                      has_country_flag = b_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                             }
+                                   clr_country_flag = hox_olym_host
+                                   every_country = {
+                                                    clr_country_flag = hox_olympian
+                                                   }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rev_olym_host
+		                                       }
+		                              random_list = {
+		                                             50 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = rev_olym_host
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             40 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = rev_olympian
+							                                                                      has_country_flag = s_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             30 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = rev_olympian
+							                                                                      has_country_flag = a_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             20 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = rev_olympian
+							                                                                      has_country_flag = b_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                            }
+				                               random_list = {
+				                                              50 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = rev_olym_host
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              40 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = rev_olympian
+				 					                                                                      has_country_flag = s_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              30 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = rev_olympian
+				 					                                                                      has_country_flag = a_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              20 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = rev_olympian
+				 					                                                                      has_country_flag = b_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                             }
+				 		                               random_list = {
+				 		                                              50 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = rev_olym_host
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              40 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = rev_olympian
+				 		 					                                                                      has_country_flag = s_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              30 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = rev_olympian
+				 		 					                                                                      has_country_flag = a_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              20 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = rev_olympian
+				 		 					                                                                      has_country_flag = b_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                             }
+						 		                               random_list = {
+						 		                                              50 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = rev_olym_host
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              40 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = rev_olympian
+						 		 					                                                                      has_country_flag = s_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              30 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = rev_olympian
+						 		 					                                                                      has_country_flag = a_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              20 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = rev_olympian
+						 		 					                                                                      has_country_flag = b_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                             }
+								 		                               random_list = {
+								 		                                              50 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = rev_olym_host
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              40 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = rev_olympian
+								 		 					                                                                      has_country_flag = s_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              30 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = rev_olympian
+								 		 					                                                                      has_country_flag = a_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              20 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = rev_olympian
+								 		 					                                                                      has_country_flag = b_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                             }
+										 		                               random_list = {
+										 		                                              50 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = rev_olym_host
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              40 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = rev_olympian
+										 		 					                                                                      has_country_flag = s_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              30 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = rev_olympian
+										 		 					                                                                      has_country_flag = a_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              20 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = rev_olympian
+										 		 					                                                                      has_country_flag = b_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                             }
+                                   clr_country_flag = rev_olym_host
+                                   every_country = {
+                                                    clr_country_flag = rev_olympian
+                                                   }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = pos_olym_host
+		                                       }
+		                              random_list = {
+		                                             50 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = pos_olym_host
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             40 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = pos_olympian
+							                                                                      has_country_flag = s_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             30 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = pos_olympian
+							                                                                      has_country_flag = a_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             20 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = pos_olympian
+							                                                                      has_country_flag = b_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                            }
+				                               random_list = {
+				                                              50 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = pos_olym_host
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              40 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = pos_olympian
+				 					                                                                      has_country_flag = s_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              30 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = pos_olympian
+				 					                                                                      has_country_flag = a_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              20 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = pos_olympian
+				 					                                                                      has_country_flag = b_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                             }
+				 		                               random_list = {
+				 		                                              50 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = pos_olym_host
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              40 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = pos_olympian
+				 		 					                                                                      has_country_flag = s_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              30 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = pos_olympian
+				 		 					                                                                      has_country_flag = a_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              20 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = pos_olympian
+				 		 					                                                                      has_country_flag = b_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                             }
+						 		                               random_list = {
+						 		                                              50 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = pos_olym_host
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              40 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = pos_olympian
+						 		 					                                                                      has_country_flag = s_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              30 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = pos_olympian
+						 		 					                                                                      has_country_flag = a_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              20 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = pos_olympian
+						 		 					                                                                      has_country_flag = b_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                             }
+								 		                               random_list = {
+								 		                                              50 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = pos_olym_host
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              40 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = pos_olympian
+								 		 					                                                                      has_country_flag = s_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              30 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = pos_olympian
+								 		 					                                                                      has_country_flag = a_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              20 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = pos_olympian
+								 		 					                                                                      has_country_flag = b_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                             }
+										 		                               random_list = {
+										 		                                              50 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = pos_olym_host
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              40 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = pos_olympian
+										 		 					                                                                      has_country_flag = s_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              30 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = pos_olympian
+										 		 					                                                                      has_country_flag = a_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              20 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = pos_olympian
+										 		 					                                                                      has_country_flag = b_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                             }
+                                   clr_country_flag = pos_olym_host
+                                   every_country = {
+                                                    clr_country_flag = pos_olympian
+                                                   }
+		                             }
+		                        if = {
+		                               limit = {
+		                                         has_country_flag = rai_olym_host
+		                                       }
+		                              random_list = {
+		                                             50 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = rai_olym_host
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             40 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = rai_olympian
+							                                                                      has_country_flag = s_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             30 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = rai_olympian
+							                                                                      has_country_flag = a_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                             20 = {
+		                                                    random_country = {
+		                                                                      limit = {
+		                                                                                has_country_flag = rai_olympian
+							                                                                      has_country_flag = b_marathon_team
+		                                                                              }
+		                                                                      country_event = {
+		                                                                                       id = olympics.12
+		                                                                                       days = 10
+		                                                                                      }
+		                                                                     }
+		                                                  }
+		                                            }
+				                               random_list = {
+				                                              50 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = rai_olym_host
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              40 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = rai_olympian
+				 					                                                                      has_country_flag = s_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              30 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = rai_olympian
+				 					                                                                      has_country_flag = a_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                              20 = {
+				                                                     random_country = {
+				                                                                       limit = {
+				                                                                                 has_country_flag = rai_olympian
+				 					                                                                      has_country_flag = b_stregnth_team
+				                                                                               }
+				                                                                       country_event = {
+				                                                                                        id = olympics.12
+				                                                                                        days = 10
+				                                                                                       }
+				                                                                      }
+				                                                   }
+				                                             }
+				 		                               random_list = {
+				 		                                              50 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = rai_olym_host
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              40 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = rai_olympian
+				 		 					                                                                      has_country_flag = s_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              30 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = rai_olympian
+				 		 					                                                                      has_country_flag = a_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                              20 = {
+				 		                                                     random_country = {
+				 		                                                                       limit = {
+				 		                                                                                 has_country_flag = rai_olympian
+				 		 					                                                                      has_country_flag = b_acrobatics_team
+				 		                                                                               }
+				 		                                                                       country_event = {
+				 		                                                                                        id = olympics.12
+				 		                                                                                        days = 10
+				 		                                                                                       }
+				 		                                                                      }
+				 		                                                   }
+				 		                                             }
+						 		                               random_list = {
+						 		                                              50 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = rai_olym_host
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              40 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = rai_olympian
+						 		 					                                                                      has_country_flag = s_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              30 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = rai_olympian
+						 		 					                                                                      has_country_flag = a_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                              20 = {
+						 		                                                     random_country = {
+						 		                                                                       limit = {
+						 		                                                                                 has_country_flag = rai_olympian
+						 		 					                                                                      has_country_flag = b_racing_team
+						 		                                                                               }
+						 		                                                                       country_event = {
+						 		                                                                                        id = olympics.12
+						 		                                                                                        days = 10
+						 		                                                                                       }
+						 		                                                                      }
+						 		                                                   }
+						 		                                             }
+								 		                               random_list = {
+								 		                                              50 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = rai_olym_host
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              40 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = rai_olympian
+								 		 					                                                                      has_country_flag = s_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              30 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = rai_olympian
+								 		 					                                                                      has_country_flag = a_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                              20 = {
+								 		                                                     random_country = {
+								 		                                                                       limit = {
+								 		                                                                                 has_country_flag = rai_olympian
+								 		 					                                                                      has_country_flag = b_stregnth_team
+								 		                                                                               }
+								 		                                                                       country_event = {
+								 		                                                                                        id = olympics.12
+								 		                                                                                        days = 10
+								 		                                                                                       }
+								 		                                                                      }
+								 		                                                   }
+								 		                                             }
+										 		                               random_list = {
+										 		                                              50 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = rai_olym_host
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              40 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = rai_olympian
+										 		 					                                                                      has_country_flag = s_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              30 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = rai_olympian
+										 		 					                                                                      has_country_flag = a_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                              20 = {
+										 		                                                     random_country = {
+										 		                                                                       limit = {
+										 		                                                                                 has_country_flag = rai_olympian
+										 		 					                                                                      has_country_flag = b_archery_team
+										 		                                                                               }
+										 		                                                                       country_event = {
+										 		                                                                                        id = olympics.12
+										 		                                                                                        days = 10
+										 		                                                                                       }
+										 		                                                                      }
+										 		                                                   }
+										 		                                             }
+                                   clr_country_flag = rai_olym_host
+                                   every_country = {
+                                                    clr_country_flag = rai_olympian
+                                                   }
+		                             }
+    	}
+		}
+
+##### Training #####
+
+send_all_s_teams = {
+    cost = 500
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_all_s_teams
+                     OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                    }
+		}
+    complete_effect = {
+                       add_manpower = -1250
+                       set_country_flag = s_marathon_team
+                       set_country_flag = s_archery_team
+                       set_country_flag = s_stregnth_team
+                       set_country_flag = s_racing_team
+    	}
+		}
+
+
+send_all_a_teams = {
+    cost = 150
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_all_a_teams
+                     OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                     }
+		}
+    complete_effect = {
+                       add_manpower = -1000
+                       set_country_flag = a_marathon_team
+                       set_country_flag = a_archery_team
+                       set_country_flag = a_stregnth_team
+                       set_country_flag = a_racing_team
+    	}
+		}
+
+send_all_b_teams = {
+    cost = 100
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_all_b_teams
+                     OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                     }
+		}
+    complete_effect = {
+                       add_manpower = -750
+                       set_country_flag = b_marathon_team
+                       set_country_flag = b_archery_team
+                       set_country_flag = b_stregnth_team
+                       set_country_flag = b_racing_team
+    	}
+		}
+
+send_s_marathon_teams = {
+    cost = 100
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_s_marathon_teams
+                     OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+		}
+    complete_effect = {
+                       add_manpower = -250
+                       set_country_flag = s_marathon_team
+    	}
+		}
+
+
+send_a_marathon_teams = {
+    cost = 50
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_a_marathon_teams
+                     OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+		}
+    complete_effect = {
+                       add_manpower = -200
+                       set_country_flag = a_marathon_team
+    	}
+		}
+
+send_b_marathon_teams = {
+    cost = 20
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_b_marathon_teams
+                     OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                      }
+		}
+    complete_effect = {
+                       add_manpower = -150
+                       set_country_flag = b_marathon_team
+    	}
+		}
+
+send_s_stregnth_teams = {
+    cost = 100
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_s_stregnth_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+		}
+    complete_effect = {
+                       add_manpower = -250
+                       set_country_flag = s_stregnth_team
+    	}
+		}
+
+
+send_a_stregnth_teams = {
+    cost = 50
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_a_stregnth_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                      }
+		}
+    complete_effect = {
+                       add_manpower = -200
+                       set_country_flag = a_stregnth_team
+    	}
+		}
+
+send_b_stregnth_teams = {
+    cost = 20
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_b_stregnth_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                      }
+		}
+    complete_effect = {
+                       add_manpower = -150
+                       set_country_flag = b_stregnth_team
+    	}
+		}
+
+send_s_archery_teams = {
+    cost = 100
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_s_archery_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+		}
+    complete_effect = {
+                       add_manpower = -250
+                       set_country_flag = s_archery_team
+    	}
+		}
+
+
+send_a_archery_teams = {
+    cost = 50
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_a_archery_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+		}
+    complete_effect = {
+                       add_manpower = -200
+                       set_country_flag = a_archery_team
+    	}
+		}
+
+send_b_archery_teams = {
+    cost = 20
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_b_archery_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+		}
+    complete_effect = {
+                       add_manpower = -150
+                       set_country_flag = b_archery_team
+    	}
+		}
+
+send_s_racing_teams = {
+    cost = 100
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_s_racing_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+		}
+    complete_effect = {
+                       add_manpower = -250
+                       set_country_flag = s_racing_team
+    	}
+		}
+
+
+send_a_racing_teams = {
+    cost = 50
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_a_racing_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                      }
+		}
+    complete_effect = {
+                       add_manpower = -200
+                       set_country_flag = a_racing_team
+    	}
+		}
+
+send_b_racing_teams = {
+    cost = 20
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_b_racing_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                      }
+		}
+    complete_effect = {
+                       add_manpower = -150
+                       set_country_flag = b_racing_team
+    	}
+		}
+
+send_s_acrobatics_teams = {
+    cost = 100
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_s_acrobatics_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+		}
+    complete_effect = {
+                       add_manpower = -250
+                       set_country_flag = s_acrobatics_team
+    	}
+		}
+
+
+send_a_acrobatics_teams = {
+    cost = 50
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_a_acrobatics_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                       }
+
+		}
+    complete_effect = {
+                       add_manpower = -200
+                       set_country_flag = a_acrobatics_team
+    	}
+		}
+
+send_b_acrobatics_teams = {
+    cost = 20
+    fire_only_once = yes
+		visible = {
+               AND = {
+                       has_country_flag = send_b_acrobatics_teams
+                       OR = {
+                           has_country_flag = tech_olympian
+			                     has_country_flag = rev_olympian
+                           has_country_flag = pos_olympian
+			                     has_country_flag = hox_olympian
+			                     has_country_flag = raid_olympian
+                           }
+                      }
+		}
+    complete_effect = {
+                       add_manpower = -150
+                       set_country_flag = b_acrobatics_team
+    	}
+		}
+}

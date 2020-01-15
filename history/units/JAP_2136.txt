@@ -1,0 +1,309 @@
+division_template = {
+	name = "Militia"		# Infantry Division
+	division_names_group = JAP_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+
+##### OOB #####
+units = {
+
+	#Kita Homengun - North Japan Army
+	division = { # "7 'Kuma' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 7
+		}
+		location = 12421 #Asahigawa
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Ominato Kichi Kaiheidan"
+		location = 9859 #Ominato Naval Base
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Chishima Kichi Shubitai"
+		location = 1399 #Shumshu
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = { # "Karafuto Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 201
+		}
+		location = 12446 #Toyohara
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+	#Chuo Homengun - East Japan Army
+	division = { # "2 'Yu' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7087 #Shizuoka
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "Konoe Shidan"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 601
+		}
+		location = 1182 #Tokyo
+		division_template = "Militia"			# Elite Guard unit (highest experience, best equipment)
+		start_experience_factor = 0.4
+	}
+	division = {
+		name = "Osaka Kichi Kaiheidan"
+		location = 7072 #Osaka
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Yokusaka Tokubetsu Militia"
+		location = 9998 #Yokosuka
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+	#Roppou Homengun - West Japan Army
+	division = { # "4 'Yodo' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9950 #Nagasaki
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Kure Kichi Kaiheidan"
+		location = 1092 #Hiroshima
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		name = "Sasebo Kichi Kaiheidan"
+		location = 9950 #Sasebo/Nagasaki
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+
+	#Taiwan Homengun - Taiwan Army
+	division = {
+		name = "Taiwan Kichi Shubitai"
+		location = 7186 #Taipei
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	#3 Homengun - 3rd Field Army
+	division = { # "3 'Ko' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 7186 #Taipei
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "6 'Mei' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 7186 #Taipei
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "11 'Nishiki' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 11
+		}
+		location = 7186 #Taipei
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+
+	#Chosen Gun - Korea Army
+
+
+
+
+
+	### Island IJN Garrisons ###
+
+	division = {
+		name = "Okinawa Kichi Shubitai"
+		location = 11932 #Naha
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+
+	#1 Konkyochi Ichigun
+	division = {
+		name = "Saipan Kichi Shubitai"
+		location = 3995 #Saipan
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Iwoto Kichi Shubitai"
+		location = 13025 #Iwo Jima
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Minamitorishima Kichi Shubitai"
+		location = 13026 #Marcus Island
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+
+	#2 Konkyochi Ichigun
+
+	#3 Konkyochi Ichigun
+	division = {
+		name = "Kwajalein Kichi Shubitai"
+		location = 13041 #Kwajalein
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Eniwetok Kichi Shubitai"
+		location = 13046 #Eniwetok
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Mili Kichi Shubitai"
+		location = 13040 #Mili
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division = {
+		name = "Maleolap Kichi Shubitai"
+		location = 13043 #Maleolap
+		division_template = "Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+
+	}
+
+
+	##### Kwantung Army #####
+	#Garrisons
+
+
+	division = { # "9 'Take' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 9
+		}
+		location = 11879 #Near Changkufeng Lake
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	division = { # "14 'Sho' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 14
+		}
+		location = 6838 #Eastern Manchuria
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+	#Hoppou Manchuko Homengun - Northern Manchukuo Army
+
+
+
+	# 5 Homengun - 5th Field Army
+	division = {
+		name = "3 Dokuritsu Shubirentai"
+		location = 12189
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "4 Dokuritsu Shubirentai"
+		location = 12136
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "5 Dokuritsu Shubirentai"
+		location = 1842
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = {
+		name = "6 Dokuritsu Shubirentai"
+		location = 664
+		division_template = "Militia"		# Japanese garrison (better than militia, but still with older equipment)
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.7
+
+	}
+	division = { # "12 'Ken' Militia"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 12
+		}
+		location = 6686
+		division_template = "Militia"
+		start_experience_factor = 0.3
+	}
+
+	### Chumo Gun -- Inner Mongolian Army ###
+
+
+
+
+	### Kita-Shina Ichigun - North China Army ###
+	#Independents
+
+
+
+	#2 Homengun - 2nd Field Army
+
+
+}
